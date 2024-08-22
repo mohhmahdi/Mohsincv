@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #f8f8f8;
+    padding: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.home-text {
+    flex: 1;
+    margin-right: 20px; /* Space between text and image */
+}
+
+.home-image {
+    flex: 1;
+    text-align: right; /* Aligns the image to the right */
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center; /* Center the content */
+    }
+
+    .home-text {
+        margin-right: 0; /* Remove margin in stacked view */
+        text-align: center; /* Center text on smaller screens */
+    }
+}
+
+/* Additional CSS styles can go here */

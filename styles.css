@@ -42,5 +42,79 @@ nav a {
         text-align: center; /* Center text on smaller screens */
     }
 }
+/* ... scroll CSS styles ... */
+
+.scroll-down-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.scroll-down-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.scroll-down-button img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .scroll-down-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .scroll-down-button img {
+        width: 24px;
+    }
+}
+
+/* ... other CSS styles ... */
+
+.work-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.work-item {
+    width: 48%;
+    margin-bottom: 40px;
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.work-item-info {
+    margin-top: 10px;
+}
+
+.work-item-info h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.work-item-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .work-item {
+        width: 100%;
+    }
+}
 
 /* Additional CSS styles can go here */

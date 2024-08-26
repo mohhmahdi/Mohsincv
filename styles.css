@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiller&display=swap');
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+       font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/white-lines-series-are-from-series-by-person.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
 }
 
 header {
@@ -9,6 +19,7 @@ header {
 }
 
 nav a {
+    font-family: 'Chiller', cursive;
     margin: 0 15px;
     text-decoration: none;
     color: #333;

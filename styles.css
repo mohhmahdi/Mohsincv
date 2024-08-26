@@ -220,14 +220,18 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
 .skill-item {
   position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 20px;
+  width: 100px;
+  height: 100px;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-icon {
@@ -241,18 +245,17 @@ nav a {
   justify-content: center;
   align-items: center;
   background-color: #f1f1f1;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .skill-icon img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 .skill-icon span {
   position: absolute;
-  bottom: -20px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 14px;
@@ -260,24 +263,30 @@ nav a {
   transition: all 0.3s ease;
 }
 
+.skill-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
 .skill-item:hover .skill-icon {
   background-color: #e0e0e0;
+  transform: scale(1.1);
 }
 
 .skill-item:hover .skill-icon span {
   opacity: 1;
+  bottom: -40px;
 }
 
 @media (max-width: 768px) {
   .skill-item {
-    width: 60px;
-    height: 60px;
-    margin: 15px;
+    width: 80px;
+    height: 80px;
   }
 
   .skill-icon img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 
   .skill-icon span {
@@ -287,20 +296,18 @@ nav a {
 
 @media (max-width: 480px) {
   .skill-item {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+    width: 70px;
+    height: 70px;
   }
 
   .skill-icon img {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
   }
 
   .skill-icon span {
     font-size: 10px;
   }
-
 }
     .whatsapp-chat-float {
   position: fixed;

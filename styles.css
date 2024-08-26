@@ -302,5 +302,69 @@ nav a {
   }
 
 }
+    .whatsapp-chat-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.whatsapp-chat-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-chat-icon:hover {
+  background-color: #128c7e;
+}
+
+.whatsapp-chat-icon i {
+  color: #fff;
+  font-size: 24px;
+}
+
+.whatsapp-chat-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  margin-left: 20px;
+  display: none;
+  animation: slideIn 0.3s ease;
+}
+
+.whatsapp-chat-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #128c7e;
+}
+
+.whatsapp-chat-body p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 /* Additional CSS styles can go here */

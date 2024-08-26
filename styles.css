@@ -17,12 +17,16 @@ header {
     background: #f8f8f8;
     padding: 10px;
 }
-
 nav a {
     font-family: 'Chiller', cursive;
     margin: 0 15px;
     text-decoration: none;
     color: #333;
+    transition: color 0.3s ease-in-out; /* Add transition effect for color change */
+}
+
+nav a:hover {
+    color: #666; /* Change color on hover */
 }
 
 .home-container {
@@ -35,11 +39,17 @@ nav a {
 .home-text {
     flex: 1;
     margin-right: 20px; /* Space between text and image */
+    font-size: 1.2rem; /* Increase font size for better readability */
 }
 
 .home-image {
     flex: 1;
     text-align: right; /* Aligns the image to the right */
+}
+
+.home-image img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 @media (max-width: 768px) {
@@ -51,6 +61,12 @@ nav a {
     .home-text {
         margin-right: 0; /* Remove margin in stacked view */
         text-align: center; /* Center text on smaller screens */
+        font-size: 1rem; /* Decrease font size for better mobile layout */
+    }
+
+    .home-image {
+        text-align: center; /* Center the image on smaller screens */
+        margin-top: 20px; /* Add some spacing between text and image */
     }
 }
 /* ... scroll CSS styles ... */

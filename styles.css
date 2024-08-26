@@ -373,5 +373,59 @@ nav a {
     opacity: 1;
   }
 }
+/* Services Section */
+#services {
+  padding: 60px 20px;
+  text-align: center;
+}
 
+#services h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.service-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 300px;
+}
+
+.service-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.service-item h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .service-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .service-item img {
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+}
 /* Additional CSS styles can go here */

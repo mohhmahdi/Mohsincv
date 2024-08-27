@@ -17,16 +17,73 @@ header {
     background: #f8f8f8;
     padding: 10px;
 }
+/* Reset styles */
 nav a {
-    font-family: 'Chiller', cursive;
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease-in-out; /* Add transition effect for color change */
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav a img {
+  margin-right: 0.5rem;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  width: 30px;
+  height: 21px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+}
+
+/* Main styles */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 nav a:hover {
-    color: #666; /* Change color on hover */
+  color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+
+  nav.show {
+    display: flex !important;
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.show {
+  display: flex !important;
 }
 
 .home-container {

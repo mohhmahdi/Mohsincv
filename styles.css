@@ -18,50 +18,61 @@ header {
     padding: 10px;
 }
 /* Reset styles */
+
 nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff; /* Change to your desired background */
+    position: relative;
 }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
-
-nav a img {
-  margin-right: 0.5rem;
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Change to your desired background */
+    padding: 1rem;
 }
 
 .menu-toggle {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.5rem;
-  width: 30px;
-  height: 21px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex; /* Always show toggle button */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    width: 30px;
+    height: 21px;
 }
 
 .bar {
-  width: 100%;
-  height: 3px;
-  background-color: #333;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+}
+
+/* Slide menu styles */
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start off-screen */
+    height: 100%;
+    width: 250px; /* Width of the slide menu */
+    background-color: #fff; /* Change background color here */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease; /* Smooth transition */
+    flex-direction: column;
+    padding-top: 5rem; /* Adjust for toggle button height */
+}
+
+.nav-links.show {
+    right: 0; /* Slide in */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    display: show; /* Hide the menu by default */
-  }
+    .nav-links {
+        display: flex; /* Only display the nav-links when toggled */
+    }
+}
 
   nav.show {
     display: flex; /* Show the menu when toggled */

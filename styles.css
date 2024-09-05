@@ -18,6 +18,13 @@ header {
     padding: 10px;
 }
 /* Reset styles */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* Change to your desired background */
+}
+
 nav a {
   text-decoration: none;
   color: #333;
@@ -34,7 +41,7 @@ nav a img {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  display: none;
+  display: none; /* Hidden by default */
   flex-direction: column;
   justify-content: space-between;
   padding: 0.5rem;
@@ -48,17 +55,25 @@ nav a img {
   background-color: #333;
 }
 
-/* Main styles */
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none; /* Hide the menu by default */
+  }
 
-nav a:hover {
-  color: #666;
+  nav.show {
+    display: flex; /* Show the menu when toggled */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show the toggle button */
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+  }
 }
 
 /* Responsive styles */

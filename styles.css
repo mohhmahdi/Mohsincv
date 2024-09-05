@@ -12,7 +12,11 @@ body {
     background-attachment: fixed;
       background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
 }
-
+body {
+    margin: 0;
+   font-family: Arial, sans-serif;
+       font-family: 'Arial', sans-serif; /* Change or keep the same font here */
+}
 header {
     background: #f8f8f8;
     padding: 10px;

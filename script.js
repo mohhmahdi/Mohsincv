@@ -13,9 +13,9 @@ document.querySelector('.whatsapp-chat-container').addEventListener('click', (e)
 });
 // Select the menu toggle button and the nav links
 const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('nav');
+const navLinks = document.querySelector('.nav-links');
 
 // Add event listener to toggle the menu
 menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show'); // Toggling the 'show' class
+    navLinks.classList.toggle('show'); // Toggling the 'show' class
 });

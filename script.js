@@ -11,8 +11,13 @@ document.querySelector('.whatsapp-chat-container').addEventListener('click', (e)
     document.querySelector('.whatsapp-chat-container').style.display = 'none';
   }
 });
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-    menuToggle.setAttribute('aria-expanded', !expanded);
-});
+<script>
+   const menuToggle = document.querySelector('.menu-toggle');
+   const navLinks = document.querySelector('.nav-links');
+
+   menuToggle.addEventListener('click', () => {
+       navLinks.classList.toggle('show');
+       const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+       menuToggle.setAttribute('aria-expanded', !expanded);
+   });
+</script>

@@ -19,10 +19,7 @@ header {
 }
 /* Reset styles */
 /* Reset styles */
-body {
-    margin: 0;
-    font-family: 'chiller', sans-serif; /* Change or keep the same font here */
-}
+
 
 nav {
     display: flex;

@@ -11,7 +11,7 @@ document.querySelector('.whatsapp-chat-container').addEventListener('click', (e)
     document.querySelector('.whatsapp-chat-container').style.display = 'none';
   }
 });
-<script>
+
    const menuToggle = document.querySelector('.menu-toggle');
    const navLinks = document.querySelector('.nav-links');
 
@@ -20,4 +20,4 @@ document.querySelector('.whatsapp-chat-container').addEventListener('click', (e)
        const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
        menuToggle.setAttribute('aria-expanded', !expanded);
    });
-</script>
+

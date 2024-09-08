@@ -67,6 +67,8 @@ nav {
 @media (max-width: 768px) {
     .nav-links {
         display: none; /* Hide by default on mobile */
+          opacity: 0; /* Start hidden */
+    transition: right 0.3s ease, opacity 0.3s ease; /* Include opacity */
     }
 
     .menu-toggle {
@@ -75,6 +77,8 @@ nav {
 
     .nav-links.show {
         display: flex; /* Show when toggled */
+         right: 0;
+    opacity: 1; /* Show when toggled */
     }
 }
 .show {

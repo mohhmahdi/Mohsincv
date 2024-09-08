@@ -11,11 +11,8 @@ document.querySelector('.whatsapp-chat-container').addEventListener('click', (e)
     document.querySelector('.whatsapp-chat-container').style.display = 'none';
   }
 });
-// Select the menu toggle button and the nav links
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-// Add event listener to toggle the menu
 menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show'); // Toggling the 'show' class
+    navLinks.classList.toggle('show');
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+    menuToggle.setAttribute('aria-expanded', !expanded);
 });

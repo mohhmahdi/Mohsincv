@@ -19,7 +19,11 @@ header {
 }
 /* Reset styles */
 nav {
-    position: relative;
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff; /* Background color for the nav */
 }
 
 .nav-links {

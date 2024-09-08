@@ -59,7 +59,7 @@ nav {
 /* Responsive styles */
 @media (max-width: 768px) {
     .nav-links {
-        display: flex; /* Only display the nav-links when toggled */
+        display: none; /* Only display the nav-links when toggled */
     }
 
     .menu-toggle {

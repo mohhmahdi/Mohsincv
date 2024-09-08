@@ -18,22 +18,28 @@ header {
     padding: 10px;
 }
 /* Reset styles */
+/* Reset styles */
+body {
+    margin: 0;
+    font-family: 'chiller', sans-serif; /* Change or keep the same font here */
+}
+
 nav {
-   display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     background-color: #fff; /* Background color for the nav */
 }
 
+/* Nav links */
 .nav-links {
-    display: flex;
+    display: flex; /* Always show on desktop */
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
 }
 
-/* Hide nav links by default on mobile */
+/* Slide-in styles */
 .nav-links {
     position: fixed;
     top: 0;
@@ -57,23 +63,23 @@ nav {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    display: none; /* Hidden by default */
+    display: none; /* Hidden by default on desktop */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Only display the nav-links when toggled */
+        display: none; /* Hide by default on mobile */
     }
 
     .menu-toggle {
         display: flex; /* Show the toggle button on mobile */
-        position: absolute; /* Position the toggle button */
-        right: 1rem; /* Align to the right */
-        top: 1rem; /* Adjust top position as needed */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show when toggled */
     }
 }
-
 .show {
   display: flex !important;
 }

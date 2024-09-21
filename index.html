@@ -273,13 +273,15 @@
 
 <section id="contact">
     <h3>Contact Me</h3>
-    <div class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-    </div>
-    <div>
+    <form id="contact-form" method="POST" action="send-email.php">
+        <div class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </div>
+    </form>
+</section>
         <a href="https://www.linkedin.com/in/mohsin-mahdi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
             <img src="/contact us/lin.png" alt="LinkedIn" style="width:20px;">
          

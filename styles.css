@@ -499,4 +499,60 @@ header {
     margin-bottom: 0;
   }
 }
+
+/* Contact section styles */
+#contact {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto; /* Center the form */
+}
+
+h3 {
+    text-align: center;
+}
+
+/* Contact form styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between inputs */
+}
+
+input, textarea {
+    width: 100%; /* Make inputs full width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Font size for better readability */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Minimum height for the textarea */
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Consistent font size */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    #contact {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    input, textarea, button {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
 /* Additional CSS styles can go here */

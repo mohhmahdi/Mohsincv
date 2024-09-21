@@ -21,3 +21,6 @@ document.querySelector('.whatsapp-chat-container').addEventListener('click', (e)
        menuToggle.setAttribute('aria-expanded', !expanded);
    });
 
+document.getElementById('download-cv').onclick = function() {
+    window.location.href = '/images/Mohsin_Mahdi_CV-H.pdf'; // Replace with the actual path to your CV
+};

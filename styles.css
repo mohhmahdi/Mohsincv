@@ -168,7 +168,51 @@ nav {
 .my-info-section {
   padding: 40px 0;
 }
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Adjust to your preferred font */
+}
 
+/* Header styles */
+header {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    padding: 20px;
+}
+
+/* Button styles */
+.download-button {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Button background color */
+    color: white;              /* Text color */
+    border: none;              /* No border */
+    border-radius: 5px;       /* Rounded corners */
+    cursor: pointer;           /* Pointer cursor on hover */
+    font-size: 16px;           /* Font size */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Hover effect */
+.download-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .download-button {
+        padding: 12px 24px; /* Adjust padding for mobile */
+        font-size: 18px;     /* Increase font size on mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .download-button {
+        padding: 10px 20px; /* Default padding for desktop */
+        font-size: 16px;     /* Default font size for desktop */
+    }
+}
 .experience {
   display: flex;
   flex-wrap: wrap;

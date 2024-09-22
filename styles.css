@@ -286,7 +286,6 @@ header {
   .text-container p {
     font-size: 14px;
   }
-
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -296,8 +295,8 @@ header {
 
 .skill-item {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 80px; /* Standard size for desktop */
+  height: 80px; /* Standard size for desktop */
   cursor: pointer;
   overflow: hidden;
   border-radius: 12px;
@@ -320,8 +319,8 @@ header {
 }
 
 .skill-icon img {
-  width: 50px;
-  height: 50px;
+  width: 48px; /* Icon size for desktop */
+  height: 48px; /* Icon size for desktop */
 }
 
 .skill-icon span {
@@ -329,7 +328,7 @@ header {
   bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 14px;
+  font-size: 14px; /* Font size for desktop */
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -349,35 +348,37 @@ header {
   bottom: -40px;
 }
 
+/* Tablet adjustments */
 @media (max-width: 768px) {
   .skill-item {
-    width: 80px;
-    height: 80px;
+    width: 64px; /* Adjusted for tablet */
+    height: 64px; /* Adjusted for tablet */
   }
 
   .skill-icon img {
-    width: 40px;
-    height: 40px;
+    width: 36px; /* Adjusted icon size for tablet */
+    height: 36px; /* Adjusted icon size for tablet */
   }
 
   .skill-icon span {
-    font-size: 12px;
+    font-size: 12px; /* Adjusted font size for tablet */
   }
 }
 
+/* Mobile adjustments */
 @media (max-width: 480px) {
   .skill-item {
-    width: 70px;
-    height: 70px;
+    width: 48px; /* Adjusted for mobile */
+    height: 48px; /* Adjusted for mobile */
   }
 
   .skill-icon img {
-    width: 35px;
-    height: 35px;
+    width: 30px; /* Adjusted icon size for mobile */
+    height: 30px; /* Adjusted icon size for mobile */
   }
 
   .skill-icon span {
-    font-size: 10px;
+    font-size: 10px; /* Adjusted font size for mobile */
   }
 }
     .whatsapp-chat-float {

@@ -18,9 +18,6 @@ header {
     padding: 10px;
 }
 /* Reset styles */
-/* Reset styles */
-
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -28,20 +25,32 @@ nav {
     padding: 1rem;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-}
-
-/* Nav links for desktop */
+/* Nav links */
 .nav-links {
     display: flex; /* Show normally on desktop */
     justify-content: space-between;
     align-items: center;
 }
 
+/* Navigation link styles */
+.nav-links a {
+    font-family: 'Chiller', cursive; /* Use Chiller font *
+    font-size: 16px; /* Adjust as needed */
+    color: #333; /* Change to your desired text color */
+    text-decoration: none; /* Remove underline */
+    padding: 0.5rem 1rem; /* Add padding for better spacing */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+.menu-toggle img {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default on desktop */
+}
 /* Slide-in styles for mobile */
 @media (max-width: 768px) {
     .nav-links {

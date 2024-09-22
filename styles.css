@@ -286,6 +286,7 @@ header {
   .text-container p {
     font-size: 14px;
   }
+/* Skills Section */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -319,8 +320,9 @@ header {
 }
 
 .skill-icon img {
-  width: 48px; /* Icon size for desktop */
-  height: 48px; /* Icon size for desktop */
+  width: 100%; /* Ensures the image fills the container */
+  height: 100%; /* Ensures the image fills the container */
+  object-fit: contain; /* Maintains aspect ratio */
 }
 
 .skill-icon span {
@@ -356,8 +358,9 @@ header {
   }
 
   .skill-icon img {
-    width: 36px; /* Adjusted icon size for tablet */
-    height: 36px; /* Adjusted icon size for tablet */
+    width: 100%; /* Ensures the image fills the container */
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: contain; /* Maintains aspect ratio */
   }
 
   .skill-icon span {
@@ -373,13 +376,15 @@ header {
   }
 
   .skill-icon img {
-    width: 30px; /* Adjusted icon size for mobile */
-    height: 30px; /* Adjusted icon size for mobile */
+    width: 100%; /* Ensures the image fills the container */
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: contain; /* Maintains aspect ratio */
   }
 
   .skill-icon span {
     font-size: 10px; /* Adjusted font size for mobile */
   }
+}
 }
     .whatsapp-chat-float {
   position: fixed;

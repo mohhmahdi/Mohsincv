@@ -45,12 +45,7 @@ nav {
 .nav-links a:hover {
     color: #007BFF; /* Change color on hover */
 }
-.menu-toggle img {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: none; /* Hidden by default on desktop */
-}
+
 /* Slide-in styles for mobile */
 @media (max-width: 768px) {
     .nav-links {

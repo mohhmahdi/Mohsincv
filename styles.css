@@ -54,6 +54,7 @@ nav {
         right: -250px; /* Start off-screen */
         height: 100%;
         width: 250px; /* Width of the slide menu */
+        background-image: url('/images/background 1.png');
         background-color: #fff; /* Background color */
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
         transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */

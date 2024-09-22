@@ -25,6 +25,20 @@ nav {
     padding: 1rem;
 }
 
+/* Nav links pc version */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white; /* Solid background for the nav */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for visibility */
+    position: fixed; /* Fix the nav at the top */
+    top: 0;
+    width: 100%; /* Full width */
+    z-index: 100; /* Keep it above other content */
+}
+
 /* Nav links */
 .nav-links {
     display: flex; /* Show normally on desktop */
@@ -34,7 +48,7 @@ nav {
 
 /* Navigation link styles */
 .nav-links a {
-    font-family: 'Chiller', cursive; /* Use Chiller font *
+    font-family: 'Chiller', cursive; /* Use Chiller font */
     font-size: 16px; /* Adjust as needed */
     color: #333; /* Change to your desired text color */
     text-decoration: none; /* Remove underline */

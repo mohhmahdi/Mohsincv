@@ -26,7 +26,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-
 }
 
 /* Nav links */
@@ -43,16 +42,18 @@ nav {
     right: -250px; /* Start off-screen */
     height: 100%;
     width: 250px; /* Width of the slide menu */
-    background-color: #fff; /* Change background color here */
-    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
-    transition: right 0.3s ease; /* Smooth transition */
+    background-color: #fff; /* Background color */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */
     flex-direction: column;
     padding-top: 5rem; /* Adjust for toggle button height */
+    opacity: 0; /* Start hidden */
 }
 
 /* Show nav links when toggled */
 .nav-links.show {
     right: 0; /* Slide in */
+    opacity: 1; /* Show when toggled */
 }
 
 /* Toggle button styles */
@@ -60,15 +61,13 @@ nav {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    display: none; /* Hidden by default on desktop */
+    display: flex; /* Show the toggle button on mobile */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide by default on mobile */
-          opacity: 0; /* Start hidden */
-    transition: right 0.3s ease, opacity 0.3s ease; /* Include opacity */
+        display: flex; /* Show flex for mobile */
     }
 
     .menu-toggle {
@@ -76,13 +75,8 @@ nav {
     }
 
     .nav-links.show {
-        display: flex; /* Show when toggled */
-         right: 0;
-    opacity: 1; /* Show when toggled */
+        right: 0; /* Slide in */
     }
-}
-.show {
-  display: flex !important;
 }
 
 .home-container {

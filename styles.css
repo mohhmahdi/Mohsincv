@@ -445,6 +445,7 @@ header {
   }
 }
 /* Services Section */
+/* Services Section */
 #services {
   padding: 60px 20px;
   text-align: center;
@@ -463,15 +464,20 @@ header {
   gap: 30px;
 }
 
+/* New container for each service item */
 .service-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1 1 300px;
+  flex: 0 1 calc(50% - 30px); /* Two containers per row minus the gap */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+  padding: 10px; /* Padding around container */
+  border: 1px solid #ddd; /* Optional border */
+  border-radius: 5px; /* Rounded corners */
 }
 
 .service-item img {
-  width: 60px;
+  width: 60px; /* Default size for desktop */
   height: 60px;
   margin-bottom: 10px;
 }
@@ -481,7 +487,13 @@ header {
   font-weight: bold;
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
+  .service-item img {
+    width: 117px; /* Adjusting image size for mobile */
+    height: 117px; /* Adjusting image size for mobile */
+  }
+
   .service-items {
     flex-direction: column;
     align-items: center;
@@ -500,6 +512,28 @@ header {
   }
 }
 
+/* Desktop adjustments */
+@media (min-width: 769px) {
+  .service-item img {
+    width: 80px; /* Adjusting image size for desktop */
+    height: 80px; /* Adjusting image size for desktop */
+  }
+
+  .service-item h4 {
+    font-size: 18px; /* Slightly larger font size for desktop */
+  }
+}
+
+/* Contact section styles */
+#contact {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto; /* Center the form */
+}
+
+h3 {
+    text-align: center;
+}
 /* Contact section styles */
 #contact {
     padding: 20px;

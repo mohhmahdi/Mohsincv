@@ -28,60 +28,54 @@ nav {
     padding: 1rem;
 }
 
-/* Nav links */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Nav links for desktop */
 .nav-links {
-    display: flex; /* Always show on desktop */
+    display: flex; /* Show normally on desktop */
     justify-content: space-between;
     align-items: center;
 }
 
-/* Slide-in styles */
-.nav-links {
-    position: fixed;
-    top: 0;
-    right: -250px; /* Start off-screen */
-    height: 100%;
-    width: 250px; /* Width of the slide menu */
-    background-color: #fff; /* Background color */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */
-    flex-direction: column;
-    padding-top: 5rem; /* Adjust for toggle button height */
-    opacity: 0; /* Start hidden */
-}
-
-/* Show nav links when toggled */
-.nav-links.show {
-    right: 0; /* Slide in */
-    opacity: 1; /* Show when toggled */
-}
-
-/* Toggle button styles */
-.menu-toggle {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex; /* Show the toggle button on mobile */
-}
-
-/* Responsive styles */
+/* Slide-in styles for mobile */
 @media (max-width: 768px) {
     .nav-links {
-        display: flex; /* Show flex for mobile */
+        position: fixed;
+        top: 0;
+        right: -250px; /* Start off-screen */
+        height: 100%;
+        width: 250px; /* Width of the slide menu */
+        background-color: #fff; /* Background color */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+        flex-direction: column;
+        padding-top: 5rem; /* Adjust for toggle button height */
+        opacity: 0; /* Start hidden */
+    }
+
+    .nav-links.show {
+        right: 0; /* Slide in */
+        opacity: 1; /* Show when toggled */
+    }
+
+    /* Hide the nav links by default */
+    .nav-links:not(.show) {
+        display: none; /* Hide links when not shown */
     }
 
     .menu-toggle {
-        
         display: flex; /* Show the toggle button on mobile */
     }
-.menu-toggle img {
+    .menu-toggle img {
     width: 30px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Maintain aspect ratio */
 }
-    .nav-links.show {
-        right: 0; /* Slide in */
-    }
 }
 
 .home-container {

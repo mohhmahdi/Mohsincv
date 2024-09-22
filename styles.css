@@ -323,7 +323,7 @@ header {
 .skill-icon img {
   width: 100%; /* Ensures the image fills the container */
   height: 100%; /* Ensures the image fills the container */
-  object-fit: cover; /* Fills the container and maintains aspect ratio, cropping if necessary */
+  object-fit: contain; /* Maintains aspect ratio */
 }
 
 .skill-icon span {
@@ -361,7 +361,7 @@ header {
   .skill-icon img {
     width: 100%; /* Ensures the image fills the container */
     height: 100%; /* Ensures the image fills the container */
-    object-fit: cover; /* Fills the container and maintains aspect ratio */
+    object-fit: contain; /* Maintains aspect ratio */
   }
 
   .skill-icon span {
@@ -379,7 +379,7 @@ header {
   .skill-icon img {
     width: 100%; /* Ensures the image fills the container */
     height: 100%; /* Ensures the image fills the container */
-    object-fit: cover; /* Fills the container and maintains aspect ratio */
+    object-fit: contain; /* Maintains aspect ratio */
   }
 
   .skill-icon span {

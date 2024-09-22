@@ -17,13 +17,7 @@ header {
     background: #f8f8f8;
     padding: 10px;
 }
-/* Reset styles */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-}
+/* Reset styles *
 
 /* Nav links pc version */
 nav {

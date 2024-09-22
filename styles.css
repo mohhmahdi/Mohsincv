@@ -80,6 +80,9 @@ nav {
 
     .menu-toggle {
         display: flex; /* Show the toggle button on mobile */
+       position: absolute; /* Position it absolutely */
+        right: 1rem; /* Adjust to your desired spacing from the right */
+        top: 1rem; /* Align with the top of the nav */
     }
     .menu-toggle img {
     width: 30px; /* Adjust width as needed */

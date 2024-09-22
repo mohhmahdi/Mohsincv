@@ -14,13 +14,19 @@ document.querySelector('.whatsapp-chat-container').addEventListener('click', (e)
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-
+// open menu when clicking 
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('show');
     const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
     menuToggle.setAttribute('aria-expanded', !expanded);
 });
-
+// Close menu when clicking outside of it
+document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+        navLinks.classList.remove('show');
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+});
 document.getElementById('download-cv').onclick = function() {
     window.location.href = '/images/Mohsin_Mahdi_CV-H.pdf'; // Replace with the actual path to your CV
 };

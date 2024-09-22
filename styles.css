@@ -71,9 +71,14 @@ nav {
     }
 
     .menu-toggle {
+        
         display: flex; /* Show the toggle button on mobile */
     }
-
+.menu-toggle img {
+    width: 30px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Maintain aspect ratio */
+}
     .nav-links.show {
         right: 0; /* Slide in */
     }

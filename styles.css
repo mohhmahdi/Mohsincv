@@ -449,42 +449,47 @@ h4 {
   }
 }
 /* Services Section */
+/* Basic styling that applies universally, add if needed */
 #services {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
 }
 
-.service-items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns for six items, two items each */
-    gap: 20px;
-    text-align: center; /* Center-align the content */
-}
-
-.service-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-}
-
-.service-item img {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
-}
-
-.service-item h4 {
-    font-family: 'Century Gothic', sans-serif;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Add media query for responsiveness if needed */
-@media (max-width: 768px) {
-    .service-items {
-        grid-template-columns: 1fr 1fr; /* Two columns for smaller screens */
+/* Desktop specific styles */
+@media (min-width: 1024px) {
+    #services {
+        max-width: 1200px;
+        margin: 0 auto;
     }
+
+    .service-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three columns for six items, two items each */
+        gap: 20px;
+        text-align: center; /* Center-align the content */
+    }
+
+    .service-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+    }
+
+    .service-item img {
+        width: 100px; /* Adjust size as needed */
+        height: auto;
+    }
+
+    .service-item h4 {
+        font-family: 'Century Gothic', sans-serif;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+}
+
+/* You might not need the following media query unless you have specific styles for smaller screens */
+@media (max-width: 768px) {
+    /* Styles for smaller devices can be placed here if necessary */
 }
 /* Contact section styles */
 #contact {

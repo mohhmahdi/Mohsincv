@@ -46,7 +46,7 @@ text-shadow:
 }
 p {
   font-size: 1.2rem;
-  font-family: 'Century Gothic', sans-serif;
+ font-family: 'nu-century-gothic', sans-serif;
   font-weight: normal;
   text-align: left;
 }
@@ -155,7 +155,8 @@ nav {
     flex: 1;
     margin-right: 20px; /* Space between text and image */
     font-size: 1.2rem; /* Increase font size for better readability */
-font-family: 'Century Gothic', Sans-serif; /* Use Chiller font */
+    font-family: 'nu-century-gothic', sans-serif;
+                                                
 }
 
 .home-image {
@@ -510,7 +511,7 @@ h4 {
     }
 
     .service-item h4 {
-        font-family: 'Century Gothic', sans-serif;
+        font-family: 'nu-century-gothic', sans-serif;
         font-weight: bold;
         margin-top: 10px;
     }

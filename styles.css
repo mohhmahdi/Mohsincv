@@ -1,22 +1,3 @@
-
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('/images/background 1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-}
-h3{
-font-weight: bold;
-font-family: 'Chiller', cursive; /* Use Chiller font */
-font-size: 20px; /* Adjust as needed */
-      text-align: center; /* Center text on smaller screens */
-}
-
-
 /* Base styles for 1920px */
 .container {
     width: 100%;
@@ -46,6 +27,25 @@ font-size: 20px; /* Adjust as needed */
         padding: 5px;
     }
 }
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/background 1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+h3{
+font-weight: bold;
+font-family: 'Chiller', cursive; /* Use Chiller font */
+font-size: 150px; /* Adjust as needed */
+      text-align: center; /* Center text on smaller screens */
+}
+
+
+
 header {
     background: #f8f8f8;
     padding: 10px;

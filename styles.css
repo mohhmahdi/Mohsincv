@@ -395,6 +395,7 @@ h4 {
     flex-direction: column; /* Vertical stack for all devices */
     align-items: center; /* Centering items for visual consistency */
     text-align: center; /* Center-aligning text within each skill item */
+    font-family: 'Roboto Thin', sans-serif;
 }
 
 .skill-icon {

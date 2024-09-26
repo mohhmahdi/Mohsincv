@@ -307,14 +307,14 @@ h4 {
     margin-top: 40px; /* Space above each header */
     margin-bottom: 20px; /* Space below each header before the skill items */
     text-align: left; /* Left-aligning the header text */
-    font-size: 18px; /* Adjust font size as necessary */
-    color: #333; /* Adjust color as necessary */
+    font-size: 18px; /* Desktop font size */
+    color: #333; /* Text color */
 }
 
 /* Styling for the skills container */
 .skills {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Creates as many columns as needed with a minimum width */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Grid setup that adapts to content size */
     gap: 20px; /* Space between skill items */
     margin-bottom: 40px; /* Space below the entire skills set before next header */
 }
@@ -322,14 +322,14 @@ h4 {
 .skill-item {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Aligning items in the center for visual consistency */
-    text-align: left; /* Left-aligning text within each skill item */
+    align-items: center; /* Centering items for visual consistency */
+    text-align: center; /* Center-aligning text within each skill item */
     margin-bottom: 20px; /* Space between each icon-text group */
 }
 
 .skill-icon {
-    width: 50px; /* Icon width */
-    height: 50px; /* Icon height */
+    width: 64px; /* Icon width for desktop */
+    height: 64px; /* Icon height for desktop */
     margin-bottom: 8px; /* Space between the icon and the text */
 }
 
@@ -340,13 +340,9 @@ h4 {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .skills {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust column width for smaller screens */
-    }
-
     .skill-icon {
-        width: 40px; /* Smaller icons for mobile */
-        height: 40px;
+        width: 50px; /* Slightly smaller icons for tablets */
+        height: 50px;
     }
 
     .skill-item {
@@ -355,13 +351,19 @@ h4 {
 }
 
 @media (max-width: 480px) {
-    .skills {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Even smaller columns for very small screens */
-    }
-
     h4 {
+        font-size: 16px; /* Slightly smaller font size for mobile */
         margin-top: 20px; /* Smaller spacing above headers on mobile */
         margin-bottom: 10px; /* Smaller spacing below headers on mobile */
+    }
+
+    .skills {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust column width for smaller screens */
+    }
+
+    .skill-icon {
+        width: 40px; /* Smaller icons for mobile */
+        height: 40px;
     }
 }
     .whatsapp-chat-float {

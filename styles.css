@@ -302,25 +302,11 @@ header {
     font-size: 14px;
   }
 /* Skills Section */
-.skillz-icon span {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Responsive grid */
-    justify-content: space-around;
-    align-items: flex-end;
-    gap: 20px; /* Adds spacing between items */
-    position: relative; /* Change to relative */
-    bottom: 0; /* Reset bottom */
-    font-size: 14px; /* Font size for desktop */
-    opacity: 1; /* Ensure it's visible by default */
-    transition: all 0.3s ease;
-}
-
-/
 .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Adds spacing between items */
 }
 
 .skill-item {
@@ -355,13 +341,11 @@ header {
 }
 
 .skill-icon span {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* Changed to relative */
+    bottom: 0; /* Reset bottom */
     font-size: 14px; /* Font size for desktop */
-    opacity: 0;
-    transition: all 0.3s ease;
+    opacity: 1; /* Ensure it's visible by default */
+    transition: opacity 0.3s ease, bottom 0.3s ease;
 }
 
 .skill-item:hover {
@@ -375,11 +359,11 @@ header {
 }
 
 .skill-item:hover .skill-icon span {
-    opacity: 1;
-    bottom: -40px;
+    opacity: 1; /* Ensure text is visible on hover */
+    bottom: 0; /* Adjust position on hover */
 }
 
-/* Tablet adjustments */
+/* Adjustments for different screen sizes */
 @media (max-width: 768px) {
     .skill-item {
         width: 64px; /* Adjusted for tablet */
@@ -391,7 +375,6 @@ header {
     }
 }
 
-/* Mobile adjustments */
 @media (max-width: 480px) {
     .skill-item {
         width: 48px; /* Adjusted for mobile */
@@ -403,12 +386,7 @@ header {
     }
 }
 
-/* PC version adjustments */
 @media (min-width: 1024px) {
-    .skillz__content {
-        grid-template-columns: repeat(4, 1fr); /* Four columns for desktop */
-    }
-
     .skill-item {
         width: 100px; /* Larger size for desktop */
         height: 100px; /* Larger size for desktop */

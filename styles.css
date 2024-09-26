@@ -90,25 +90,45 @@ font-family: 'Roboto Thin', sans-serif;
   }
 }
 h5 {
-font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Medium', sans-serif;
   margin-left: 20px; /* Default for larger screens */
+  font-size: 1rem; /* Set a base font size for all screen sizes */
+  position: relative; /* Required for positioning the pseudo-element */
+  display: inline-block; /* Ensures that the underline fits the content width */
+  overflow: hidden; /* Clips the underline if it overflows the content width */
 }
 
+h5::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Start with no visible underline */
+  height: 2px;
+  background-color: #007BFF; /* Blue underline color */
+  transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+
+h5:hover::after {
+  width: 100%; /* Expand the underline across the full width on hover */
+}
+
+/* Adjust margins and font size based on screen width */
 @media (max-width: 768px) {
-    .h5 {
-        margin-left: 10px; /* Reduce left margin for tablets */
-    }
+  h5 {
+    margin-left: 10px; /* Reduce left margin for tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  h5 {
+    font-size: 1rem; /* Ensures consistent font size at this breakpoint */
+  }
 }
 
 @media (max-width: 480px) {
-    .h5 {
-        margin-left: 5px; /* Further reduce margin for mobile */
-    }
-}
-/* Adjust font size for screens smaller than 600px */
-@media (max-width: 600px) {
   h5 {
-    font-size: 1rem; /* Reduces the font size to the default 16px */
+    margin-left: 5px; /* Further reduce margin for mobile phones */
   }
 }
 h6 {

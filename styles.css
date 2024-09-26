@@ -51,23 +51,45 @@ p {
   text-align: left;
 }
 h1 {
-  
+   
  font-family: 'Roboto Black', sans-serif;
+  margin-left: 20px; /* Default for larger screens */
+}
 
+@media (max-width: 768px) {
+    .h1 {
+        margin-left: 10px; /* Reduce left margin for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .h1 {
+        margin-left: 5px; /* Further reduce margin for mobile */
+    }
 }
 h2 {
-font-family: 'Roboto Light', sans-serif;
-font-weight: light;
-  
-
+font-family: 'Roboto Thin', sans-serif;
+  margin-left: 20px; /* Default for larger screens */
 }
 
+@media (max-width: 768px) {
+    .h2 {
+        margin-left: 10px; /* Reduce left margin for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .h2 {
+        margin-left: 5px; /* Further reduce margin for mobile */
+    }
+}
 /* Adjust font size for screens smaller than 600px */
 @media (max-width: 600px) {
   p {
     font-size: 1rem; /* Reduces the font size to the default 16px */
   }
 }
+
 header {
     background: #f8f8f8;
     padding: 10px;

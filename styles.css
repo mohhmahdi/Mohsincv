@@ -1,32 +1,4 @@
-/* Base styles for 1920px */
-.container {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
-/* Adjustments for smaller desktops */
-@media (max-width: 1919px) {
-    .container {
-        padding: 15px;
-    }
-}
-
-/* Tablet and below */
-@media (max-width: 1024px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-}
-
-/* Mobile phones */
-@media (max-width: 768px) {
-    .container {
-        padding: 5px;
-    }
-}
 body {
     margin: 0;
     padding: 0;

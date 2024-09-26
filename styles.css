@@ -183,11 +183,7 @@ nav {
 .my-info-section {
   padding: 40px 0;
 }
-/* General styles */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif; /* Adjust to your preferred font */
-}
+
 
 /* Header styles */
 header {

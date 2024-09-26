@@ -308,6 +308,11 @@ header {
     justify-content: space-around;
     align-items: flex-end;
     gap: 20px; /* Adds spacing between items */
+    position: relative; /* Change to relative */
+    bottom: 0; /* Reset bottom */
+    font-size: 14px; /* Font size for desktop */
+    opacity: 1; /* Ensure it's visible by default */
+    transition: all 0.3s ease;
 }
 
 /

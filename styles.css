@@ -298,7 +298,7 @@ header {
     font-size: 14px;
   }
 /* Skills Section */
-/* Basic styling for the headers */
+//* Basic styling for the headers */
 h4 {
     margin-top: 40px; /* Space above each header */
     margin-bottom: 20px; /* Space below each header before the skill items */
@@ -312,7 +312,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns on all devices by default */
     gap: 20px; /* Space between skill items */
-    margin-bottom: 40px; /* Space below the entire skills set before next header */
+    margin-bottom: 40px; /* Space below the entire skills set before next content */
 }
 
 .skill-item {
@@ -325,14 +325,15 @@ h4 {
 .skill-icon {
     width: 64px; /* Fixed icon width */
     height: 64px; /* Fixed icon height */
+    display: inline-block; /* Ensures it behaves as block but fits content */
     overflow: hidden; /* Keeps any overflowing parts of the image from showing */
 }
 
 .skill-icon img {
     display: block; /* Removes any margin/padding issues related to inline elements */
-    width: 64px; /* Explicit width to override any other styles */
-    height: 64px; /* Explicit height to override any other styles */
-    object-fit: contain; /* Ensures the image fits within the bounds without cropping */
+    width: 64px !important; /* Explicit width to override any other styles */
+    height: 64px !important; /* Explicit height to override any other styles */
+    object-fit: contain !important; /* Ensures the image fits within the bounds without cropping */
     overflow: visible; /* Revert overflow behavior to default */
     clip: auto; /* Remove clipping */
 }
@@ -348,7 +349,6 @@ h4 {
     h4 {
         font-size: 20px; /* Larger font size for larger screens */
     }
-}
 }
     .whatsapp-chat-float {
   position: fixed;

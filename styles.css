@@ -272,17 +272,34 @@ header {
 .image-container {
   flex: 0 0 30%;
   text-align: left;
+  position: relative; /* Position relative to allow absolute positioning of the button */
 }
 
 .image-container img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
+  display: block;
 }
 
 .image-container h4 {
   margin-top: 10px;
   font-size: 18px;
+}
+
+.image-button {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust to keep the button inside the image on the right */
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.image-button img {
+  width: 30px; /* Icon size, adjust as necessary */
+  height: auto;
 }
 
 .text-container {
@@ -329,6 +346,7 @@ header {
   .text-container p {
     font-size: 14px;
   }
+}
 /* Skills Section */
 /* Basic styling for the headers */
 h4 {

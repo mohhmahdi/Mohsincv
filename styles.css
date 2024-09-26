@@ -320,20 +320,21 @@ h4 {
     flex-direction: column; /* Vertical stack for all devices */
     align-items: center; /* Centering items for visual consistency */
     text-align: center; /* Center-aligning text within each skill item */
-    margin-bottom: 20px; /* Space between each icon-text group */
 }
 
 .skill-icon {
-    width: 64px; /* Fixed icon width for all devices */
-    height: 64px; /* Fixed icon height for all devices */
-    margin-bottom: 8px; /* Space between the icon and the text */
-    overflow: hidden; /* Prevents any overflow from icon container */
+    width: 64px; /* Fixed icon width */
+    height: 64px; /* Fixed icon height */
+    overflow: hidden; /* Keeps any overflowing parts of the image from showing */
 }
 
 .skill-icon img {
-    width: 100%; /* Ensures the image uses the full width of its container */
-    height: 100%; /* Ensures the image uses the full height of its container */
-    object-fit: cover; /* Ensures the image covers the space without distorting aspect ratio */
+    display: block; /* Removes any margin/padding issues related to inline elements */
+    width: 64px; /* Explicit width to override any other styles */
+    height: 64px; /* Explicit height to override any other styles */
+    object-fit: contain; /* Ensures the image fits within the bounds without cropping */
+    overflow: visible; /* Revert overflow behavior to default */
+    clip: auto; /* Remove clipping */
 }
 
 /* Responsive adjustments for larger screens */
@@ -347,6 +348,7 @@ h4 {
     h4 {
         font-size: 20px; /* Larger font size for larger screens */
     }
+}
 }
     .whatsapp-chat-float {
   position: fixed;

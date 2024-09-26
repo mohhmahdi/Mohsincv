@@ -303,16 +303,17 @@ header {
   }
 /* Skills Section */
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
     gap: 20px; /* Adds spacing between items */
+    justify-content: center;
+    padding: 20px; /* Padding around the grid */
 }
 
 .skill-item {
-    position: relative;
-    width: 80px; /* Standard size for desktop */
-    height: 80px; /* Standard size for desktop */
+    display: flex; /* Using flex to align image and text vertically */
+    flex-direction: column; /* Stack image and text */
+    align-items: center; /* Center align children */
     cursor: pointer;
     overflow: hidden;
     border-radius: 12px;
@@ -321,31 +322,28 @@ header {
 }
 
 .skill-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    background-color: #f1f1f1;
+    width: 60px; /* Smaller width for icons */
+    height: 60px; /* Smaller height for icons */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f1f1f1;
+    border-radius: 50%; /* Circular icons */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .skill-icon img {
-    width: 100%; /* Ensures the image fills the container */
-    height: 100%; /* Ensures the image fills the container */
+    width: 80%; /* Image fills less of the container for better aesthetics */
+    height: 80%; /* Image fills less of the container */
     object-fit: contain; /* Maintains aspect ratio */
 }
 
 .skill-icon span {
-    position: relative; /* Changed to relative */
-    bottom: 0; /* Reset bottom */
     font-size: 14px; /* Font size for desktop */
+    margin-top: 8px; /* Space between icon and text */
+    text-align: center; /* Center the text under the icon */
     opacity: 1; /* Ensure it's visible by default */
-    transition: opacity 0.3s ease, bottom 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .skill-item:hover {
@@ -354,46 +352,41 @@ header {
 }
 
 .skill-item:hover .skill-icon {
-    background-color: #e0e0e0;
+    background-color: #e0e0e0; /* Lighter background on hover */
     transform: scale(1.1);
 }
 
-.skill-item:hover .skill-icon span {
-    opacity: 1; /* Ensure text is visible on hover */
-    bottom: 0; /* Adjust position on hover */
-}
-
-/* Adjustments for different screen sizes */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .skill-item {
-        width: 64px; /* Adjusted for tablet */
-        height: 64px; /* Adjusted for tablet */
+    .skill-icon {
+        width: 48px; /* Smaller for tablets */
+        height: 48px;
     }
 
     .skill-icon span {
-        font-size: 12px; /* Adjusted font size for tablet */
+        font-size: 12px; /* Smaller font size for tablets */
     }
 }
 
 @media (max-width: 480px) {
-    .skill-item {
-        width: 48px; /* Adjusted for mobile */
-        height: 48px; /* Adjusted for mobile */
+    .skill-icon {
+        width: 40px; /* Smaller for mobile */
+        height: 40px;
     }
 
     .skill-icon span {
-        font-size: 10px; /* Adjusted font size for mobile */
+        font-size: 10px; /* Smaller font size for mobile */
     }
 }
 
 @media (min-width: 1024px) {
-    .skill-item {
-        width: 100px; /* Larger size for desktop */
-        height: 100px; /* Larger size for desktop */
+    .skill-icon {
+        width: 70px; /* Larger size for large desktops */
+        height: 70px;
     }
 
     .skill-icon span {
-        font-size: 16px; /* Font size for desktop */
+        font-size: 16px; /* Larger font size for large desktops */
     }
 }
     .whatsapp-chat-float {

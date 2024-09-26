@@ -313,21 +313,21 @@ h4 {
 
 /* Styling for the skills container */
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five columns for desktop */
+    justify-content: space-around; /* Even spacing around items */
+    align-items: flex-end; /* Align items to the bottom */
     gap: 20px; /* Space between skill items */
     margin-bottom: 40px; /* Space below the entire skills set before next header */
 }
 
 .skill-item {
-    flex-basis: 20%; /* Adjust the width of each skill item here */
     text-align: center; /* Centering content within each skill item */
 }
 
 .skill-icon {
-    width: 60px; /* Adjust the size of the icon container */
-    height: 60px; /* Adjust the height of the icon container */
+    width: 50px; /* Smaller icons for desktop */
+    height: 50px; /* Smaller icons for desktop */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -341,25 +341,34 @@ h4 {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
+    .skills {
+        grid-template-columns: repeat(3, max-content); /* Three columns with max content width */
+    }
+
     .skill-item {
-        flex-basis: 46%; /* Adjusts to about half-width on smaller screens */
+        margin-bottom: 20px; /* Adjust spacing for clarity */
     }
 
     .skill-icon {
-        width: 50px; /* Slightly smaller icons on smaller screens */
-        height: 50px;
+        width: 40px; /* Adjust icon size for mobile */
+        height: 40px;
     }
 }
 
 @media (max-width: 480px) {
+    .skills {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on very small screens */
+    }
+
     .skill-item {
-        flex-basis: 100%; /* Full width on very small screens */
+        margin-bottom: 15px; /* Reduced margin for tight spaces */
     }
 
     h4 {
         margin-top: 20px; /* Smaller spacing above headers on mobile */
         margin-bottom: 10px; /* Smaller spacing below headers on mobile */
     }
+}
 }
     .whatsapp-chat-float {
   position: fixed;

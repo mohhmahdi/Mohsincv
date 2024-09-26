@@ -302,91 +302,63 @@ header {
     font-size: 14px;
   }
 /* Skills Section */
+/* Basic styling for the headers */
+h4 {
+    margin-top: 40px; /* Space above each header */
+    margin-bottom: 20px; /* Space below each header before the skill items */
+    text-align: center; /* Centering the header text */
+    font-size: 18px; /* Adjust font size as necessary */
+    color: #333; /* Adjust color as necessary */
+}
+
+/* Styling for the skills container */
 .skills {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
-    gap: 20px; /* Adds spacing between items */
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 20px; /* Padding around the grid */
+    gap: 20px; /* Space between skill items */
+    margin-bottom: 40px; /* Space below the entire skills set before next header */
 }
 
 .skill-item {
-    display: flex; /* Using flex to align image and text vertically */
-    flex-direction: column; /* Stack image and text */
-    align-items: center; /* Center align children */
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-basis: 20%; /* Adjust the width of each skill item here */
+    text-align: center; /* Centering content within each skill item */
 }
 
 .skill-icon {
-    background-color: #f1f1f1;
-    width: 60px; /* Smaller width for icons */
-    height: 60px; /* Smaller height for icons */
+    width: 60px; /* Adjust the size of the icon container */
+    height: 60px; /* Adjust the height of the icon container */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Circular icons */
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 8px; /* Space between the icon and the text label */
 }
 
 .skill-icon img {
-    width: 80%; /* Image fills less of the container for better aesthetics */
-    height: 80%; /* Image fills less of the container */
-    object-fit: contain; /* Maintains aspect ratio */
+    max-width: 100%; /* Ensures the image scales within the container */
+    height: auto;
 }
 
-.skill-icon span {
-    font-size: 14px; /* Font size for desktop */
-    margin-top: 8px; /* Space between icon and text */
-    text-align: center; /* Center the text under the icon */
-    opacity: 1; /* Ensure it's visible by default */
-    transition: opacity 0.3s ease;
-}
-
-.skill-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.skill-item:hover .skill-icon {
-    background-color: #e0e0e0; /* Lighter background on hover */
-    transform: scale(1.1);
-}
-
-/* Responsive Adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .skill-icon {
-        width: 48px; /* Smaller for tablets */
-        height: 48px;
+    .skill-item {
+        flex-basis: 46%; /* Adjusts to about half-width on smaller screens */
     }
 
-    .skill-icon span {
-        font-size: 12px; /* Smaller font size for tablets */
+    .skill-icon {
+        width: 50px; /* Slightly smaller icons on smaller screens */
+        height: 50px;
     }
 }
 
 @media (max-width: 480px) {
-    .skill-icon {
-        width: 40px; /* Smaller for mobile */
-        height: 40px;
+    .skill-item {
+        flex-basis: 100%; /* Full width on very small screens */
     }
 
-    .skill-icon span {
-        font-size: 10px; /* Smaller font size for mobile */
-    }
-}
-
-@media (min-width: 1024px) {
-    .skill-icon {
-        width: 70px; /* Larger size for large desktops */
-        height: 70px;
-    }
-
-    .skill-icon span {
-        font-size: 16px; /* Larger font size for large desktops */
+    h4 {
+        margin-top: 20px; /* Smaller spacing above headers on mobile */
+        margin-bottom: 10px; /* Smaller spacing below headers on mobile */
     }
 }
     .whatsapp-chat-float {

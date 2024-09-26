@@ -312,9 +312,19 @@ h4 {
 }
 
 /* Styling for the skills container */
+/* Basic styling for the headers */
+h4 {
+    margin-top: 40px; /* Space above each header */
+    margin-bottom: 20px; /* Space below each header before the skill items */
+    text-align: left; /* Left-aligning the header text */
+    font-size: 18px; /* Desktop font size */
+    color: #333; /* Text color */
+}
+
+/* Styling for the skills container */
 .skills {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Grid setup that adapts to content size */
+    grid-template-columns: repeat(3, 1fr); /* Three columns on all devices by default */
     gap: 20px; /* Space between skill items */
     margin-bottom: 40px; /* Space below the entire skills set before next header */
 }
@@ -328,8 +338,8 @@ h4 {
 }
 
 .skill-icon {
-    width: 64px; /* Icon width for desktop */
-    height: 64px; /* Icon height for desktop */
+    width: 64px; /* Consistent icon width for all devices */
+    height: 64px; /* Consistent icon height for all devices */
     margin-bottom: 8px; /* Space between the icon and the text */
 }
 
@@ -338,33 +348,18 @@ h4 {
     height: auto; /* Maintains the aspect ratio of the image */
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .skill-icon {
-        width: 50px; /* Slightly smaller icons for tablets */
-        height: 50px;
-    }
-
-    .skill-item {
-        margin-bottom: 15px; /* Reduced spacing between items for compact layout */
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+    .skills {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1024px) {
     h4 {
-        font-size: 16px; /* Slightly smaller font size for mobile */
-        margin-top: 20px; /* Smaller spacing above headers on mobile */
-        margin-bottom: 10px; /* Smaller spacing below headers on mobile */
+        font-size: 20px; /* Larger font size for larger screens */
     }
-
-    .skills {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust column width for smaller screens */
-    }
-
-    .skill-icon {
-        width: 40px; /* Smaller icons for mobile */
-        height: 40px;
-    }
+}
 }
     .whatsapp-chat-float {
   position: fixed;

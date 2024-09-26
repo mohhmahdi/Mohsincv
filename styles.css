@@ -9,11 +9,32 @@ body {
     background-attachment: fixed;
       background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
 }
-h3{
-font-weight: bold;
-font-family: 'Chiller', cursive; /* Use Chiller font */
-font-size: 150px; /* Adjust as needed */
-      text-align: center; /* Center text on smaller screens */
+h3 {
+    font-weight: bold;
+    font-family: 'Chiller', cursive; /* Ensure Chiller is properly loaded */
+    font-size: 150px; /* Default font size for larger screens */
+    text-align: center;
+}
+
+/* Smaller screens (e.g., tablets) */
+@media (max-width: 1024px) {
+    h3 {
+        font-size: 120px; /* Smaller font size for medium screens */
+    }
+}
+
+/* Even smaller screens (e.g., large phones) */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 90px; /* Smaller font size for small screens */
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    h3 {
+        font-size: 60px; /* Smaller font size for very small screens */
+    }
 }
 
 

@@ -111,6 +111,7 @@ nav {
     flex: 1;
     margin-right: 20px; /* Space between text and image */
     font-size: 1.2rem; /* Increase font size for better readability */
+font-family: 'Chiller', cursive; /* Use Chiller font */
 }
 
 .home-image {

@@ -83,7 +83,7 @@ nav {
 /* Navigation link styles */
 .nav-links a {
     font-family: 'Chiller', cursive; /* Use Chiller font */
-    font-size: 16px; /* Adjust as needed */
+    font-size: 30px; /* Adjust as needed */
     color: #333; /* Change to your desired text color */
     text-decoration: none; /* Remove underline */
     padding: 0.5rem 1rem; /* Add padding for better spacing */

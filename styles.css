@@ -388,6 +388,7 @@ h4 {
     grid-template-columns: repeat(3, 1fr); /* Three columns on all devices by default */
     gap: 20px; /* Space between skill items */
     margin-bottom: 40px; /* Space below the entire skills set before next content */
+ font-family: 'Roboto Thin', sans-serif;
 }
 
 .skill-item {
@@ -395,7 +396,7 @@ h4 {
     flex-direction: column; /* Vertical stack for all devices */
     align-items: center; /* Centering items for visual consistency */
     text-align: center; /* Center-aligning text within each skill item */
-    font-family: 'Roboto Thin', sans-serif;
+   
 }
 
 .skill-icon {

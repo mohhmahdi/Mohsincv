@@ -298,45 +298,38 @@ header {
     font-size: 14px;
   }
 /* Skills Section */
-/* Reset specific for skill components to avoid unwanted inheritance */
-.skill-reset {
-    all: revert; /* Resets to the browser's default styling, not quite initial but often more practical */
-}
-
 /* Basic styling for the headers */
-.skill-reset h4 {
+h4 {
     margin-top: 40px; /* Space above each header */
     margin-bottom: 20px; /* Space below each header before the skill items */
     text-align: left; /* Left-aligning the header text */
     font-size: 18px; /* Desktop font size */
     color: #333; /* Text color */
-    font-family: Arial, sans-serif; /* Ensures consistent font family */
 }
 
 /* Styling for the skills container */
-.skill-reset .skills {
+.skills {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns on all devices by default */
     gap: 20px; /* Space between skill items */
     margin-bottom: 40px; /* Space below the entire skills set before next content */
-    font-family: inherit; /* Explicitly inherit font-family if needed */
 }
 
-.skill-reset .skill-item {
+.skill-item {
     display: flex;
     flex-direction: column; /* Vertical stack for all devices */
     align-items: center; /* Centering items for visual consistency */
     text-align: center; /* Center-aligning text within each skill item */
 }
 
-.skill-reset .skill-icon {
+.skill-icon {
     width: 64px; /* Fixed icon width */
     height: 64px; /* Fixed icon height */
     display: inline-block; /* Ensures it behaves as block but fits content */
     overflow: hidden; /* Keeps any overflowing parts of the image from showing */
 }
 
-.skill-reset .skill-icon img {
+.skill-icon img {
     display: block; /* Removes any margin/padding issues related to inline elements */
     width: 64px !important; /* Explicit width to override any other styles */
     height: 64px !important; /* Explicit height to override any other styles */
@@ -347,13 +340,13 @@ header {
 
 /* Responsive adjustments for larger screens */
 @media (min-width: 768px) {
-    .skill-reset .skills {
+    .skills {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
     }
 }
 
 @media (min-width: 1024px) {
-    .skill-reset h4 {
+    h4 {
         font-size: 20px; /* Larger font size for larger screens */
     }
 }

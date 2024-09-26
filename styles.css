@@ -85,12 +85,12 @@ font-family: 'Roboto Thin', sans-serif;
 }
 /* Adjust font size for screens smaller than 600px */
 @media (max-width: 600px) {
-  h5 {
+  h2 {
     font-size: 1rem; /* Reduces the font size to the default 16px */
   }
 }
 h5 {
-font-family: 'Roboto Thin', sans-serif;
+font-family: 'Roboto Medium', sans-serif;
   margin-left: 20px; /* Default for larger screens */
 }
 
@@ -112,7 +112,7 @@ font-family: 'Roboto Thin', sans-serif;
   }
 }
 h6 {
-font-family: 'Roboto Thin', sans-serif;
+font-family: 'Roboto Black', sans-serif;
   margin-left: 20px; /* Default for larger screens */
 }
 
@@ -134,7 +134,7 @@ font-family: 'Roboto Thin', sans-serif;
   }
 }
 h7 {
-font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Black', sans-serif;
   margin-left: 20px; /* Default for larger screens */
 }
 

@@ -302,104 +302,116 @@ header {
     font-size: 14px;
   }
 /* Skills Section */
+.skillz__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Responsive grid */
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 20px; /* Adds spacing between items */
+}
+
 /* Skills Section */
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .skill-item {
-  position: relative;
-  width: 80px; /* Standard size for desktop */
-  height: 80px; /* Standard size for desktop */
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 80px; /* Standard size for desktop */
+    height: 80px; /* Standard size for desktop */
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f1f1f1;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .skill-icon img {
-  width: 100%; /* Ensures the image fills the container */
-  height: 100%; /* Ensures the image fills the container */
-  object-fit: contain; /* Maintains aspect ratio */
+    width: 100%; /* Ensures the image fills the container */
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: contain; /* Maintains aspect ratio */
 }
 
 .skill-icon span {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 14px; /* Font size for desktop */
-  opacity: 0;
-  transition: all 0.3s ease;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px; /* Font size for desktop */
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
 .skill-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .skill-item:hover .skill-icon {
-  background-color: #e0e0e0;
-  transform: scale(1.1);
+    background-color: #e0e0e0;
+    transform: scale(1.1);
 }
 
 .skill-item:hover .skill-icon span {
-  opacity: 1;
-  bottom: -40px;
+    opacity: 1;
+    bottom: -40px;
 }
 
 /* Tablet adjustments */
 @media (max-width: 768px) {
-  .skill-item {
-    width: 64px; /* Adjusted for tablet */
-    height: 64px; /* Adjusted for tablet */
-  }
+    .skill-item {
+        width: 64px; /* Adjusted for tablet */
+        height: 64px; /* Adjusted for tablet */
+    }
 
-  .skill-icon img {
-    width: 100%; /* Ensures the image fills the container */
-    height: 100%; /* Ensures the image fills the container */
-    object-fit: contain; /* Maintains aspect ratio */
-  }
-
-  .skill-icon span {
-    font-size: 12px; /* Adjusted font size for tablet */
-  }
+    .skill-icon span {
+        font-size: 12px; /* Adjusted font size for tablet */
+    }
 }
 
 /* Mobile adjustments */
 @media (max-width: 480px) {
-  .skill-item {
-    width: 48px; /* Adjusted for mobile */
-    height: 48px; /* Adjusted for mobile */
-  }
+    .skill-item {
+        width: 48px; /* Adjusted for mobile */
+        height: 48px; /* Adjusted for mobile */
+    }
 
-  .skill-icon img {
-    width: 100%; /* Ensures the image fills the container */
-    height: 100%; /* Ensures the image fills the container */
-    object-fit: contain; /* Maintains aspect ratio */
-  }
+    .skill-icon span {
+        font-size: 10px; /* Adjusted font size for mobile */
+    }
+}
 
-  .skill-icon span {
-    font-size: 10px; /* Adjusted font size for mobile */
-  }
+/* PC version adjustments */
+@media (min-width: 1024px) {
+    .skillz__content {
+        grid-template-columns: repeat(4, 1fr); /* Four columns for desktop */
+    }
+
+    .skill-item {
+        width: 100px; /* Larger size for desktop */
+        height: 100px; /* Larger size for desktop */
+    }
+
+    .skill-icon span {
+        font-size: 16px; /* Font size for desktop */
+    }
 }
     .whatsapp-chat-float {
   position: fixed;

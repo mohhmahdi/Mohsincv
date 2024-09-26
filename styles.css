@@ -310,7 +310,7 @@ h4 {
 /* Styling for the skills container */
 .skills {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns on all devices by default */
+    grid-template-columns: 1fr; /* One column on mobile devices */
     gap: 20px; /* Space between skill items */
     margin-bottom: 40px; /* Space below the entire skills set before next content */
 }
@@ -336,6 +336,12 @@ h4 {
     object-fit: contain !important; /* Ensures the image fits within the bounds without cropping */
     overflow: visible; /* Revert overflow behavior to default */
     clip: auto; /* Remove clipping */
+}
+
+.skill-name {
+    font-size: 14px; /* Appropriate size for readability */
+    color: #666; /* A softer color that contrasts less with the background */
+    margin-top: 5px; /* Space between the icon and the name */
 }
 
 /* Responsive adjustments for larger screens */

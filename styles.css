@@ -20,7 +20,6 @@ text-shadow:
         -1px  1px 0 #FAFAFA,
          1px  1px 0 #FAFAFA;
 }
-
 /* Smaller screens (e.g., tablets) */
 @media (max-width: 1024px) {
     h3 {
@@ -41,9 +40,19 @@ text-shadow:
         font-size: 60px; /* Smaller font size for very small screens */
     }
 }
+p {
+  font-size: 1.2rem;
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: normal;
+  text-align: left;
+}
 
-
-
+/* Adjust font size for screens smaller than 600px */
+@media (max-width: 600px) {
+  p {
+    font-size: 1rem; /* Reduces the font size to the default 16px */
+  }
+}
 header {
     background: #f8f8f8;
     padding: 10px;
@@ -142,7 +151,7 @@ nav {
     flex: 1;
     margin-right: 20px; /* Space between text and image */
     font-size: 1.2rem; /* Increase font size for better readability */
-font-family: 'Century Gothic', cursive; /* Use Chiller font */
+font-family: 'Century Gothic', Sans-serif; /* Use Chiller font */
 }
 
 .home-image {

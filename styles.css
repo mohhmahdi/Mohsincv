@@ -50,6 +50,17 @@ p {
   font-weight: light;
   text-align: left;
 }
+h1 {
+  
+ font-family: 'Roboto Black', sans-serif;
+
+}
+h2 {
+font-family: 'Roboto Light', sans-serif;
+font-weight: light;
+  
+
+}
 
 /* Adjust font size for screens smaller than 600px */
 @media (max-width: 600px) {
@@ -155,7 +166,7 @@ nav {
     flex: 1;
     margin-right: 20px; /* Space between text and image */
     font-size: 1.2rem; /* Increase font size for better readability */
-    font-family: 'Roboto Medium', sans-serif;
+    
                                                 
 }
 

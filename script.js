@@ -2,10 +2,13 @@ document.querySelector('.contact-form button').addEventListener('click', functio
     event.preventDefault(); // Prevent default form submission
     alert('Your message has been sent!');
 });
-document.querySelector('.whatsapp-chat-icon').addEventListener('click', () => {
+// This ensures the code runs after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.whatsapp-chat-container').style.display = 'block';
-}
+    // Adding click event listener to the WhatsApp chat icon
+    document.querySelector('.whatsapp-chat-icon').addEventListener('click', () => {
+        // Setting the display style of the WhatsApp chat container to 'block'
+        document.querySelector('.whatsapp-chat-container').style.display = 'block';
+    });
 });
 const whatsappContainer = document.querySelector('.whatsapp-chat-container');
 if (whatsappContainer) {

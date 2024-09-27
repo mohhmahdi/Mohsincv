@@ -13,6 +13,13 @@ body {
     background-attachment: fixed;
       background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
 }
+.linkedin-container {
+    display: flex;       /* Establishes a flex container */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh;      /* Takes at least the full height of the viewport */
+    width: 100vw;       /* Takes at least the full width of the viewport */
+}
 h3 {
     font-weight: bold;
     font-family: 'Chiller', cursive; /* Ensure Chiller is properly loaded */
@@ -45,6 +52,12 @@ text-shadow:
     }
 }
 p {
+  font-size: 1.2rem;
+ font-family: 'Roboto Light', sans-serif;
+  font-weight: light;
+  text-align: left;
+}
+p5 {
   font-size: 1.2rem;
  font-family: 'Roboto Light', sans-serif;
   font-weight: light;

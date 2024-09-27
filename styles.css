@@ -17,7 +17,14 @@ body {
     display: flex;       /* Establishes a flex container */
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
-    height: 100vh;      /* Takes at least the full height of the viewport */
+    height: 11vh;      /* Takes at least the  height of the viewport */
+    width: 100vw;       /* Takes at least the full width of the viewport */
+}
+.copy-container {
+    display: flex;       /* Establishes a flex container */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 11vh;      /* Takes at least the  height of the viewport */
     width: 100vw;       /* Takes at least the full width of the viewport */
 }
 h3 {
@@ -63,12 +70,7 @@ p5 {
   font-weight: light;
   text-align: left;
 }
-p4 {
-  font-size: 1.2rem;
- font-family: 'Roboto meduim', sans-serif;
-  text-align: center;
-  margin-left: 500px;
-}
+
 @media (max-width: 768px) {
     p4 {
         margin-left: 250px; /* Reduce left margin for tablets */

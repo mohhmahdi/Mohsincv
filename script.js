@@ -3,9 +3,9 @@ document.querySelector('.contact-form button').addEventListener('click', functio
     alert('Your message has been sent!');
 });
 document.querySelector('.whatsapp-chat-icon').addEventListener('click', () => {
-  document.querySelector('.whatsapp-chat-container').style.display = 'block';
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.whatsapp-chat-container').style.display = 'block';
 });
-
 const whatsappContainer = document.querySelector('.whatsapp-chat-container');
 if (whatsappContainer) {
     whatsappContainer.addEventListener('click', (e) => {

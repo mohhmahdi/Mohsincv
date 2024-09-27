@@ -358,10 +358,13 @@ nav {
     font-size: 25px; /* Example font size */
       width: auto; 
         height: auto; 
+    margin-bottom: 20px; /* Ensures there is space below the paragraph */
 }
 
 .download-button {
+   display: inline-block; /* Ensures the button is treated as an inline element but can have a width and height */
     margin-top: 20px; /* Space above the button */
+    /* Other styles */
 }
 
 /* Responsive CSS */

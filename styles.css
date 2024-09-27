@@ -439,15 +439,14 @@ nav {
 
 }
 
-.work-item-info {
-    margin-top: 10px;
-}
 
 
 
 .work-item-info {
-    font-size: 14px;
-    color: #666;
+font-family: 'Roboto Medium', sans-serif;
+    font-size: 18px;
+    color: #333;
+margin:25px;
 }
 
 @media (max-width: 768px) {

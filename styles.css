@@ -351,9 +351,11 @@ nav {
     margin-right: 20px; /* Adds space between the image and the text */
 }
 
-.info-container p1 {
+.special-paragraph {
     flex: 1; /* Allows the paragraph to fill up the remaining space */
     margin: 0 20px; /* Spacing for text readability */
+    font-family: 'Arial', sans-serif; /* Example font */
+    font-size: 16px; /* Example font size */
 }
 
 .download-button {
@@ -372,15 +374,16 @@ nav {
         margin-right: 0; /* Remove margin between image and text */
     }
 
-    .info-container p1 {
+    .special-paragraph {
         margin: 10px 0; /* Reduced margin in a mobile environment */
+        font-size: 14px; /* Slightly smaller font on mobile */
     }
 
     .download-button {
         width: 100%; /* Make the button full-width on mobile */
     }
 }
-/* ... info section ... */
+/* ... info ends ... */
 .work-items {
     display: flex;
     justify-content: space-between;

@@ -151,7 +151,7 @@ h5:hover::after {
 /* Adjust margins and font size based on screen width */
 @media (max-width: 768px) {
   h5 {
-    margin-left: 10px; /* Reduce left margin for tablets */
+    margin-left: 20px; /* Reduce left margin for tablets */
   }
 }
 
@@ -195,7 +195,7 @@ h7 {
 
 @media (max-width: 768px) {
   h7 {
-        margin-left: 10px; /* Reduce left margin for tablets */
+        margin-left: 20px; /* Reduce left margin for tablets */
     }
 }
 

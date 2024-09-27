@@ -645,10 +645,17 @@ text-align: center;   /* Center-align text */
 .skill-icon span {
     z-index: 10; /* Raise the z-index to make sure it's above any other positioned elements */
     position: relative; /* Needed to make z-index effective */
+   background-color: #ff0; // Bright yellow to test visibility
+    color: #000; // Black text for contrast
 }
 .skill-item:hover .skill-icon span {
     color: #000; /* Make text black on hover for better visibility */
     background-color: rgba(255, 255, 255, 0.8); /* Light background on hover for readability */
+}
+.skill-icon::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 /* Responsive adjustments for larger screens */
 @media (min-width: 768px) {

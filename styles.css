@@ -512,14 +512,15 @@ header {
 }
 
 .text-container {
+ display: flex;
+    justify-content: flex-start;
   flex: 0 0 70%;
   padding-left: 20px;
 }
 
 .text-container p {
-    display: flex;
-    justify-content: flex-start;
-  margin-bottom: 50px;
+   
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
@@ -541,6 +542,8 @@ header {
     flex: 0 0 auto;
     width: 100%;
     padding-left: 0;
+    display: flex;
+    justify-content: flex-start;
   }
   .image-button {
     right: 5%; /* Closer to the edge on smaller screens */

@@ -520,10 +520,10 @@ h4 {
     overflow: visible; /* Revert overflow behavior to default */
     clip: auto; /* Remove clipping */
 }
-.skill-icon span {
+.skills span {
     font-family: 'Roboto Thin', sans-serif; /* Apply font family to the span */
     font-size: 14px; /* Adjust font size as needed */
-    margin-top: 8px; /* Space between icon and text */
+    margin-bottom: 5px; /* Space between icon and text */
 }
 /* Responsive adjustments for larger screens */
 @media (min-width: 768px) {

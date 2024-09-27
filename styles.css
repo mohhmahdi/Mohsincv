@@ -75,17 +75,8 @@ p5 {
       margin: 20px
 }
 
-@media (max-width: 768px) {
-    p4 {
-        margin-left: 250px; /* Reduce left margin for tablets */
-    }
-}
 
-@media (max-width: 480px) {
-    p4 {
-        margin-left: 125px; /* Further reduce margin for mobile */
-    }
-}
+
 h1 {
    
  font-family: 'Roboto Black', sans-serif;

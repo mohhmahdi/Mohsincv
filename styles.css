@@ -63,12 +63,14 @@ p {
  font-family: 'Roboto Light', sans-serif;
   font-weight: light;
   text-align: left;
+    margin: 20px
 }
 p5 {
   font-size: 1.2rem;
  font-family: 'Roboto medium', sans-serif;
   font-weight: light;
   text-align: left;
+      margin: 20px
 }
 
 @media (max-width: 768px) {
@@ -128,6 +130,7 @@ h5 {
   position: relative; /* Required for positioning the pseudo-element */
   display: inline-block; /* Ensures that the underline fits the content width */
   overflow: hidden; /* Clips the underline if it overflows the content width */
+  margin: 20px
 }
 
 h5::after {

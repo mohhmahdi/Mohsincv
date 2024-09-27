@@ -494,6 +494,8 @@ h4 {
     grid-template-columns: repeat(3, 1fr); /* Three columns on all devices by default */
     gap: 20px; /* Space between skill items */
     margin-bottom: 40px; /* Space below the entire skills set before next content */
+    font-family: 'Roboto Thin', sans-serif; /* Apply font family to the span */
+    font-size: 14px; /* Adjust font size as needed */
  
 }
 
@@ -519,11 +521,6 @@ h4 {
     object-fit: contain !important; /* Ensures the image fits within the bounds without cropping */
     overflow: visible; /* Revert overflow behavior to default */
     clip: auto; /* Remove clipping */
-}
-.skills span {
-    font-family: 'Roboto Thin', sans-serif; /* Apply font family to the span */
-    font-size: 14px; /* Adjust font size as needed */
-    margin-bottom: 5px; /* Space between icon and text */
 }
 /* Responsive adjustments for larger screens */
 @media (min-width: 768px) {

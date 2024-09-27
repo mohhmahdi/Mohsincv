@@ -275,7 +275,7 @@ nav {
 .nav-links a {
     font-family: 'Chiller', cursive; /* Use Chiller font */
     font-size: 30px; /* Adjust as needed */
-    color: #4D2DF2; /* Change to your desired text color */
+    color: #333; /* Change to your desired text color */
     text-decoration: none; /* Remove underline */
     padding: 0.5rem 1rem; /* Add padding for better spacing */
     transition: color 0.3s ease; /* Smooth color transition */
@@ -593,7 +593,7 @@ display: flex;
 /* Skills Section */
 /* Basic styling for the headers */
 h4 {
-    margin-top: 40px; /* Space above each header */
+    margin-top: 10px; /* Space above each header */
     margin-bottom: 20px; /* Space below each header before the skill items */
     text-align: left; /* Left-aligning the header text */
     font-size: 18px; /* Desktop font size */

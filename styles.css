@@ -494,8 +494,7 @@ h4 {
     grid-template-columns: repeat(3, 1fr); /* Three columns on all devices by default */
     gap: 20px; /* Space between skill items */
     margin-bottom: 40px; /* Space below the entire skills set before next content */
-    font-family: 'Roboto Thin', sans-serif; /* Apply font family to the span */
-    font-size: 14px; /* Adjust font size as needed */
+    
  
 }
 
@@ -512,6 +511,7 @@ h4 {
     height: 64px; /* Fixed icon height */
     display: inline-block; /* Ensures it behaves as block but fits content */
     overflow: hidden; /* Keeps any overflowing parts of the image from showing */
+text-align: center;   /* Center-align text */
 }
 
 .skill-icon img {
@@ -521,6 +521,11 @@ h4 {
     object-fit: contain !important; /* Ensures the image fits within the bounds without cropping */
     overflow: visible; /* Revert overflow behavior to default */
     clip: auto; /* Remove clipping */
+}
+.skill-icon span {
+    font-family: 'Roboto Thin', sans-serif; /* Apply the Roboto Thin font */
+    font-size: 12px; /* Set the font size to 14px */
+    color: #333; /* Optional: sets the color of the text, change as necessary */
 }
 /* Responsive adjustments for larger screens */
 @media (min-width: 768px) {

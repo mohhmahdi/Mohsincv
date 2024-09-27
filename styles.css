@@ -614,7 +614,7 @@ h4 {
 .skill-item {
     display: flex;
     flex-direction: column; /* Vertical stack for all devices */
-    align-items: center; /* Centering items for visual consistency */
+    align-items: flex-start; /* Centering items for visual consistency */
     margin: 20px;
    
 }

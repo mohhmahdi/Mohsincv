@@ -50,6 +50,12 @@ p {
   font-weight: light;
   text-align: left;
 }
+p {
+  font-size: 1.2rem;
+ font-family: 'Roboto Light', sans-serif;
+  font-weight: light;
+  text-align: center;
+}
 h1 {
    
  font-family: 'Roboto Black', sans-serif;

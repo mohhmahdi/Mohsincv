@@ -272,7 +272,14 @@ nav {
         padding-top: 5rem; /* Adjust for toggle button height */
         opacity: 0; /* Start hidden */
     }
-
+.nav-links a {
+    font-family: 'Chiller', cursive; /* Use Chiller font */
+    font-size: 30px; /* Adjust as needed */
+    color: #333; /* Change to your desired text color */
+    text-decoration: none; /* Remove underline */
+    padding: 0.5rem 1rem; /* Add padding for better spacing */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
     .nav-links.show {
         right: 0; /* Slide in */
         opacity: 1; /* Show when toggled */

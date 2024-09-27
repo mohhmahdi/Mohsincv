@@ -6,11 +6,14 @@ document.querySelector('.whatsapp-chat-icon').addEventListener('click', () => {
   document.querySelector('.whatsapp-chat-container').style.display = 'block';
 });
 
-document.querySelector('.whatsapp-chat-container').addEventListener('click', (e) => {
-  if (e.target.closest('.whatsapp-chat-icon') === null) {
-    document.querySelector('.whatsapp-chat-container').style.display = 'none';
-  }
-});
+const whatsappContainer = document.querySelector('.whatsapp-chat-container');
+if (whatsappContainer) {
+    whatsappContainer.addEventListener('click', (e) => {
+        if (!e.target.closest('.whatsapp-chat-icon')) {
+            whatsappContainer.style.display = 'none';
+        }
+    });
+}
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');

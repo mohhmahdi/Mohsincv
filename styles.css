@@ -636,14 +636,13 @@ text-align: center;   /* Center-align text */
     clip: auto; /* Remove clipping */
 }
 .skill-item .skill-icon span {
-    font-family: Arial, sans-serif; /* Ensures a standard sans-serif font is used */
-    font-size: 12px; /* Increased for visibility, adjust as necessary */
+     font-family: 'Roboto light', sans-serif;
+    font-size: 16px; /* Increased for visibility, adjust as necessary */
     color: #333; /* Ensures color is dark, adjust if background is dark */
     display: block; /* Ensures the span is treated as a block element */
-    margin-top: 4px; /* Adds a little space between the icon and the text */
+    margin-top: 2px; /* Adds a little space between the icon and the text */
     position: relative; /* Setting position to relative */
     z-index: 1; /* Ensure it is above its siblings */
-    background-color: #FFF; /* Adding a background color for contrast */
     width: auto; /* Ensure the width is sufficient to hold the content */
     height: auto; /* Ensure height adjusts to content */
     overflow: visible; /* Ensures no content is clipped */
@@ -669,7 +668,7 @@ text-align: center;   /* Center-align text */
         font-size: 20px;
     }
     .skill-item .skill-icon span {
-        font-size: 16px; /* Ensure this rule is correctly applied */
+        font-size: 12px; /* Ensure this rule is correctly applied */
     }
 }
     .whatsapp-chat-float {

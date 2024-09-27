@@ -362,8 +362,10 @@ nav {
 }
 
 .download-button {
-   display: inline-block; /* Ensures the button is treated as an inline element but can have a width and height */
+
+    display: block; /* Full width button */
     margin-top: 20px; /* Space above the button */
+    width: auto; /* Adjust to content or specific width */
     /* Other styles */
 }
 

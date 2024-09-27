@@ -577,12 +577,9 @@ header {
   }
   .image-button {
     right: 5%; /* Closer to the edge on smaller screens */
-    width: 48px; /* Smaller button on smaller screens */
   }
 
-  .image-button img {
-    width: 48px; /* Adjust icon size for smaller screens */
-  }
+
 }
 
 @media (max-width: 480px) {

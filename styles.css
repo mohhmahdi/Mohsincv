@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    /*background-image: url('/images/background 1.png');*/
+    background-image: url('/images/background 1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -623,7 +623,7 @@ h4 {
     width: 64px; /* Fixed icon width */
     height: 64px; /* Fixed icon height */
     display: inline-block; /* Ensures it behaves as block but fits content */
-    overflow: hidden; /* Keeps any overflowing parts of the image from showing */
+   
 text-align: center;   /* Center-align text */
 }
 

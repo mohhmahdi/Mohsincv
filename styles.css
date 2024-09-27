@@ -348,14 +348,14 @@ nav {
 .info-container img {
     width: 443px;
     height: 710px;
-    margin-right: 20px; /* Adds space between the image and the text */
+    margin-right: 5x; /* Adds space between the image and the text */
 }
 
 .special-paragraph {
     flex: 1; /* Allows the paragraph to fill up the remaining space */
     margin: 0 20px; /* Spacing for text readability */
-    font-family: 'Arial', sans-serif; /* Example font */
-    font-size: 16px; /* Example font size */
+   font-family: 'Roboto Light', sans-serif;
+    font-size: 25px; /* Example font size */
 }
 
 .download-button {

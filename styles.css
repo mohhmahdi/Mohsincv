@@ -642,6 +642,10 @@ text-align: center;   /* Center-align text */
  display: block; /* Ensures the span is treated as a block element, which can help in visibility */
     margin-top: 4px; /* Adds a little space between the icon and the text */
 }
+.skill-icon span {
+    z-index: 10; /* Raise the z-index to make sure it's above any other positioned elements */
+    position: relative; /* Needed to make z-index effective */
+}
 .skill-item:hover .skill-icon span {
     color: #000; /* Make text black on hover for better visibility */
     background-color: rgba(255, 255, 255, 0.8); /* Light background on hover for readability */

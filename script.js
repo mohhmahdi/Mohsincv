@@ -14,15 +14,28 @@ document.querySelector('.whatsapp-chat-container').addEventListener('click', (e)
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-// open menu when clicking 
-menuToggle.addEventListener('click', () => {
+
+// Open/close menu when clicking the toggle
+menuToggle.addEventListener('click', (event) => {
+    // Prevent the click from being considered as outside click
+    event.stopPropagation(); 
+
     navLinks.classList.toggle('show');
     const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
     menuToggle.setAttribute('aria-expanded', !expanded);
 });
+
 // Close menu when clicking outside of it
 document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+    if (navLinks.classList.contains('show')) {
+        navLinks.classList.remove('show');
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+});
+
+// Optional: close menu when a link inside it is clicked
+navLinks.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A') {  // Only if a link was clicked
         navLinks.classList.remove('show');
         menuToggle.setAttribute('aria-expanded', 'false');
     }

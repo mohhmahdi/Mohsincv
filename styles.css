@@ -490,6 +490,7 @@ h4 {
 /* Styling for the skills container */
 .skills {
     display: grid;
+    margin-top: 15px;
     grid-template-columns: repeat(3, 1fr); /* Three columns on all devices by default */
     gap: 20px; /* Space between skill items */
     margin-bottom: 40px; /* Space below the entire skills set before next content */
@@ -527,6 +528,7 @@ h4 {
 /* Responsive adjustments for larger screens */
 @media (min-width: 768px) {
     .skills {
+ margin-top: 15px;
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
     }
 }

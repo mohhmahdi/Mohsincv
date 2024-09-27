@@ -320,6 +320,7 @@ nav {
 }
 
 .work-item img {
+
     width: 100%;
     height: auto;
     border-radius: 5px;
@@ -329,10 +330,7 @@ nav {
     margin-top: 10px;
 }
 
-.work-item-info h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
+
 
 .work-item-info p {
     font-size: 14px;

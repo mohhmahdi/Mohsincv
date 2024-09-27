@@ -492,16 +492,16 @@ header {
 
 .image-button {
   position: absolute;
-  top: 50%;
-  right: 50px; /* Adjust to keep the button inside the image on the right */
-  transform: translateY(-50%);
+  top: 50%; /* Center vertically */
+  right: 10px; /* Keep close to the right edge of the image */
+  transform: translateY(-50%); /* Center vertically relative to itself */
   border: none;
   background: none;
   cursor: pointer;
 }
 
 .image-button img {
-  width: 64px; /* Icon size, adjust as necessary */
+  width: 64px;
   height: auto;
 }
 
@@ -530,6 +530,14 @@ header {
     flex: 0 0 auto;
     width: 100%;
     padding-left: 0;
+  }
+  .image-button {
+    right: 5px; /* Closer to the edge on smaller screens */
+    width: 48px; /* Smaller button on smaller screens */
+  }
+
+  .image-button img {
+    width: 48px; /* Adjust icon size for smaller screens */
   }
 }
 

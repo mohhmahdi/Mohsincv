@@ -522,10 +522,10 @@ text-align: center;   /* Center-align text */
     overflow: visible; /* Revert overflow behavior to default */
     clip: auto; /* Remove clipping */
 }
-.skill-icon span {
-    font-family: 'Roboto Thin', sans-serif; /* Apply the Roboto Thin font */
-    font-size: 12px; /* Set the font size to 14px */
-    color: #333; /* Optional: sets the color of the text, change as necessary */
+.skill-item .skill-icon span {
+    font-family: Arial, sans-serif; /* Temporarily use Arial to test */
+    font-size: 12px;
+    color: #333;
 }
 /* Responsive adjustments for larger screens */
 @media (min-width: 768px) {
@@ -534,13 +534,12 @@ text-align: center;   /* Center-align text */
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
     }
 }
-
 @media (min-width: 1024px) {
     h4 {
-        font-size: 20px; /* Larger font size for larger screens */
+        font-size: 20px;
     }
-.skill-icon span {
-        font-size: 16px; /* Larger font size for desktop */
+    .skill-item .skill-icon span {
+        font-size: 16px; /* Ensure this rule is correctly applied */
     }
 }
     .whatsapp-chat-float {

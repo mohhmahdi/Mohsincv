@@ -432,9 +432,11 @@ nav {
 
 .work-item img {
 
-    width: 100%;
+    width: 90%;
     height: auto;
     border-radius: 5px;
+    margin : 20px;
+
 }
 
 .work-item-info {
@@ -450,8 +452,20 @@ nav {
 
 @media (max-width: 768px) {
     .work-item {
+ display: flex;  /* Use flexbox to center content */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically if needed */
+    margin-bottom: 20px;  /* Optional: Adds space between items */
         width: 100%;
     }
+.work-item img {
+
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+
+}
+
 }
 .my-info-section {
   padding: 40px 0;

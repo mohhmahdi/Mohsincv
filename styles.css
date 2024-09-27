@@ -33,6 +33,7 @@ h3 {
     font-size: 150px; /* Default font size for larger screens */
     text-align: center;
     margin: auto;
+    margin-top: 20px;
 text-shadow:
         -1px -1px 0 #FAFAFA,  
          1px -1px 0 #FAFAFA,

@@ -5,6 +5,7 @@ document.querySelector('.contact-form button').addEventListener('click', functio
 document.querySelector('.whatsapp-chat-icon').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.whatsapp-chat-container').style.display = 'block';
+}
 });
 const whatsappContainer = document.querySelector('.whatsapp-chat-container');
 if (whatsappContainer) {

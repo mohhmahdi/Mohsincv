@@ -356,6 +356,8 @@ nav {
     margin: 0 20px; /* Spacing for text readability */
    font-family: 'Roboto Light', sans-serif;
     font-size: 25px; /* Example font size */
+      width: 4005px; 
+        height: auto; 
 }
 
 .download-button {
@@ -375,6 +377,7 @@ nav {
     }
 
     .special-paragraph {
+
         margin: 10px 0; /* Reduced margin in a mobile environment */
         font-size: 14px; /* Slightly smaller font on mobile */
     }

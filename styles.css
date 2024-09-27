@@ -697,17 +697,7 @@ text-align: center;   /* Center-align text */
   animation: slideIn 0.3s ease;
 }
 
-.whatsapp-chat-header h3 {
-  margin: 0;
-  font-size: 18px;
-  color: #128c7e;
-}
 
-.whatsapp-chat-body p {
-  margin: 10px 0 0;
-  font-size: 14px;
-  color: #666;
-}
 
 @keyframes slideIn {
   0% {

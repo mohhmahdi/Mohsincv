@@ -54,7 +54,18 @@ p4 {
   font-size: 1.2rem;
  font-family: 'Roboto meduim', sans-serif;
   text-align: center;
-  margin-left: 100px;
+  margin-left: 500px;
+}
+@media (max-width: 768px) {
+    p4 {
+        margin-left: 250px; /* Reduce left margin for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    p4 {
+        margin-left: 125px; /* Further reduce margin for mobile */
+    }
 }
 h1 {
    
@@ -63,13 +74,13 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    .h1 {
+  h1 {
         margin-left: 10px; /* Reduce left margin for tablets */
     }
 }
 
 @media (max-width: 480px) {
-    .h1 {
+  h1 {
         margin-left: 5px; /* Further reduce margin for mobile */
     }
 }
@@ -79,13 +90,13 @@ font-family: 'Roboto Thin', sans-serif;
 }
 
 @media (max-width: 768px) {
-    .h2 {
+  h2 {
         margin-left: 10px; /* Reduce left margin for tablets */
     }
 }
 
 @media (max-width: 480px) {
-    .h2 {
+  h2 {
         margin-left: 5px; /* Further reduce margin for mobile */
     }
 }
@@ -149,7 +160,7 @@ font-family: 'Roboto Black', sans-serif;
 }
 
 @media (max-width: 480px) {
-    .h6 {
+  h6 {
         margin-left: 5px; /* Further reduce margin for mobile */
     }
 }
@@ -165,13 +176,13 @@ h7 {
 }
 
 @media (max-width: 768px) {
-    .h7 {
+  h7 {
         margin-left: 10px; /* Reduce left margin for tablets */
     }
 }
 
 @media (max-width: 480px) {
-    .h7 {
+  h7 {
         margin-left: 5px; /* Further reduce margin for mobile */
     }
 }

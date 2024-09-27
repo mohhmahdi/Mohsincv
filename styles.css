@@ -127,12 +127,11 @@ font-family: 'Roboto Thin', sans-serif;
 }
 h5 {
   font-family: 'Roboto Medium', sans-serif;
-  margin-left: 20px; /* Default for larger screens */
   font-size: 1rem; /* Set a base font size for all screen sizes */
   position: relative; /* Required for positioning the pseudo-element */
   display: inline-block; /* Ensures that the underline fits the content width */
   overflow: hidden; /* Clips the underline if it overflows the content width */
-  margin: 20px
+  margin: 25px
 }
 
 h5::after {

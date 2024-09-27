@@ -475,7 +475,10 @@ header {
 .image-container {
   flex: 0 0 30%;
   text-align: left;
-  position: relative; /* Position relative to allow absolute positioning of the button */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: flex-end; /* Align children to the right */
+  position: relative;
 }
 
 .image-container img {
@@ -491,13 +494,14 @@ header {
 }
 
 .image-button {
-  position: absolute;
+   position: absolute;
   top: 50%; /* Center vertically */
-  right: 10px; /* Keep close to the right edge of the image */
-  transform: translateY(-50%); /* Center vertically relative to itself */
+  right: 5%; /* Use percentage to keep it close but responsive */
+  transform: translateY(-50%);
   border: none;
   background: none;
   cursor: pointer;
+  margin-right: 10px; /* Adjust spacing as needed */
 }
 
 .image-button img {
@@ -532,7 +536,7 @@ header {
     padding-left: 0;
   }
   .image-button {
-    right: 5px; /* Closer to the edge on smaller screens */
+    right: 5%; /* Closer to the edge on smaller screens */
     width: 48px; /* Smaller button on smaller screens */
   }
 
@@ -557,7 +561,17 @@ header {
   .text-container p {
     font-size: 14px;
   }
+  .image-button {
+    right: 5%; /* Closer to the edge on smaller screens */
+    width: 48px; /* Smaller button on smaller screens */
+  }
+
+  .image-button img {
+    width: 48px; /* Adjust icon size for smaller screens */
+  }
 }
+
+
 /* Skills Section */
 /* Basic styling for the headers */
 h4 {

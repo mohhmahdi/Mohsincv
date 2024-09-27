@@ -361,12 +361,17 @@ nav {
     margin-bottom: 20px; /* Ensures there is space below the paragraph */
 }
 
-.download-button {
+.button-container {
+    position: relative; /* Ensures the positioning context is set */
+    height: 100px; /* Adjust height based on your design */
+    width: 100%; /* Container takes full width of its parent */
+}
 
-    display: block; /* Full width button */
-    margin-top: 20px; /* Space above the button */
-    width: auto; /* Adjust to content or specific width */
-    /* Other styles */
+.download-button {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Align center of the button to the center of the container */
 }
 
 /* Responsive CSS */
@@ -388,9 +393,15 @@ nav {
         width: auto; 
         height: auto; 
     }
+.button-container {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height to accommodate content */
+    }
 
     .download-button {
-        width: auto; /* Make the button full-width on mobile */
+        width: auto; /* Adjust width as needed */
+        padding: 8px 16px; /* Smaller padding on smaller screens */
+        font-size: 14px; /* Smaller font size on smaller screens */
     }
 }
 /* ... info ends ... */

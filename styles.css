@@ -32,6 +32,7 @@ h3 {
     font-family: 'Chiller', cursive; /* Ensure Chiller is properly loaded */
     font-size: 150px; /* Default font size for larger screens */
     text-align: center;
+    margin: auto;
 text-shadow:
         -1px -1px 0 #FAFAFA,  
          1px -1px 0 #FAFAFA,
@@ -802,9 +803,6 @@ gap: 35px; /* Space between skill items */
     margin: auto; /* Center the form */
 }
 
-h3 {
-    text-align: center;
-}
 
 /* Contact form styles */
 .contact-form {

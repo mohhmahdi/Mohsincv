@@ -421,7 +421,7 @@ nav {
 /* Basic styling for the work section */
 /* General styles */
 .work-item {
-    border: 2px solid #fff8ee;
+    border: 5px solid #fff8ee;
     border-radius: 15px;
     padding: 20px;
     margin: 30px;
@@ -488,15 +488,15 @@ nav {
     font-size: 1.5rem; /* Adjust the size as needed */
     font-family: 'Roboto black', sans-serif;
     margin-bottom: 10px; /* Adds space between the header and description */
+height: fit-content;
 }
-.work-item .work-description{
-flex-direction: row-reverse;
-} 
+
 .work-description {
     font-size: 1.2rem;
     font-family: 'Roboto medium', sans-serif;
     text-align: left;
     margin: 20px;
+    height: fit-content;
 }
 
 

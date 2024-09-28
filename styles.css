@@ -496,6 +496,11 @@ nav {
         width: 80%; /* Smaller and centered image on top */
         margin-bottom: 20px; /* Space between image and text */
     }
+
+    .work-link {
+        width: 100%; /* Full width button on smaller screens */
+    }
+}
 }
 
 /* Header styles */

@@ -427,19 +427,21 @@ nav {
 }
 
 .work-item {
-    border: 2px solid black; /* Replace 'black' with your color */
+    border: 2px solid black; /* Solid border for normal state */
     border-radius: 15px;
     padding: 20px;
     margin: 10px;
     width: 80%; /* Adjust based on your layout preference */
     text-align: center;
-    transition: background-color 0.3s; /* Smooth transition for hover */
-    flex-flow: column;
+    transition: box-shadow 0.3s, background-color 0.3s; /* Smooth transitions for hover */
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .work-item:hover {
-    background-color: lightgray; /* Replace 'lightgray' with your hover color */
+    background-color: lightgray; /* Background color on hover */
+    box-shadow: 0 0 8px 3px #00FF00; /* Green glow effect */
 }
 
 .work-header,
@@ -460,21 +462,27 @@ nav {
 .work-link:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+
 .work-image {
     width: 400px; /* Responsive image that fits the container */
     height: auto;
-    border-radius: 12px; /* Optional: adds rounded corners to the image */
+    border-radius: 12px; /* Rounded corners for the image */
+    transition: box-shadow 0.3s; /* Smooth transition for glow effect */
 }
 
-/* Responsive styling for screens less than 600px wide */
+.work-image:hover {
+    box-shadow: 0 0 8px 3px #00FF00; /* Green glow effect to resemble LED lights */
+}
+
+/* Responsive styling for screens less than 768px wide */
 @media (max-width: 768px) {
     .work-section {
         flex-direction: column;
     }
 
     .work-item {
-     ransform: rotate(90deg);
-        transform-origin: top left; /* Adjusted to ensure it rotates around the correct point */
+        transform: rotate(90deg);
+        transform-origin: top left; /* Ensures it rotates around the correct point */
         justify-content: flex-end;
         margin-top: 50px; /* Add margin to handle layout shift */
         min-height: 750px;
@@ -487,13 +495,12 @@ nav {
     .work-description {
         font-size: 14px;
     }
-.work-image {
-    width: 300px; /* Responsive image that fits the container */
-    height: auto;
-    border-radius: 12px; /* Optional: adds rounded corners to the image */
+    
+    .work-image {
+        width: 300px; /* Smaller width for mobile */
+        border-radius: 12px; /* Maintain rounded corners */
+    }
 }
-}
-
 
 
 /* Header styles */

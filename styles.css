@@ -466,8 +466,10 @@ nav {
     }
 
     .work-item {
-        transform: rotate(90deg);
-        transform-origin: center;
+     ransform: rotate(90deg);
+        transform-origin: top left; /* Adjusted to ensure it rotates around the correct point */
+        width: 300px; /* Fixed width to handle rotation better */
+        margin-top: 50px; /* Add margin to handle layout shift */
     }
 
     .work-header {

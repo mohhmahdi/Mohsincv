@@ -420,13 +420,6 @@ nav {
 /* ... info ends ... */
 /* Basic styling for the work section */
 /* General styles */
-.work-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
-
 .work-item {
     border: 2px solid #fff8ee;
     border-radius: 15px;
@@ -435,8 +428,10 @@ nav {
     width: 80%;
     display: flex;
     justify-content: space-between; /* To separate content and image */
+    flex-direction: row-reverse; /* Reverse the order of flex items */
     position: relative;
     overflow: hidden;
+    transition: box-shadow 0.3s, background-color 0.3s; /* Adding transition for hover effects */
 }
 
 .work-content {
@@ -445,37 +440,23 @@ nav {
     justify-content: flex-start;
     align-items: flex-start; /* Aligns content to the left */
     width: 50%; /* Adjust based on layout preference */
-    padding-right: 20px; /* Space between text and image */
+    padding-left: 20px; /* Space between image and text when reversed */
 }
 
-.work-header,
-.work-description {
-    margin: 10px 0;
-}
-
-.work-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-}
-
-.work-link:hover {
-    background-color: #0056b3; /* Adjust hover color for better contrast */
+.work-item:hover {
+    background-color: #fff8ee; /* Background color on hover */
+    box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
 }
 
 .work-image {
     width: 45%; /* Adjust based on layout preference */
     height: auto;
     border-radius: 12px;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s; /* Smooth transition for glow effect */
 }
 
 .work-image:hover {
-    box-shadow: 0 0 8px 3px #00FF00;
+    box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
 }
 
 /* Responsive styles */

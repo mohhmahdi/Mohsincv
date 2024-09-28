@@ -17,36 +17,6 @@ overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 /*parallax effcet start here */
 
-#rotatedText {
-  font-size: 48px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-12deg);
-    opacity: 1;
-    transition: opacity 2s ease;
-    z-index: 1000; /* High z-index to keep it on top */
-}
-
-.parallax {
-    width: 100px;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 2s;
-}
-
-#pen, #cap {
-    position: fixed;
-    top: 50%; /* Center vertically */
-    width: 100px; /* Adjust size as needed */
-    transition: transform 2s; /* Smooth transformation */
-    z-index: 999; /* Below the text but above other content */
-}
-
-#pen { left: 30%; }
-#cap { left: 35%; }
-
 /*parallax effcet ends here */
 .linkedin-container {
     display: flex;       /* Establishes a flex container */

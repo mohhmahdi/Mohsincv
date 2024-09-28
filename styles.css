@@ -105,23 +105,7 @@ h1 {
   h1 {
         margin-left: 5px; /* Further reduce margin for mobile */
     }
-h8 {
-   
- font-family: 'Roboto Black', sans-serif;
-  margin-left: 20px; /* Default for larger screens */
-}
 
-@media (max-width: 768px) {
-  h8 {
-        margin-left: 10px; /* Reduce left margin for tablets */
-    }
-}
-
-@media (max-width: 480px) {
-  h8 {
-        margin-left: 5px; /* Further reduce margin for mobile */
-    }
-}
 h2 {
 font-family: 'Roboto Thin', sans-serif;
   margin-left: 20px; /* Default for larger screens */

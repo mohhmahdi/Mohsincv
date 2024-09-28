@@ -13,6 +13,34 @@ body {
     background-attachment: fixed;
       background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
 }
+/*parallax effcet start here */
+
+#rotatedText {
+    font-size: 48px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-12deg);
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+img {
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 2s;
+}
+
+#pen {
+    left: 30%;
+}
+
+#cap {
+    left: 35%;
+}
+/*parallax effcet ends here */
 .linkedin-container {
     display: flex;       /* Establishes a flex container */
     justify-content: center; /* Centers content horizontally */

@@ -431,7 +431,7 @@ nav {
     border: 2px solid #fff8ee;
     border-radius: 15px;
     padding: 20px;
-    margin: 10px;
+    margin: 30px;
     width: 80%;
     display: flex;
     justify-content: space-between; /* To separate content and image */
@@ -482,9 +482,11 @@ nav {
 @media (max-width: 768px) {
     .work-item {
         flex-direction: column;
-        width: 100%;
+        width: 80%;
         max-width: none; /* Overrides previous max-width */
         align-items: center;
+        height: 600px;
+        margin: 30px;
     }
 
     .work-content {

@@ -419,6 +419,7 @@ nav {
 }
 /* ... info ends ... */
 /* Basic styling for the work section */
+/* General styles */
 .work-section {
     display: flex;
     flex-direction: column;
@@ -427,24 +428,24 @@ nav {
 }
 
 .work-item {
-    border: 2px solid #fff8ee; /* Solid border for normal state */
+    border: 2px solid #fff8ee;
     border-radius: 15px;
     padding: 20px;
     margin: 10px;
-    width: 80%; /* Adjust based on your layout preference */
-    height: 40vw;
-    text-align: flex-start;
-    align-items: flex-start;
-    transition: box-shadow 0.3s, background-color 0.3s; /* Smooth transitions for hover */
+    width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* To separate content and image */
     position: relative;
     overflow: hidden;
 }
 
-.work-item:hover {
-    background-color: lightgray; /* Background color on hover */
-    box-shadow: 0 0 8px 3px #00FF00; /* Green glow effect */
+.work-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Aligns content to the left */
+    width: 50%; /* Adjust based on layout preference */
+    padding-right: 20px; /* Space between text and image */
 }
 
 .work-header,
@@ -455,7 +456,7 @@ nav {
 .work-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF; /* Bootstrap primary blue, change as needed */
+    background-color: #007BFF;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -463,62 +464,47 @@ nav {
 }
 
 .work-link:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; /* Adjust hover color for better contrast */
 }
 
 .work-image {
-    width: 400px; /* Responsive image that fits the container */
+    width: 45%; /* Adjust based on layout preference */
     height: auto;
-    border-radius: 12px; /* Rounded corners for the image */
-    transition: box-shadow 0.3s; /* Smooth transition for glow effect */
+    border-radius: 12px;
+    transition: box-shadow 0.3s;
 }
 
 .work-image:hover {
-    box-shadow: 0 0 8px 3px #00FF00; /* Green glow effect to resemble LED lights */
+    box-shadow: 0 0 8px 3px #00FF00;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
-    .work-section {
-        flex-direction: column;
-        align-items: center; /* Ensure alignment is centered */
-        width: 100%; /* Use full width to center content */
-    }
-
     .work-item {
-        transform: rotate(90deg);
-        transform-origin: center center; /* Center the rotation point */
-        justify-content: flex-end;
-        margin-top: 50px; /* Adjust margin as needed */
-        min-height: 750px; /* Adjust based on your content */
-        width: 100%; /* Full width to handle rotation */
-        max-width: 300px; /* Limiting the width when rotated */
-        align-self: center; /* Center align the rotated item */
+        flex-direction: column;
+        width: 100%;
+        max-width: none; /* Overrides previous max-width */
+        align-items: center;
     }
 
-    .work-header {
-        font-size: 18px; /* Smaller font size for mobile */
+    .work-content {
+        width: 100%; /* Full width for smaller screens */
+        padding-right: 0; /* Remove padding on smaller screens */
     }
 
-    .work-description {
-        font-size: 14px;
-    }
-    
     .work-image {
-        width: 100%; /* Make the image responsive */
-        max-width: 300px; /* Limiting the width to fit its container */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 12px; /* Maintain rounded corners */
+        width: 80%; /* Smaller and centered image on top */
+        margin-bottom: 20px; /* Space between image and text */
     }
 }
 
 /* Header styles */
 header {
     display: flex;
-    justify-content: center; /* Center the content */
+    justify-content: center;
     align-items: center;
     padding: 20px;
 }
-
 
 
 

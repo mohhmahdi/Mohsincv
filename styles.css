@@ -458,6 +458,11 @@ nav {
 .work-link:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+.work-image {
+    width: 100%; /* Responsive image that fits the container */
+    height: auto;
+    border-radius: 12px; /* Optional: adds rounded corners to the image */
+}
 
 /* Responsive styling for screens less than 600px wide */
 @media (max-width: 600px) {

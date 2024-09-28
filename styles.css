@@ -427,16 +427,19 @@ nav {
 }
 
 .work-item {
-    border: 2px solid black; /* Solid border for normal state */
+    border: 2px solid #fff8ee; /* Solid border for normal state */
     border-radius: 15px;
     padding: 20px;
     margin: 10px;
     width: 80%; /* Adjust based on your layout preference */
-    text-align: center;
+    height: 40vw;
+    text-align: flex-start;
+    align-items: flex-start;
     transition: box-shadow 0.3s, background-color 0.3s; /* Smooth transitions for hover */
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    overflow: hidden;
 }
 
 .work-item:hover {

@@ -477,18 +477,22 @@ nav {
     box-shadow: 0 0 8px 3px #00FF00; /* Green glow effect to resemble LED lights */
 }
 
-/* Responsive styling for screens less than 768px wide */
 @media (max-width: 768px) {
     .work-section {
         flex-direction: column;
+        align-items: center; /* Ensure alignment is centered */
+        width: 100%; /* Use full width to center content */
     }
 
     .work-item {
         transform: rotate(90deg);
-        transform-origin: top left; /* Ensures it rotates around the correct point */
+        transform-origin: center center; /* Center the rotation point */
         justify-content: flex-end;
-        margin-top: 50px; /* Add margin to handle layout shift */
-        min-height: 750px;
+        margin-top: 50px; /* Adjust margin as needed */
+        min-height: 750px; /* Adjust based on your content */
+        width: 100%; /* Full width to handle rotation */
+        max-width: 300px; /* Limiting the width when rotated */
+        align-self: center; /* Center align the rotated item */
     }
 
     .work-header {
@@ -500,11 +504,12 @@ nav {
     }
     
     .work-image {
-        width: 300px; /* Smaller width for mobile */
+        width: 100%; /* Make the image responsive */
+        max-width: 300px; /* Limiting the width to fit its container */
+        height: auto; /* Maintain aspect ratio */
         border-radius: 12px; /* Maintain rounded corners */
     }
 }
-
 
 /* Header styles */
 header {

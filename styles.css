@@ -461,12 +461,11 @@ nav {
   align-self: center; /* Centers the button within the container */
   box-sizing: border-box; /* Includes padding and border in the element's size */
   width: 20%; /* Adjust width as needed */
-}
-.work-item .work-link a {
  font-size: 1.2rem;
   font-family: 'Roboto medium', sans-serif;
   text-align: center;
 }
+
 .work-link {
     display: inline-block;
     padding: 10px 20px;

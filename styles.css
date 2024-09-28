@@ -12,17 +12,20 @@ body {
     background-position: center;
     background-attachment: fixed;
       background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 100%; /* Ensure full height */
 }
 /*parallax effcet start here */
 
 #rotatedText {
-    font-size: 48px;
+  font-size: 48px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-12deg);
     opacity: 1;
-    transition: opacity 2s;
+    transition: opacity 2s ease;
+    z-index: 1000; /* High z-index to keep it on top */
 }
 
 img {
@@ -33,13 +36,17 @@ img {
     transition: transform 2s;
 }
 
-#pen {
-    left: 30%;
+#pen, #cap {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    width: 100px; /* Adjust size as needed */
+    transition: transform 2s; /* Smooth transformation */
+    z-index: 999; /* Below the text but above other content */
 }
 
-#cap {
-    left: 35%;
-}
+#pen { left: 30%; }
+#cap { left: 35%; }
+
 /*parallax effcet ends here */
 .linkedin-container {
     display: flex;       /* Establishes a flex container */

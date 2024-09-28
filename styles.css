@@ -433,11 +433,7 @@ nav {
     overflow: hidden;
     transition: box-shadow 0.3s, background-color 0.3s; /* Adding transition for hover effects */
 }
-.work-item .work-link {
-  margin-top: auto; /* Pushes the link to the bottom */
-  align-self: center; /* Centers the button within the container */
-  box-sizing: border-box; /* Includes padding and border in the element's size */
-}
+
 .work-content {
     display: flex;
     flex-direction: column;
@@ -462,6 +458,11 @@ nav {
 .work-image:hover {
     box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
 }
+.work-item .work-link {
+  margin-top: auto; /* Pushes the link to the bottom */
+  align-self: center; /* Centers the button within the container */
+  box-sizing: border-box; /* Includes padding and border in the element's size */
+}
 .work-link {
     display: inline-block;
     padding: 10px 20px;
@@ -475,7 +476,7 @@ nav {
     width: 15%;
 }
 
-}
+
 
 .work-link:hover {
     color: white; /* Change text color to white on hover */

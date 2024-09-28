@@ -433,7 +433,11 @@ nav {
     overflow: hidden;
     transition: box-shadow 0.3s, background-color 0.3s; /* Adding transition for hover effects */
 }
-
+.work-item .work-link {
+margin-top: auto; /* Pushes the link to the bottom */
+  align-self: center; /* Centers the button within the container */
+    box-sizing: border-box; /* Includes padding and border in the element's size */
+}
 .work-content {
     display: flex;
     flex-direction: column;
@@ -467,6 +471,8 @@ nav {
     border-radius: 8px;
     transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
     background-color: wheat; /* Background color is wheat */
+    height: 100%;
+    width: 15%;
 }
 
 }
@@ -513,7 +519,8 @@ nav {
     }
 
     .work-link {
-        width: 100%; /* Full width button on smaller screens */
+        width: auto;
+        height: auto;
     }
     .work-header {
         font-size: 1.2rem; /* Smaller size for tablets */

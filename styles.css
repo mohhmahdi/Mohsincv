@@ -429,8 +429,6 @@ nav {
     display: flex;
     justify-content: space-between; /* To separate content and image */
     flex-direction: row-reverse; /* Reverse the order of flex items */
-    position: relative;
-    overflow: hidden;
     transition: box-shadow 0.3s, background-color 0.3s; /* Adding transition for hover effects */
 }
 
@@ -462,6 +460,7 @@ nav {
   margin-top: auto; /* Pushes the link to the bottom */
   align-self: center; /* Centers the button within the container */
   box-sizing: border-box; /* Includes padding and border in the element's size */
+  width: 20%; /* Adjust width as needed */
 }
 .work-link {
     display: inline-block;
@@ -473,7 +472,6 @@ nav {
     transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
     background-color: wheat; /* Background color is wheat */
     height: 100%;
-    width: 20%;
 }
 
 
@@ -494,9 +492,10 @@ height: fit-content;
 .work-description {
     font-size: 1.2rem;
     font-family: 'Roboto medium', sans-serif;
-    text-align: left;
+     text-align: left;
     margin: 20px;
     height: fit-content;
+    width: 100%;
 }
 
 

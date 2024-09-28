@@ -458,6 +458,23 @@ nav {
 .work-image:hover {
     box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
 }
+.work-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #007BFF; /* Adding a border */
+    color: #007BFF; /* Text color the same as border color */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Transition effects for smooth change */
+    background-color: transparent; /* Transparent background */
+}
+
+.work-link:hover {
+    color: white; /* Change text color to white on hover */
+    border-color: #6F4E37; /* Coffee color for the border on hover */
+    box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
+    background-color: #007BFF; /* Optional: fill background on hover */
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {

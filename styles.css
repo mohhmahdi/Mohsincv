@@ -473,13 +473,13 @@ nav {
     transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
     background-color: wheat; /* Background color is wheat */
     height: 100%;
-    width: 15%;
+    width: 20%;
 }
 
 
 
 .work-link:hover {
-    color: white; /* Change text color to white on hover */
+    color: darkred; /* Change text color to white on hover */
     border-color: #6F4E37; /* Coffee color for the border on hover */
     box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
     background-color: #fff8ee; /* Optional: fill background on hover */

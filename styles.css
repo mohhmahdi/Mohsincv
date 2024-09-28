@@ -28,7 +28,7 @@ overflow-x: hidden; /* Prevent horizontal scrolling */
     z-index: 1000; /* High z-index to keep it on top */
 }
 
-img {
+.parallax {
     width: 100px;
     position: fixed;
     top: 50%;

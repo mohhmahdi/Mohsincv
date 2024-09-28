@@ -434,9 +434,9 @@ nav {
     transition: box-shadow 0.3s, background-color 0.3s; /* Adding transition for hover effects */
 }
 .work-item .work-link {
-margin-top: auto; /* Pushes the link to the bottom */
+  margin-top: auto; /* Pushes the link to the bottom */
   align-self: center; /* Centers the button within the container */
-    box-sizing: border-box; /* Includes padding and border in the element's size */
+  box-sizing: border-box; /* Includes padding and border in the element's size */
 }
 .work-content {
     display: flex;
@@ -488,7 +488,9 @@ margin-top: auto; /* Pushes the link to the bottom */
     font-family: 'Roboto black', sans-serif;
     margin-bottom: 10px; /* Adds space between the header and description */
 }
-
+.work-item .work-description{
+flex-direction: row-reverse;
+} 
 .work-description {
     font-size: 1.2rem;
     font-family: 'Roboto medium', sans-serif;

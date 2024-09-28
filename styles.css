@@ -434,6 +434,8 @@ nav {
     width: 80%; /* Adjust based on your layout preference */
     text-align: center;
     transition: background-color 0.3s; /* Smooth transition for hover */
+    flex-flow: column;
+    justify-content: space-between;
 }
 
 .work-item:hover {
@@ -459,13 +461,13 @@ nav {
     background-color: #0056b3; /* Darker blue on hover */
 }
 .work-image {
-    width: 100%; /* Responsive image that fits the container */
+    width: 400px; /* Responsive image that fits the container */
     height: auto;
     border-radius: 12px; /* Optional: adds rounded corners to the image */
 }
 
 /* Responsive styling for screens less than 600px wide */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .work-section {
         flex-direction: column;
     }
@@ -473,8 +475,9 @@ nav {
     .work-item {
      ransform: rotate(90deg);
         transform-origin: top left; /* Adjusted to ensure it rotates around the correct point */
-        width: 300px; /* Fixed width to handle rotation better */
+        justify-content: flex-end;
         margin-top: 50px; /* Add margin to handle layout shift */
+        min-height: 750px;
     }
 
     .work-header {
@@ -484,6 +487,11 @@ nav {
     .work-description {
         font-size: 14px;
     }
+.work-image {
+    width: 300px; /* Responsive image that fits the container */
+    height: auto;
+    border-radius: 12px; /* Optional: adds rounded corners to the image */
+}
 }
 
 

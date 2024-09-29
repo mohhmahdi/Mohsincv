@@ -50,10 +50,25 @@ navLinks.addEventListener('click', (event) => {
 document.getElementById('download-cv').onclick = function() {
     window.location.href = '/images/Mohsin_Mahdi_CV-H.pdf'; // Replace with the actual path to your CV
 };
+// logo scroll
+
+window.addEventListener('scroll', function() {
+    var logoContainer = document.querySelector('.logo-container');
+    var windowHeight = window.innerHeight;
+    var scrollY = window.scrollY;
+
+    if (scrollY < windowHeight) {
+        // Calculate opacity based on scroll position
+        var opacity = 1 - (scrollY / windowHeight * 0.5); // Fades out to 0.5 opacity
+        logoContainer.style.opacity = Math.max(opacity, 0.5); // Ensures opacity doesn't go below 0.5
+    } else {
+        // Minimum opacity after scrolling past the initial window height
+        logoContainer.style.opacity = 0.5;
+    }
+});
+
+// parallax effect script here 
 
 
-/* parallax effect script here */
 
-
-
-/* parallax effect script here */
+// parallax effect script here

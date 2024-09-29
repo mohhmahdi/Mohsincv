@@ -420,12 +420,7 @@ nav {
 /* ... info ends ... */
 /* Basic styling for the work section */
 /* General styles */
-.container {
-    display: flex;
-    justify-content: center; /* Centers the child elements horizontally */
-    align-items: center; /* Optional: Centers the child elements vertically if needed */
-    height: 100vh; /* Ensures the container takes at least the full height of the viewport */
-}
+
 .work-item {
     border: 7px solid #fff8ee;
     border-radius: 15px;

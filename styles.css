@@ -51,9 +51,19 @@ body {
 
 /* logo fade out-in ends here */
 
-
 /* parallax effcet start here */
 
+
+
+#pen {
+    width: 80%;
+    position: absolute;
+    left: 10%; /* Centering: 100% - 80% width = 20% leftover, 10% on each side */
+    top: 50%; /* Start at 50% from the top */
+    transform: translateY(-50%); /* Shift up by half its own height to truly center */
+    max-width: 100%;
+    box-sizing: border-box;
+}
 
 /* parallax effcet ends here */
 

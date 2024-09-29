@@ -429,7 +429,7 @@ nav {
     width: 100%; /* Take full width to center content properly */
 }
 .work-item {
-    border: 7px solid #fff8ee;
+    border: 7px solid #AB003A;
     border-radius: 15px;
     padding: 20px;
     margin: 70px;
@@ -480,12 +480,12 @@ nav {
    font-size: 1.2rem;
   font-family: 'Roboto medium', sans-serif;
   text-align: center;
-  height: 100%;
+  height: auto;
 }
 .work-link {
     display: inline-block;
     padding: 10px 20px;
-    border: 7px solid #fff8ee; /* Light cream border */
+    border: 7px solid burlywood; /* Light cream border */
     color: brown; /* Initial text color is brown */
     text-decoration: none;
     border-radius: 8px;

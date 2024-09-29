@@ -470,27 +470,6 @@ nav {
   text-align: center;
 }
 
-.work-link {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 2px solid #fff8ee; /* Light cream border */
-    color: brown; /* Initial text color is brown */
-    text-decoration: none;
-    border-radius: 8px;
-    transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
-    background-color: wheat; /* Background color is wheat */
-    height: 100%;
-  
-}
-
-
-
-.work-link:hover {
-    color: darkred; /* Change text color to white on hover */
-    border-color: #6F4E37; /* Coffee color for the border on hover */
-    box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
-    background-color: #fff8ee; /* Optional: fill background on hover */
-}
 .work-h8 {
     font-size: 1.5rem; /* Adjust the size as needed */
     font-family: 'Roboto black', sans-serif;

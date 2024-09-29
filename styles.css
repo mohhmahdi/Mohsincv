@@ -421,11 +421,18 @@ nav {
 /* ... info ends ... */
 /* Basic styling for the work section */
 /* General styles */
+.work-items {
+    display: flex; /* Use flexbox to align children */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align children horizontally */
+    justify-content: center; /* Center-align children vertically if there's extra space */
+    width: 100%; /* Take full width to center content properly */
+}
 .work-item {
     border: 7px solid #fff8ee;
     border-radius: 15px;
     padding: 20px;
-    margin: 30px;
+    margin: 70px;
     width: 50%;
     display: flex;
     justify-content: space-between; /* To separate content and image */

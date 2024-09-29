@@ -491,7 +491,7 @@ nav {
     box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
     background-color: #fff8ee; /* Optional: fill background on hover */
 }
-.work-header {
+.work-h8 {
     font-size: 1.5rem; /* Adjust the size as needed */
     font-family: 'Roboto black', sans-serif;
     margin-bottom: 10px; /* Adds space between the header and description */
@@ -499,7 +499,7 @@ nav {
  
 }
 
-.work-description {
+.work-p8 {
     font-size: 1.2rem;
     font-family: 'Roboto medium', sans-serif;
      text-align: left;
@@ -536,10 +536,10 @@ nav {
         width: auto;
         height: auto;
     }
-    .work-header {
+    .work-h8 {
         font-size: 1.2rem; /* Smaller size for tablets */
     }
-    .work-description {
+    .work-p8 {
         font-size: 1rem; /* Smaller size for tablets */
     }
 .work-item .work-link {

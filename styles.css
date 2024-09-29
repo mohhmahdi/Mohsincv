@@ -93,7 +93,9 @@ box-sizing: border-box;
     max-width: 100%;
     box-sizing: border-box;
 }
-
+.c-pen--1-1.desktop.w--current {
+transform: translate(-140%);
+}
 #cap {
     width: 100%;
     vertical-align: middle;

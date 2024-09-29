@@ -447,7 +447,7 @@ nav {
 
 .work-item:hover {
     background-color: #fff8ee; /* Background color on hover */
-    box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
+    box-shadow: 0 0 8px 3px #D8D8D8; /* Dark yellow glow effect */
 }
 
 .work-image {
@@ -460,7 +460,7 @@ nav {
 }
 
 .work-image:hover {
-    box-shadow: 0 0 8px 3px #D8D8D8; /* Dark yellow glow effect */
+    box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
 }
 .work-item .work-link {
    margin-top: auto; /* Pushes the link to the bottom */
@@ -470,6 +470,7 @@ nav {
    font-size: 1.2rem;
   font-family: 'Roboto medium', sans-serif;
   text-align: center;
+  height: 100%;
 }
 .work-link {
     display: inline-block;
@@ -480,8 +481,7 @@ nav {
     border-radius: 8px;
     transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
     background-color: wheat; /* Background color is wheat */
-    height: 100%;
-    width: 20%;
+    
 }
 
 

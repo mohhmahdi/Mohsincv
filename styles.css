@@ -459,8 +459,8 @@ align-items: baseline;
     box-shadow: 0 0 8px 3px #D8D8D8; /* silver */
 }
 .work-item .work-link {
-  margin-top: flex-end; /* Pushes the link to the bottom */
-  align-self: center; /* Centers the button within the container */
+  margin-top: auto; /* Pushes the link to the bottom */
+  align-self: flex-start; /* start */
   box-sizing: border-box; /* Includes padding and border in the element's size */
   width: 20%; /* Adjust width as needed */
  font-size: 1.2rem;

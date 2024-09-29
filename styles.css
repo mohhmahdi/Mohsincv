@@ -24,7 +24,7 @@ body {
     vertical-align: middle;
     display: inline-block;
     border: 0;
-    box-sizing: border-box;
+   
 }
 
 /* Styling for the container that holds the image */
@@ -40,7 +40,7 @@ body {
     display: flex;
     position: relative;
     overflow: hidden;
-    box-sizing: border-box;
+   
 }
 
 /* Additional div to control the logo width */
@@ -61,7 +61,7 @@ body {
     display: block;
     position: sticky;
     top: 43vh;
-box-sizing: border-box;
+
 }
 
 .wholeinner-container {
@@ -71,7 +71,7 @@ width: 70%;
     margin-right: auto;
     position: relative;
     inset: 0% auto 0% 0%;
-box-sizing: border-box;
+
 
 }
 
@@ -80,7 +80,7 @@ box-sizing: border-box;
     height: 300px;
     position: relative;
     overflow: hidden;
-box-sizing: border-box;
+
 }
 
 
@@ -92,6 +92,10 @@ box-sizing: border-box;
     transform: translateY(-50%); /* Shift up by half its own height to truly center */
     max-width: 100%;
     box-sizing: border-box;
+    inset: 0% auto auto 12%;
+    transform: translate(111%);
+    border: 0;
+
 }
 .c-pen--1-1.desktop.w--current {
 transform: translate(-140%);
@@ -102,7 +106,6 @@ transform: translate(-140%);
     max-width: 100%;
     display: inline-block;
     border: 0;
-    box-sizing: border-box;
 }
 
 

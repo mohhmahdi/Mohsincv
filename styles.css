@@ -420,12 +420,18 @@ nav {
 /* ... info ends ... */
 /* Basic styling for the work section */
 /* General styles */
+.container {
+    display: flex;
+    justify-content: center; /* Centers the child elements horizontally */
+    align-items: center; /* Optional: Centers the child elements vertically if needed */
+    height: 100vh; /* Ensures the container takes at least the full height of the viewport */
+}
 .work-item {
     border: 7px solid #fff8ee;
     border-radius: 15px;
     padding: 20px;
     margin: 30px;
-    width: 80%;
+    width: 50%;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -464,7 +470,7 @@ nav {
   margin-top: auto; /* Pushes the link to the bottom */
   align-self: flex-start; /* start */
   box-sizing: border-box; /* Includes padding and border in the element's size */
-  width: 20%; /* Adjust width as needed */
+  width: 40%; /* Adjust width as needed */
  font-size: 1.2rem;
   font-family: 'Roboto medium', sans-serif;
   text-align: center;
@@ -480,7 +486,7 @@ nav {
     transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
     background-color: wheat; /* Background color is wheat */
     height: 100%;
-    width: 40%;
+  
 }
 
 

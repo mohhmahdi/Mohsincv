@@ -54,19 +54,6 @@ document.getElementById('download-cv').onclick = function() {
 
 /* parallax effect script here */
 
-document.addEventListener('DOMContentLoaded', function() {
-    const image = document.getElementById('afterheaderImage');
-    const imageHeight = image.clientHeight;
 
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > imageHeight) {
-            image.classList.add('hidden');
-        } else {
-            image.classList.remove('hidden');
-        }
-    });
-});
 
 /* parallax effect script here */

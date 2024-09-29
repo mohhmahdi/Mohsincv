@@ -17,17 +17,6 @@ body {
 }
 /*parallax effcet start here */
 
-#afterheaderImage {
-    height: 100vh; /* Use viewport height for full-screen height at any screen size */
-    width: 100vw; /* Use viewport width for full-screen width at any screen size */
-    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
-    transition: opacity 1s ease-in-out;
-    opacity: 1; /* Start fully visible */
-}
-
-#afterheaderImage.hidden {
-    opacity: 0; /* This will now only affect #afterheaderImage when it has the 'hidden' class */
-}
 
 /*parallax effcet ends here */
 

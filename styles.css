@@ -419,7 +419,136 @@ nav {
 }
 /* ... info ends ... */
 /* Basic styling for the work section */
-/* General styles */
+
+.work-item {
+    border: 7px solid #fff8ee;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.work-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    padding-right: 20px;
+    height: 100%; /* Ensure that the content uses the full height of its container */
+    order: 1;  /* Ensures this content is first */
+}
+
+}
+
+.work-item:hover {
+    background-color: #fff8ee; /* Background color on hover */
+    box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
+}
+
+.work-image {
+    width: 45%; /* Adjust based on layout preference */
+    height: auto;
+    border-radius: 12px;
+    transition: box-shadow 0.3s; /* Smooth transition for glow effect */
+    order: 2;
+}
+
+.work-image:hover {
+    box-shadow: 0 0 8px 3px #D8D8D8; /* silver */
+}
+.work-item .work-link {
+  margin-top: auto; /* Pushes the link to the bottom */
+  align-self: flex-start; /* start */
+  box-sizing: border-box; /* Includes padding and border in the element's size */
+  width: 40%; /* Adjust width as needed */
+ font-size: 1.2rem;
+  font-family: 'Roboto medium', sans-serif;
+  text-align: center;
+}
+
+.work-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #fff8ee; /* Light cream border */
+    color: brown; /* Initial text color is brown */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+    background-color: wheat; /* Background color is wheat */
+    height: 100%;
+  
+}
+
+
+
+.work-link:hover {
+    color: darkred; /* Change text color to white on hover */
+    border-color: #6F4E37; /* Coffee color for the border on hover */
+    box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
+    background-color: #fff8ee; /* Optional: fill background on hover */
+}
+.work-header {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    font-family: 'Roboto black', sans-serif;
+    margin-bottom: 10px; /* Adds space between the header and description */
+    height: fit-content;
+ 
+}
+
+.work-description {
+    font-size: 1.2rem;
+    font-family: 'Roboto medium', sans-serif;
+     text-align: left;
+    margin: 20px;
+    height: fit-content;
+    width: 100%;
+ margin-top: auto; /* Lifts up from the bottom */
+    margin-bottom: 20px; /* Pushes down towards the button */
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .work-item {
+        flex-direction: column;
+        width: 80%;
+        max-width: none; /* Overrides previous max-width */
+        align-items: center;
+        height: 600px;
+        margin: 30px;
+    }
+
+    .work-content {
+        width: 100%; /* Full width for smaller screens */
+        padding-right: 0; /* Remove padding on smaller screens */
+    }
+
+    .work-image {
+        width: 80%; /* Smaller and centered image on top */
+        margin-bottom: 20px; /* Space between image and text */
+    }
+
+    .work-link {
+        width: auto;
+        height: auto;
+    }
+    .work-header {
+        font-size: 1.2rem; /* Smaller size for tablets */
+    }
+    .work-description {
+        font-size: 1rem; /* Smaller size for tablets */
+    }
+.work-item .work-link {
+  margin-top: auto; /* Pushes the link to the bottom */
+  align-self: center; /* Centers the button within the container */
+
+}
+
+/*work ends here  */
 
 
 /* Header styles */
@@ -607,10 +736,7 @@ text-align: center;   /* Center-align text */
     height: auto; /* Ensure height adjusts to content */
     overflow: visible; /* Ensures no content is clipped */
 }
-.skill-item:hover .skill-icon span {
-    color: #000; /* Make text black on hover for better visibility */
-    background-color: rgba(255, 255, 255, 0.8); /* Light background on hover for readability */
-}
+
 .skill-icon::after {
     content: "";
     display: block;

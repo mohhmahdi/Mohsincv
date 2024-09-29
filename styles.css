@@ -1,3 +1,4 @@
+
 @import url('https://fonts.cdnfonts.com/css/chiller');
 @import url('https://fonts.cdnfonts.com/css/nu-century-gothic');
 @import url('https://fonts.cdnfonts.com/css/roboto');
@@ -419,6 +420,85 @@ nav {
 }
 /* ... info ends ... */
 /* Basic styling for the work section */
+/* General styles */
+.work-item {
+    border: 2px solid #fff8ee;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between; /* To separate content and image */
+    flex-direction: row-reverse; /* Reverse the order of flex items */
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s, background-color 0.3s; /* Adding transition for hover effects */
+}
+
+.work-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Aligns content to the left */
+    width: 50%; /* Adjust based on layout preference */
+    padding-left: 20px; /* Space between image and text when reversed */
+}
+
+.work-item:hover {
+    background-color: #fff8ee; /* Background color on hover */
+    box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
+}
+
+.work-image {
+    width: 45%; /* Adjust based on layout preference */
+    height: auto;
+    border-radius: 12px;
+    transition: box-shadow 0.3s; /* Smooth transition for glow effect */
+}
+
+.work-image:hover {
+    box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
+}
+.work-item .work-link {
+  margin-top: auto; /* Pushes the link to the bottom */
+  align-self: center; /* Centers the button within the container */
+  box-sizing: border-box; /* Includes padding and border in the element's size */
+}
+.work-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #fff8ee; /* Light cream border */
+    color: brown; /* Initial text color is brown */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+    background-color: wheat; /* Background color is wheat */
+    height: 100%;
+    width: 20%;
+}
+
+
+
+.work-link:hover {
+    color: darkred; /* Change text color to white on hover */
+    border-color: #6F4E37; /* Coffee color for the border on hover */
+    box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
+    background-color: #fff8ee; /* Optional: fill background on hover */
+}
+.work-header {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    font-family: 'Roboto black', sans-serif;
+    margin-bottom: 10px; /* Adds space between the header and description */
+}
+.work-item .work-description{
+flex-direction: row-reverse;
+} 
+.work-description {
+    font-size: 1.2rem;
+    font-family: 'Roboto medium', sans-serif;
+    text-align: left;
+    margin: 20px;
+}
 
 
 /* Responsive styles */
@@ -446,19 +526,14 @@ nav {
         width: auto;
         height: auto;
     }
-    .work-h8 {
+    .work-header {
         font-size: 1.2rem; /* Smaller size for tablets */
     }
-    .work-p8 {
+    .work-description {
         font-size: 1rem; /* Smaller size for tablets */
     }
-.work-item .work-link {
-  margin-top: auto; /* Pushes the link to the bottom */
-  align-self: center; /* Centers the button within the container */
 
 }
-
-/*work ends here  */
 
 
 /* Header styles */
@@ -646,7 +721,10 @@ text-align: center;   /* Center-align text */
     height: auto; /* Ensure height adjusts to content */
     overflow: visible; /* Ensures no content is clipped */
 }
-
+.skill-item:hover .skill-icon span {
+    color: #000; /* Make text black on hover for better visibility */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background on hover for readability */
+}
 .skill-icon::after {
     content: "";
     display: block;

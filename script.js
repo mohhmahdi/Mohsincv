@@ -59,11 +59,11 @@ window.addEventListener('scroll', function() {
 
     if (scrollY < windowHeight) {
         // Calculate opacity based on scroll position
-        var opacity = 1 - (scrollY / windowHeight * 0.5); // Fades out to 0.5 opacity
-        logoContainer.style.opacity = Math.max(opacity, 0.5); // Ensures opacity doesn't go below 0.5
+        var opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.5 opacity
+        logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.5
     } else {
         // Minimum opacity after scrolling past the initial window height
-        logoContainer.style.opacity = 0.5;
+        logoContainer.style.opacity = 0.4;
     }
 });
 

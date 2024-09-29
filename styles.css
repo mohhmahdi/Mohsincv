@@ -18,7 +18,24 @@ overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 /*parallax effcet start here */
 
+header {
+    width: 100%;
+    text-align: center; /* Centers the content */
+}
+
+#headerImage {
+    height: 300px; /* Adjust the height as needed */
+    width: auto;
+    transition: opacity 1s ease-in-out;
+    opacity: 1; /* Start fully visible */
+}
+
+.hidden {
+    opacity: 0;
+}
+
 /*parallax effcet ends here */
+
 .linkedin-container {
     display: flex;       /* Establishes a flex container */
     justify-content: center; /* Centers content horizontally */

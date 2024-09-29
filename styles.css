@@ -893,7 +893,7 @@ textarea {
     min-height: 100px; /* Minimum height for the textarea */
 }
 
-.contact-form.button {
+.contact-form button {
     padding: 10px;
     background-color: #007BFF;
     border-radius: 5px;
@@ -905,7 +905,7 @@ textarea {
     color: brown; /* Initial text color is brown */
 }
 
-.contact-form.button:hover {
+.contact-form button:hover {
      color: darkred; /* Change text color to white on hover */
     border-color: #6F4E37; /* Coffee color for the border on hover */
     box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */

@@ -437,8 +437,10 @@ nav {
     display: flex;
     justify-content: space-between; /* To separate content and image */
     flex-direction: row; /* Reverse the order of flex items */
+    position: relative;
     overflow: hidden;
     transition: box-shadow 0.3s, background-color 0.3s; /* Adding transition for hover effects */
+
 }
 
 .work-content {
@@ -470,8 +472,9 @@ nav {
     box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
 }
 .work-item .work-link {
-   margin-top: auto; /* Pushes the link to the bottom */
-  align-self: flex-start; /* start */
+     padding: 10px;
+    margin: 30px;
+    align-self: center; /* center */
   box-sizing: border-box; /* Includes padding and border in the element's size */
   width: 40%; /* Adjust width as needed */
    font-size: 1.2rem;
@@ -482,12 +485,12 @@ nav {
 .work-link {
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #fff8ee; /* Light cream border */
+    border: 7px solid #fff8ee; /* Light cream border */
     color: brown; /* Initial text color is brown */
     text-decoration: none;
     border-radius: 8px;
     transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
-    background-color: wheat; /* Background color is wheat */
+    
     
 }
 
@@ -534,10 +537,6 @@ nav {
         margin-bottom: 20px; /* Space between image and text */
     }
 
-    .work-link {
-        width: auto;
-        height: auto;
-    }
     .work-h8 {
         font-size: 1.2rem; /* Smaller size for tablets */
     }

@@ -13,8 +13,8 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    
-
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+     height: 100%; /* Ensure full height */ 
 }
 /*parallax effcet start here */
 

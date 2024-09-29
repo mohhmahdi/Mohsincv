@@ -15,10 +15,47 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
    
 }
-/*parallax effcet start here */
+/* logo fade out-in start here */
+/* Styles for the image within the container */
+#afterheaderImage {
+    width: 100%;
+    max-height: 90vh;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the container that holds the image */
+.logo-container {
+    perspective: 1000px;
+    color: #fff;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex: 1;
+    place-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Additional div to control the logo width */
+.logo-container-div {
+    width: 65%;
+    position: relative;
+}
+
+/* logo fade out-in ends here */
 
 
-/*parallax effcet ends here */
+/* parallax effcet start here */
+
+
+/* parallax effcet ends here */
 
 .linkedin-container {
     display: flex;       /* Establishes a flex container */

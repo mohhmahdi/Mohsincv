@@ -422,15 +422,14 @@ nav {
 /* Basic styling for the work section */
 /* General styles */
 .work-item {
-    border: 2px solid #fff8ee;
+    border: 7px solid #fff8ee;
     border-radius: 15px;
     padding: 20px;
     margin: 30px;
-    width: 80%;
+    width: 50%;
     display: flex;
     justify-content: space-between; /* To separate content and image */
-    flex-direction: row-reverse; /* Reverse the order of flex items */
-    position: relative;
+    flex-direction: row; /* Reverse the order of flex items */
     overflow: hidden;
     transition: box-shadow 0.3s, background-color 0.3s; /* Adding transition for hover effects */
 }

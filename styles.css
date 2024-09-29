@@ -13,8 +13,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-     height: 100%; /* Ensure full height */ 
+   
 }
 /*parallax effcet start here */
 
@@ -573,6 +572,7 @@ header {
   align-items: center;
   width: 100%;
   margin-bottom: 30px;
+
 }
 
 .image-container {
@@ -614,7 +614,7 @@ header {
   height: auto;
 }
 .image-button img:hover {
-background-color: #fff8ee; /* Background color on hover *
+    background-color: #fff8ee; /* Background color on hover */
 }
 .text-container {
   flex: 0 0 70%;

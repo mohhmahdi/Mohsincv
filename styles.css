@@ -13,6 +13,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    
 
 }
 /*parallax effcet start here */
@@ -209,10 +210,6 @@ h7 {
     font-size: 1rem; /* Reduces the font size to the default 16px */
   }
 }
-header {
-    background: #EFEFEF;
-    padding: 10px;
-}
 /* Reset styles *
 
 /* Nav links pc version */
@@ -321,6 +318,7 @@ nav {
 .home-image {
     flex: 1;
     text-align: right; /* Aligns the image to the right */
+  
 }
 
 .home-image img {

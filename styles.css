@@ -18,7 +18,7 @@ overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 /*parallax effcet start here */
 
-#headerImage {
+#afterheaderImage {
   height: 100vh; /* Use viewport height for full-screen height at any screen size */
     width: 100vw; /* Use viewport width for full-screen width at any screen size */
     object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */

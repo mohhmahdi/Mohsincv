@@ -95,12 +95,12 @@ width: 70%;
     max-width: 100%;
     box-sizing: border-box;
     inset: 0% auto auto 12%;
-    transform: translate(111%);
+     transform: translate3d(111%, 0, 0);
     border: 0;
 
 }
 .c-pen--1-1.desktop.w--current {
-transform: translate(-140%);
+transform: translate3d(-140%, 0, 0);
 }
 #cap {
     width: 100%;

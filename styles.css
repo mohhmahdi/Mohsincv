@@ -455,6 +455,8 @@ nav {
     height: auto;
     border-radius: 12px;
     transition: box-shadow 0.3s; /* Smooth transition for glow effect */
+    order: 2;
+
 }
 
 .work-image:hover {

@@ -460,12 +460,16 @@ nav {
 }
 
 .work-image:hover {
-    box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
+    box-shadow: 0 0 8px 3px #D8D8D8; /* Dark yellow glow effect */
 }
 .work-item .work-link {
-  margin-top: auto; /* Pushes the link to the bottom */
-  align-self: center; /* Centers the button within the container */
+   margin-top: auto; /* Pushes the link to the bottom */
+  align-self: flex-start; /* start */
   box-sizing: border-box; /* Includes padding and border in the element's size */
+  width: 40%; /* Adjust width as needed */
+   font-size: 1.2rem;
+  font-family: 'Roboto medium', sans-serif;
+  text-align: center;
 }
 .work-link {
     display: inline-block;

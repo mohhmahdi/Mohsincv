@@ -608,7 +608,9 @@ header {
   width: 64px;
   height: auto;
 }
-
+.image-button img:hover {
+ box-shadow: 0 0 8px 3px #DAA520;
+}
 .text-container {
   flex: 0 0 70%;
   padding-left: 20px;

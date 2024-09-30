@@ -66,14 +66,14 @@ window.addEventListener('scroll', function() {
     }
 
     // Curtain effect for cap and pen
-    let homeSection = document.getElementById('home');
+    let home = document.getElementById('home');
     let footer = document.getElementById('footer');  // Ensure you have an element with id="footer"
     
-    if (!homeSection || !footer) {
+    if (!home || !footer) {
         return; // Exit if home or footer sections are not found
     }
 
-    let homeRect = homeSection.getBoundingClientRect();
+    let homeRect = home.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
 
     let homeVisibleHeight = windowHeight - homeRect.top;
@@ -84,7 +84,7 @@ window.addEventListener('scroll', function() {
 
     // Adjust this calculation based on your specific layout and what "fully open" means in pixel or percentage terms
     if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
-        let percentOpen = Math.min(homeVisibleHeight / homeSection.offsetHeight, 1);
+        let percentOpen = Math.min(homeVisibleHeight / home.offsetHeight, 1);
         let translateX = 50 * (1 - percentOpen);
         pen.style.transform = `translateX(${translateX}%)`;
         cap.style.transform = `translateX(-${translateX}%)`;

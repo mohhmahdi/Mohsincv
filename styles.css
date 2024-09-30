@@ -81,26 +81,28 @@ body {
 }
 
 #pen, #cap {
-    transition: transform 0.5s ease; /* Smooth transition for any transformations */
-    will-change: transform;
-   max-width: 100%;
-   width: 70%; 
+    width: auto; /* Adjusts width to maintain aspect ratio based on height */
+    height: 100%; /* Use the full height of the container */
+    max-width: 100%; /* Ensures it doesn't exceed the width of its container */
+    max-height: 100%; /* Ensures it doesn't exceed the height of its container */
+    transition: transform 0.5s ease; /* Smooth transitions for transformations */
+    will-change: transform; /* Optimize for transformations */
+    z-index: 99; /* Adjust z-index as necessary */
+}
 
+#cap {
+    z-index: 100; /* Ensures cap is above the pen if they overlap */
+    margin-left: -10%; /* Negative margin to pull closer to the pen */
+}
+#pen, #cap {
+    object-fit: contain; /* Ensures the image is scaled to maintain its aspect ratio while fitting within the element’s content box */
 }
 
 #pen {
-
-width: 70%; 
-order:2;
  z-index:99;
 margin-right: -10%; /* Negative margin to pull closer to the pen */  
 }
 
-#cap {
-order:1;
- z-index:100;
-margin-right: -10%; /* Negative margin to pull closer to the pen */  
-}
 
 /* parallax effcet ends here */
 

@@ -63,6 +63,14 @@ body {
     width: 100%; /* Ensures full width */
 }
 
+.wholepen-container {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 43vh;
+    width: 100%; /* Ensures full width */
+}
+
 .wholeouter-container {
     width: 100%;
     height: 300px;
@@ -81,20 +89,21 @@ body {
 }
 
 #pen, #cap {
-    width: 40%; /* Adjust width to fit side by side within the container */
     max-width: 100%;
     box-sizing: border-box;
     transition: transform 0.5s ease; /* Smooth transition for any transformations */
 }
 
 #pen {
-      order: 2; /* Makes sure pen is on the right */
-    transform: translateX(-5%); /* Slight shift to overlap or meet closely */
+    width: 50%; /* Increased width specifically for the pen */
+    order: 2; /* Keeps pen on the right */
+    transform: translateX(-10%); /* Move pen closer to the cap */
 }
 
 #cap {
-order: 1; /* Makes sure cap is on the left */
-    transform: translateX(5%); /* Slight shift to overlap or meet closely */
+    width: 40%; /* Keeps original size for the cap */
+    order: 1; /* Keeps cap on the left */
+    transform: translateX(10%); /* Move cap closer to the pen */
 }
 /* parallax effcet ends here */
 

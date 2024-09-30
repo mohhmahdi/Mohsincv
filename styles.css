@@ -63,14 +63,6 @@ body {
     width: 100%; /* Ensures full width */
 }
 
-.wholepen-container {
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 43vh;
-    width: 100%; /* Ensures full width */
-}
-
 .wholeouter-container {
     width: 100%;
     height: 300px;
@@ -85,27 +77,22 @@ body {
     position: relative;
     display: flex; /* Using flex to align children side by side */
     align-items: center; /* This will vertically center the children */
-    justify-content: center; /* This will horizontally center the children within the container */
+    justify-content: space-between; /* This will place the children on the far sides */
 }
 
 #pen, #cap {
-    max-width: 100%;
-    box-sizing: border-box;
     transition: transform 0.5s ease; /* Smooth transition for any transformations */
+    will-change: transform;
 }
 
 #pen {
-    width: 50%; /* Increased width specifically for the pen */
-    order: 2; /* Keeps pen on the right */
-    transform: translate3d(-5%, 0, 0) scale3d(1, 1, 1);
+    transform: translateX(50%); /* Initially positioned half outside the right edge */
 }
 
 #cap {
-    width: 40%; /* Keeps original size for the cap */
-    order: 1; /* Keeps cap on the left */
-    
-transform: translate3d(5%, 0, 0) scale3d(1, 1, 1);
+    transform: translateX(-50%); /* Initially positioned half outside the left edge */
 }
+
 /* parallax effcet ends here */
 
 .linkedin-container {

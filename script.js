@@ -50,24 +50,52 @@ navLinks.addEventListener('click', (event) => {
 document.getElementById('download-cv').onclick = function() {
     window.location.href = '/images/Mohsin_Mahdi_CV-H.pdf'; // Replace with the actual path to your CV
 };
-// logo scroll
 
+// parallax effect script here 
 window.addEventListener('scroll', function() {
+    // Existing logo scroll effect
     var logoContainer = document.querySelector('.logo-container');
     var windowHeight = window.innerHeight;
     var scrollY = window.scrollY;
 
     if (scrollY < windowHeight) {
-        // Calculate opacity based on scroll position
         var opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.5 opacity
         logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.5
     } else {
-        // Minimum opacity after scrolling past the initial window height
         logoContainer.style.opacity = 0.4;
+    }
+
+    // Curtain effect for cap and pen
+    let homeSection = document.getElementById('home');
+    let footer = document.getElementById('footer');  // Ensure you have an element with id="footer"
+    
+    if (!homeSection || !footer) {
+        return; // Exit if home or footer sections are not found
+    }
+
+    let homeRect = homeSection.getBoundingClientRect();
+    let footerRect = footer.getBoundingClientRect();
+
+    let homeVisibleHeight = windowHeight - homeRect.top;
+    let footerVisibleHeight = windowHeight - footerRect.top;
+
+    let pen = document.getElementById('pen');
+    let cap = document.getElementById('cap');
+
+    // Adjust this calculation based on your specific layout and what "fully open" means in pixel or percentage terms
+    if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
+        let percentOpen = Math.min(homeVisibleHeight / homeSection.offsetHeight, 1);
+        let translateX = 50 * (1 - percentOpen);
+        pen.style.transform = `translateX(${translateX}%)`;
+        cap.style.transform = `translateX(-${translateX}%)`;
+    } else if (footerRect.top < windowHeight) {
+        let percentClosed = Math.min(footerVisibleHeight / footer.offsetHeight, 1);
+        let translateX = 50 * percentClosed;
+        pen.style.transform = `translateX(${translateX}%)`;
+        cap.style.transform = `translateX(-${translateX}%)`;
     }
 });
 
-// parallax effect script here 
 
 
 

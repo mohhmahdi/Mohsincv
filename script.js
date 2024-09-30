@@ -84,21 +84,21 @@ window.addEventListener('scroll', function() {
     }
 
     if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
-        let percentClosed = 1 - Math.min((windowHeight - homeRect.top) / home.offsetHeight, 1);
-        let translateXPen = 116 * percentClosed;
-        let translateXCap = -150 * percentClosed;
-        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px)`;
-        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px)`;
+        // Calculate percent closed based on visible height
+        let percentClosed = 1 - Math.min(homeVisibleHeight / home.offsetHeight, 1);
+        // Calculate translateX based on percentClosed, adjusting for max movement
+        let translateXPen = 116 * percentClosed;  // Pen moves up to 116%
+        let translateXCap = -150 * percentClosed; // Cap moves up to -150%
+        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
+        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
     } else if (footerRect.top < windowHeight) {
-        let percentOpen = Math.min((windowHeight - footerRect.top) / footer.offsetHeight, 1);
+        // Calculate percent open based on visible height
+        let percentOpen = Math.min(footerVisibleHeight / footer.offsetHeight, 1);
+        // Calculate translateX back to initial position as footer becomes visible
         let translateXPen = 116 * (1 - percentOpen);
         let translateXCap = -150 * (1 - percentOpen);
-        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px)`;
-        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px)`;
-    } else {
-        // Reset transforms when not in the transition area
-        pen.style.transform = 'translate3d(0%, 0px, 0px)';
-        cap.style.transform = 'translate3d(0%, 0px, 0px)';
+        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
+        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
     }
 });
 

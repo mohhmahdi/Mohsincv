@@ -84,34 +84,7 @@ body {
   
     z-index: 2;
 }
-@media (max-width: 767px) {
-    .wholepen-container {
-        top: 20vh; /* Adjust top positioning to better fit mobile screens */
-    }
 
-    .wholeouter-container {
-        height: 200px; /* Reduce height to fit smaller screens */
-    }
-
-    .wholeinner-container {
-        flex-direction: column; /* Stack #pen and #cap vertically */
-    }
-
-    #pen, #cap {
-        width: 80%; /* Increase width for better visibility on smaller screens */
-        height: auto; /* Height auto for better scaling */
-        margin: 10px auto; /* Center and add spacing around items */
-    }
-
-    #pen {
-        margin-top: 0; /* Remove extra top margin in vertical layout */
-        transform: translateY(0); /* Reset transform for better placement */
-    }
-
-    #cap {
-        transform: translateY(0); /* Reset transform for better placement */
-    }
-}
 
 @media (max-width: 480px) {
     .wholepen-container {

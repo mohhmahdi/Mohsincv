@@ -65,43 +65,5 @@ window.addEventListener('scroll', function() {
         logoContainer.style.opacity = 0.4;
     }
 
-    // Curtain effect for pen and cap
-    let home = document.getElementById('home');
-    let footer = document.getElementById('footer');
-    if (!home || !footer) {
-        console.log("Home or footer sections not found, exiting curtain effect script.");
-        return; // Exit if home or footer sections are not found
-    }
-
-    let homeRect = home.getBoundingClientRect();
-    let footerRect = footer.getBoundingClientRect();
-
-    let pen = document.getElementById('pen');
-    let cap = document.getElementById('cap');
-    if (!pen || !cap) {
-        console.log("Pen or cap elements not found, exiting curtain effect script.");
-        return; // Exit if pen or cap elements are not found
-    }
-
-    // Adjust transformations based on scroll position and visibility
-    if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
-        // Home is partially visible
-        let percentClosed = 1 - Math.min((windowHeight - homeRect.top) / home.offsetHeight, 1);
-        let translateXPen = 80 * percentClosed;
-        let translateXCap = -100 * percentClosed;
-        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px)`;
-        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px)`;
-    } else if (footerRect.top < windowHeight && footerRect.bottom > 0) {
-        // Footer is becoming visible
-        let percentOpen = Math.min((windowHeight - footerRect.top) / footer.offsetHeight, 1);
-        let translateXPen = 80 * (1 - percentOpen);
-        let translateXCap = -100 * (1 - percentOpen);
-        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px)`;
-        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px)`;
-    } else {
-        // Both home and footer are out of view or fully in view, reset transforms
-        pen.style.transform = 'translate3d(0%, 0px, 0px)';
-        cap.style.transform = 'translate3d(0%, 0px, 0px)';
-    }
-});
+ 
 // parallax effect script here

@@ -88,10 +88,12 @@ body {
 }
 
 #pen {
+      order: 2; /* Makes sure pen is on the right */
     transform: translateX(-5%); /* Slight shift to overlap or meet closely */
 }
 
 #cap {
+order: 1; /* Makes sure cap is on the left */
     transform: translateX(5%); /* Slight shift to overlap or meet closely */
 }
 /* parallax effcet ends here */

@@ -65,10 +65,9 @@ window.addEventListener('scroll', function() {
         logoContainer.style.opacity = 0.4;
     }
 
-    // Curtain effect for cap and pen
+    // Curtain effect for pen and cap
     let home = document.getElementById('home');
     let footer = document.getElementById('footer');
-
     if (!home || !footer) {
         console.log("Home or footer sections not found, exiting curtain effect script.");
         return; // Exit if home or footer sections are not found
@@ -77,28 +76,29 @@ window.addEventListener('scroll', function() {
     let homeRect = home.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
 
-    let homeVisibleHeight = windowHeight - homeRect.top;
-    let footerVisibleHeight = windowHeight - footerRect.top;
-
     let pen = document.getElementById('pen');
     let cap = document.getElementById('cap');
-
     if (!pen || !cap) {
         console.log("Pen or cap elements not found, exiting curtain effect script.");
         return; // Exit if pen or cap elements are not found
     }
 
-    // Adjust this calculation based on your specific layout and what "fully open" means in pixel or percentage terms
     if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
-        let percentClosed = 1 - Math.min(homeVisibleHeight / home.offsetHeight, 1);
-        let translateX = 50 * percentClosed;  // Adjust the multiplier to control the extent of movement
-        pen.style.transform = `translateX(-${translateX}%)`;
-        cap.style.transform = `translateX(${translateX}%)`;
+        let percentClosed = 1 - Math.min((windowHeight - homeRect.top) / home.offsetHeight, 1);
+        let translateXPen = 116 * percentClosed;
+        let translateXCap = -150 * percentClosed;
+        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px)`;
+        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px)`;
     } else if (footerRect.top < windowHeight) {
-        let percentOpen = Math.min(footerVisibleHeight / footer.offsetHeight, 1);
-        let translateX = 0 * (1 - percentOpen);  // Adjust the multiplier to control the extent of movement
-        pen.style.transform = `translateX(-${translateX}%)`;
-        cap.style.transform = `translateX(${translateX}%)`;
+        let percentOpen = Math.min((windowHeight - footerRect.top) / footer.offsetHeight, 1);
+        let translateXPen = 116 * (1 - percentOpen);
+        let translateXCap = -150 * (1 - percentOpen);
+        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px)`;
+        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px)`;
+    } else {
+        // Reset transforms when not in the transition area
+        pen.style.transform = 'translate3d(0%, 0px, 0px)';
+        cap.style.transform = 'translate3d(0%, 0px, 0px)';
     }
 });
 

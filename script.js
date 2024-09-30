@@ -91,7 +91,7 @@ window.addEventListener('scroll', function() {
     // Adjust this calculation based on your specific layout and what "fully open" means in pixel or percentage terms
     if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
         let percentClosed = 1 - Math.min(homeVisibleHeight / home.offsetHeight, 1);
-        let translateX = 50 * percentClosed;  // Adjust the multiplier to control the extent of movement
+        let translateX = 0 * percentClosed;  // Adjust the multiplier to control the extent of movement
         pen.style.transform = `translateX(-${translateX}%)`;
         cap.style.transform = `translateX(${translateX}%)`;
     } else if (footerRect.top < windowHeight) {

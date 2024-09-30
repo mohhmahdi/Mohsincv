@@ -83,9 +83,15 @@ body {
 #pen, #cap {
     transition: transform 0.5s ease; /* Smooth transition for any transformations */
     will-change: transform;
+max-width: 100%;
+box-sizing: border-box;
 }
 
 #pen {
+width: 40%; /* Keeps original size for the cap /
+order: 1; / Keeps cap on the left */
+width: 50%; /* Increased width specifically for the pen /
+order: 2; / Keeps pen on the right */
     transform: translateX(50%); /* Initially positioned half outside the right edge */
 }
 

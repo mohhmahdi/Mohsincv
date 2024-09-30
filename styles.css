@@ -61,6 +61,12 @@ body {
     position: relative;
     width: 600px; /* Adjusted to fit the full width of the front container */
     height: 200px; /* Adjusted to fit the height of the back container */
+     display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 43vh;
+    width: 100%; /* Ensures full width */
+   z-index:1000;
 }
 
 /* Back container styling */

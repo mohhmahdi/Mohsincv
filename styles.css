@@ -88,14 +88,14 @@ box-sizing: border-box;
 }
 
 #pen {
-width: 40%; /* Keeps original size for the cap /
-order: 1; / Keeps cap on the left */
-width: 50%; /* Increased width specifically for the pen /
-order: 2; / Keeps pen on the right */
-    transform: translateX(50%); /* Initially positioned half outside the right edge */
+width: 40%;
+width: 50%; 
+order:2;
+transform: translateX(50%); 
 }
 
 #cap {
+order:1;
     transform: translateX(-50%); /* Initially positioned half outside the left edge */
 }
 

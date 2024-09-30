@@ -79,6 +79,16 @@ body {
     align-items: center; /* This will vertically center the children */
     justify-content: space-between;
     height: 100%; 
+    display: inline-block;
+}
+.cap-container {
+   max-width: 100%;
+   display: inline-block;
+   margin: 0 auto; /* Centers the container horizontally */
+    position: relative;
+    display: flex; /* Using flex to align children side by side */
+    align-items: center; /* This will vertically center the children */
+    justify-content: space-between;
 }
 
 #pen, #cap {

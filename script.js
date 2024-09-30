@@ -66,6 +66,7 @@ window.addEventListener('scroll', function() {
     }
 
     // Curtain effect for cap and pen
+document.addEventListener('scroll', function() {
     let home = document.getElementById('home');
     let footer = document.getElementById('footer');  // Ensure you have an element with id="footer"
     
@@ -73,6 +74,7 @@ window.addEventListener('scroll', function() {
         return; // Exit if home or footer sections are not found
     }
 
+    let windowHeight = window.innerHeight;
     let homeRect = home.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
 
@@ -84,18 +86,17 @@ window.addEventListener('scroll', function() {
 
     // Adjust this calculation based on your specific layout and what "fully open" means in pixel or percentage terms
     if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
-        let percentOpen = Math.min(homeVisibleHeight / home.offsetHeight, 1);
-        let translateX = 50 * (1 - percentOpen);
-        pen.style.transform = `translateX(${translateX}%)`;
-        cap.style.transform = `translateX(-${translateX}%)`;
-    } else if (footerRect.top < windowHeight) {
-        let percentClosed = Math.min(footerVisibleHeight / footer.offsetHeight, 1);
+        let percentClosed = 1 - Math.min(homeVisibleHeight / home.offsetHeight, 1);
         let translateX = 50 * percentClosed;
-        pen.style.transform = `translateX(${translateX}%)`;
-        cap.style.transform = `translateX(-${translateX}%)`;
+        pen.style.transform = `translateX(-${translateX}%)`;
+        cap.style.transform = `translateX(${translateX}%)`;
+    } else if (footerRect.top < windowHeight) {
+        let percentOpen = Math.min(footerVisibleHeight / footer.offsetHeight, 1);
+        let translateX = 50 * (1 - percentOpen);
+        pen.style.transform = `translateX(-${translateX}%)`;
+        cap.style.transform = `translateX(${translateX}%)`;
     }
 });
-
 
 
 

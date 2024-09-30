@@ -78,7 +78,7 @@ body {
     display: flex; /* Using flex to align children side by side */
     align-items: center; /* This will vertically center the children */
     justify-content: space-between;
-    height: 161px; /* Initial fixed height, adjusted below */
+    height: 100%; 
 }
 
 #pen, #cap {

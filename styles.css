@@ -57,57 +57,46 @@ body {
 
 
 .wholepen-container {
-justify-content: center;
-margin-left: auto;
-margin-right: auto;
-display: block;
-position: sticky;
-top: 43vh;
-
-}
-
-.wholeinner-container {
-width: 70%;
-height: 161px;
-margin-left: auto;
-margin-right: auto;
-position: relative;
-inset: 0% auto 0% 0%;
-
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 43vh;
+    width: 100%; /* Ensures full width */
 }
 
 .wholeouter-container {
-width: 100%;
-height: 300px;
-position: relative;
-overflow: hidden;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
 
+.wholeinner-container {
+    width: 70%;
+    height: 161px;
+    margin: 0 auto; /* Centers the container horizontally */
+    position: relative;
+    display: flex; /* Using flex to align children */
+    align-items: center; /* This will vertically center the children */
+}
+
+#pen, #cap {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centers vertically */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 #pen {
-width: 80%;
-position: absolute;
-left: 10%; /* Centering: 100% - 80% width = 20% leftover, 10% on each side /
-top: 50%; / Start at 50% from the top /
-transform: translateY(-50%); / Shift up by half its own height to truly center */
-max-width: 100%;
-box-sizing: border-box;
-inset: 0% auto auto 12%;
-transform: translate3d(111%, 0, 0);
-border: 0;
-
+    left: 10%; /* Adjusted to center the pen within the container */
 }
 
 #cap {
-width: 50%;
-vertical-align: middle;
-max-width: 100%;
-display: inline-block;
-border: 0;
-padding:10px;
-transform: translate3d(-140%, 0, 0);
+    left: 10%; /* Aligns the cap with the pen */
+    width: 80%; /* Same width as the pen for consistency */
 }
-
 /* parallax effcet ends here */
 
 .linkedin-container {

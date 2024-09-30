@@ -55,7 +55,6 @@ body {
 
 /* parallax effcet start here */
 
-
 .wholepen-container {
     display: flex;
     justify-content: center;
@@ -78,24 +77,25 @@ body {
     position: relative;
     display: flex; /* Using flex to align children */
     align-items: center; /* This will vertically center the children */
+    justify-content: center; /* This will horizontally center the children */
 }
 
 #pen, #cap {
-    width: 80%;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Centers vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers both images exactly in the middle */
+    width: 80%; /* Matching widths for overlay */
     max-width: 100%;
     box-sizing: border-box;
 }
 
 #pen {
-    left: 10%; /* Adjusted to center the pen within the container */
+    /* Additional styles for #pen if necessary */
 }
 
 #cap {
-    left: 10%; /* Aligns the cap with the pen */
-    width: 80%; /* Same width as the pen for consistency */
+    /* Additional styles for #cap if necessary */
 }
 /* parallax effcet ends here */
 

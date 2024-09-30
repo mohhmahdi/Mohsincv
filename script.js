@@ -56,10 +56,16 @@ document.getElementById('download-cv').onclick = function() {
  // parallax effect script here 
 window.addEventListener('scroll', function() {
     // Logo fade effect
-window.addEventListener('scroll', function() {
+    var logoContainer = document.querySelector('.logo-container');
     var windowHeight = window.innerHeight;
     var scrollY = window.scrollY;
 
+    if (scrollY < windowHeight) {
+        var opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.4 opacity
+        logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.4
+    } else {
+        logoContainer.style.opacity = 0.4;
+    }
     // Sections
     let home = document.getElementById('home');
     let footer = document.getElementById('footer');

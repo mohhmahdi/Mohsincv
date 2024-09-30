@@ -56,51 +56,58 @@ document.getElementById('download-cv').onclick = function() {
  // parallax effect script here 
 window.addEventListener('scroll', function() {
     // Logo fade effect
-    var logoContainer = document.querySelector('.logo-container');
+window.addEventListener('scroll', function() {
     var windowHeight = window.innerHeight;
     var scrollY = window.scrollY;
 
-    if (scrollY < windowHeight) {
-        var opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.4 opacity
-        logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.4
-    } else {
-        logoContainer.style.opacity = 0.4;
-    }
-
-    // Curtain effect for cap and pen
+    // Sections
     let home = document.getElementById('home');
     let footer = document.getElementById('footer');
-
     if (!home || !footer) {
-        console.log("Home or footer sections not found, exiting curtain effect script.");
-        return; // Exit if home or footer sections are not found
+        console.error("Home or footer sections not found.");
+        return;
     }
 
+    // Pen and Cap elements
+    let pen = document.getElementById('pen');
+    let cap = document.getElementById('cap');
+    if (!pen || !cap) {
+        console.error("Pen or cap elements not found.");
+        return;
+    }
+
+    // Get bounding rectangles
     let homeRect = home.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
 
-    let homeVisibleHeight = windowHeight - homeRect.top;
-    let footerVisibleHeight = windowHeight - footerRect.top;
+    // Calculate visible heights
+    let homeVisibleHeight = Math.max(0, windowHeight - homeRect.top);
+    let footerVisibleHeight = Math.max(0, windowHeight - footerRect.top);
 
-    let pen = document.getElementById('pen');
-    let cap = document.getElementById('cap');
+    // Initial transformations
+    let capStartX = 15; // Starting X position for cap
+    let penStartX = -45; // Starting X position for pen
 
-    if (!pen || !cap) {
-        console.log("Pen or cap elements not found, exiting curtain effect script.");
-        return; // Exit if pen or cap elements are not found
+    // Final transformations
+    let capEndX = -80; // End X position for cap
+    let penEndX = 80; // End X position for pen
+
+    // Home visible part handling
+    if (homeRect.bottom > 0 && homeRect.top < windowHeight) { // Home is visible
+        let progress = homeVisibleHeight / home.offsetHeight; // 0 to 1
+        let capTranslateX = capStartX + (capEndX - capStartX) * (1 - progress);
+        let penTranslateX = penStartX + (penEndX - penStartX) * (1 - progress);
+        cap.style.transform = `translateX(${capTranslateX}%)`;
+        pen.style.transform = `translateX(${penTranslateX}%)`;
     }
 
-    // Adjust this calculation based on your specific layout and what "fully open" means in pixel or percentage terms
-    if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
-        let percentClosed = 1 - Math.min(homeVisibleHeight / home.offsetHeight, 1);
-        let translateX = 50 * percentClosed;  // Adjust the multiplier to control the extent of movement
-        pen.style.transform = `translateX(-${translateX}%)`;
-        cap.style.transform = `translateX(${translateX}%)`;
-    } else if (footerRect.top < windowHeight) {
-        let percentOpen = Math.min(footerVisibleHeight / footer.offsetHeight, 1);
-        let translateX = 50 * (1 - percentOpen);  // Adjust the multiplier to control the extent of movement
-        pen.style.transform = `translateX(-${translateX}%)`;
-        cap.style.transform = `translateX(${translateX}%)`;
+    // Footer visible part handling
+    if (footerRect.top < windowHeight) { // Footer is entering the viewport
+        let progress = footerVisibleHeight / footer.offsetHeight; // 0 to 1
+        let capTranslateX = capStartX + (capEndX - capStartX) * progress;
+        let penTranslateX = penStartX + (penEndX - penStartX) * progress;
+        cap.style.transform = `translateX(${capTranslateX}%)`;
+        pen.style.transform = `translateX(${penTranslateX}%)`;
     }
 });
 // parallax effect script here

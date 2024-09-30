@@ -91,8 +91,8 @@ window.addEventListener('scroll', function() {
     let footerVisibleHeight = Math.max(0, windowHeight - footerRect.top);
 
     // Initial transformations
-    let capStartX = 15; // Starting X position for cap
-    let penStartX = -45; // Starting X position for pen
+   // let capStartX = 15; // Starting X position for cap
+    //let penStartX = -45; // Starting X position for pen
 
     // Final transformations
     let capEndX = -80; // End X position for cap

@@ -75,27 +75,24 @@ body {
     height: 161px;
     margin: 0 auto; /* Centers the container horizontally */
     position: relative;
-    display: flex; /* Using flex to align children */
+    display: flex; /* Using flex to align children side by side */
     align-items: center; /* This will vertically center the children */
-    justify-content: center; /* This will horizontally center the children */
+    justify-content: center; /* This will horizontally center the children within the container */
 }
 
 #pen, #cap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centers both images exactly in the middle */
-    width: 80%; /* Matching widths for overlay */
+    width: 40%; /* Adjust width to fit side by side within the container */
     max-width: 100%;
     box-sizing: border-box;
+    transition: transform 0.5s ease; /* Smooth transition for any transformations */
 }
 
 #pen {
-    /* Additional styles for #pen if necessary */
+    transform: translateX(-5%); /* Slight shift to overlap or meet closely */
 }
 
 #cap {
-    /* Additional styles for #cap if necessary */
+    transform: translateX(5%); /* Slight shift to overlap or meet closely */
 }
 /* parallax effcet ends here */
 

@@ -93,7 +93,7 @@ body {
 
 #cap {
     z-index: 100; /* Ensures cap is above the pen if they overlap */
-    margin-left: -10%; /* Negative margin to pull closer to the pen */
+    margin-top: 40px; 
 }
 #pen, #cap {
     object-fit: contain; /* Ensures the image is scaled to maintain its aspect ratio while fitting within the element’s content box */

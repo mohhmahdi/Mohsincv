@@ -53,20 +53,19 @@ document.getElementById('download-cv').onclick = function() {
 
 // parallax effect script here 
 window.addEventListener('scroll', function() {
-    // Existing logo scroll effect
+    // Logo fade effect
     var logoContainer = document.querySelector('.logo-container');
     var windowHeight = window.innerHeight;
     var scrollY = window.scrollY;
 
     if (scrollY < windowHeight) {
-        var opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.5 opacity
-        logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.5
+        var opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.4 opacity
+        logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.4
     } else {
         logoContainer.style.opacity = 0.4;
     }
 
     // Curtain effect for cap and pen
-document.addEventListener('scroll', function() {
     let home = document.getElementById('home');
     let footer = document.getElementById('footer');
 
@@ -75,7 +74,6 @@ document.addEventListener('scroll', function() {
         return; // Exit if home or footer sections are not found
     }
 
-    let windowHeight = window.innerHeight;
     let homeRect = home.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
 
@@ -103,5 +101,4 @@ document.addEventListener('scroll', function() {
         cap.style.transform = `translateX(${translateX}%)`;
     }
 });
-
 // parallax effect script here

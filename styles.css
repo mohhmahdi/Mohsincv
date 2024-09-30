@@ -88,8 +88,7 @@ body {
     max-height: 100%; /* Ensures it doesn't exceed the height of its container */
     transition: transform 0.5s ease; /* Smooth transitions for transformations */
     will-change: transform; /* Optimize for transformations */
-      transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
+   
     
 }
 

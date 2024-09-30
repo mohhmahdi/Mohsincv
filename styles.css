@@ -87,11 +87,16 @@ body {
     top: 0;
     width: 300px; /* Explicit width, same as the back container */
     height: 100%;
-  
+   display: inline-block;
+   margin: 0 auto; /* Centers the container horizontally */
     z-index: 2;
 }
 
-
+#pen, #cap {
+  transition: transform 0.5s ease; /* Smooth transitions for transformations */
+    will-change: transform; /* Optimize for transformations */
+    object-fit: contain;
+}
 
 /* parallax effcet ends here */
 

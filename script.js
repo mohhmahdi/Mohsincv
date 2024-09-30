@@ -83,23 +83,25 @@ window.addEventListener('scroll', function() {
         return; // Exit if pen or cap elements are not found
     }
 
+    // Adjust transformations based on scroll position and visibility
     if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
-        // Calculate percent closed based on visible height
-        let percentClosed = 1 - Math.min(homeVisibleHeight / home.offsetHeight, 1);
-        // Calculate translateX based on percentClosed, adjusting for max movement
-        let translateXPen = 116 * percentClosed;  // Pen moves up to 116%
-        let translateXCap = -150 * percentClosed; // Cap moves up to -150%
-        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
-        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
-    } else if (footerRect.top < windowHeight) {
-        // Calculate percent open based on visible height
-        let percentOpen = Math.min(footerVisibleHeight / footer.offsetHeight, 1);
-        // Calculate translateX back to initial position as footer becomes visible
-        let translateXPen = 116 * (1 - percentOpen);
-        let translateXCap = -150 * (1 - percentOpen);
-        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
-        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
+        // Home is partially visible
+        let percentClosed = 1 - Math.min((windowHeight - homeRect.top) / home.offsetHeight, 1);
+        let translateXPen = 80 * percentClosed;
+        let translateXCap = -100 * percentClosed;
+        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px)`;
+        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px)`;
+    } else if (footerRect.top < windowHeight && footerRect.bottom > 0) {
+        // Footer is becoming visible
+        let percentOpen = Math.min((windowHeight - footerRect.top) / footer.offsetHeight, 1);
+        let translateXPen = 80 * (1 - percentOpen);
+        let translateXCap = -100 * (1 - percentOpen);
+        pen.style.transform = `translate3d(${translateXPen}%, 0px, 0px)`;
+        cap.style.transform = `translate3d(${translateXCap}%, 0px, 0px)`;
+    } else {
+        // Both home and footer are out of view or fully in view, reset transforms
+        pen.style.transform = 'translate3d(0%, 0px, 0px)';
+        cap.style.transform = 'translate3d(0%, 0px, 0px)';
     }
 });
-
 // parallax effect script here

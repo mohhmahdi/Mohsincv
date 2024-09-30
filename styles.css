@@ -94,7 +94,8 @@ body {
 }
 
 #cap {
-    z-index: 100; /* Ensures cap is above the pen if they overlap */
+       z-index: 100;
+    transform: translateX(15%);
   
 }
 #pen, #cap {
@@ -102,8 +103,11 @@ body {
 }
 
 #pen {
- z-index:99;
-   margin-top: 20px; 
+    z-index: 99;
+    margin-top: 29px;
+    position: relative;
+    transform: translateX(-45%);
+}
 }
 
 

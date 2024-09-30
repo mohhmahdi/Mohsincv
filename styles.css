@@ -55,64 +55,37 @@ body {
 
 /* parallax effcet start here */
 
-.wholepen-container {
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 43vh;
-    width: 100%; /* Ensures full width */
-   z-index:1000;
-}
-
-.wholeouter-container {
-    width: 100%;
-    height: 300px;
+/* Container styling */
+/* Container styling */
+.w-container {
     position: relative;
-    overflow: hidden;
+    width: 600px; /* Adjusted to fit the full width of the front container */
+    height: 200px; /* Adjusted to fit the height of the back container */
 }
 
-.wholeinner-container {
-    width: 100%;
-    margin: 0 auto; /* Centers the container horizontally */
-    position: relative;
-    display: flex; /* Using flex to align children side by side */
-    align-items: center; /* This will vertically center the children */
-    justify-content: space-between;
-    height: 100%; 
-    display: inline-block;
-}
-.cap-container {
-   max-width: 100%;
-   display: inline-block;
-   margin: 0 auto; /* Centers the container horizontally */
-    position: relative;
-    display: flex; /* Using flex to align children side by side */
-    align-items: center; /* This will vertically center the children */
-    justify-content: space-between;
+/* Back container styling */
+.back-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px; /* Explicit width */
+    height: 100%;
+    background-color: blue;
+    color: white;
+    z-index: 1;
 }
 
-#pen, #cap {
-    width: 50%; /* Adjusts width to take half of the container's width */
-    height: 50%; /* Initially set to 50% of the container's height */
-    max-width: 100%; /* Ensures it doesn't exceed the width of its container */
-    max-height: 100%; /* Ensures it doesn't exceed the height of its container */
-    transition: transform 0.5s ease; /* Smooth transitions for transformations */
-    will-change: transform; /* Optimize for transformations */
-    object-fit: contain; /* Ensures the image scales to maintain its aspect ratio while fitting within the element’s content box */
+/* Front container styling */
+.front-container {
+    position: absolute;
+    left: 300px; /* Starts from the middle of the back container */
+    top: 0;
+    width: 300px; /* Explicit width, same as the back container */
+    height: 100%;
+    background-color: red;
+    color: white;
+    z-index: 2;
 }
-
-#cap {
-    z-index: 100; /* Higher z-index to ensure it overlaps #pen if they intersect */
-    transform: translateX(15%); /* Moves #cap to the right from its center position */
-}
-
-#pen {
-    z-index: 99; /* Lower z-index than #cap */
-    margin-top: 29px; /* Adds space at the top, adjusting vertical position */
-    position: relative; /* Ensures that margin-top has an effect */
-    transform: translateX(-45%); /* Moves #pen to the left from its center position */
-}
-
 @media (max-width: 767px) {
     .wholepen-container {
         top: 20vh; /* Adjust top positioning to better fit mobile screens */

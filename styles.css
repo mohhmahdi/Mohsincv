@@ -83,13 +83,14 @@ body {
 #pen, #cap {
     transition: transform 0.5s ease; /* Smooth transition for any transformations */
     will-change: transform;
-max-width: 100%;
+   max-width: 100%;
+   width: 70%; 
 
 }
 
 #pen {
-width: 40%;
-width: 50%; 
+
+width: 70%; 
 order:2;
 
 }

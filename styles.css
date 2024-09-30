@@ -97,13 +97,15 @@ body {
 #pen {
     width: 50%; /* Increased width specifically for the pen */
     order: 2; /* Keeps pen on the right */
-    transform: translateX(-10%); /* Move pen closer to the cap */
+    transform: translateX(-40%); /* Move pen closer to the cap */
+   z-index:999;
 }
 
 #cap {
     width: 40%; /* Keeps original size for the cap */
     order: 1; /* Keeps cap on the left */
-    transform: translateX(10%); /* Move cap closer to the pen */
+    transform: translateX(40%); /* Move cap closer to the pen */
+z-index: 1000;
 }
 /* parallax effcet ends here */
 

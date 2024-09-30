@@ -63,58 +63,38 @@ body {
     display: block;
     position: sticky;
     top: 43vh;
-
-}
-
-.wholeinner-container {
-width: 70%;
-    height: 161px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    inset: 0% auto 0% 0%;
-
-
 }
 
 .wholeouter-container {
-      width: 100%;
-    height: 300px;
+    width: 100%;
+    height: 400px; /* Increased to accommodate larger images */
     position: relative;
     overflow: hidden;
-
 }
 
+.wholeinner-container {
+    width: 80%; /* Increased for a larger visual area */
+    height: 200px; /* Adjusted height */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
 
 #pen {
-    width: 90%;
+    width: 90%; /* Increased width */
     position: absolute;
-    left: 10%; /* Centering: 100% - 80% width = 20% leftover, 10% on each side */
-    top: 50%; /* Start at 50% from the top */
-    transform: translateY(-50%); /* Shift up by half its own height to truly center */
-    max-width: 100%;
-    box-sizing: border-box;
-    inset: 0% auto auto 12%;
-     transform: translate3d(111%, 0, 0);
-    border: 0;
+    left: 5%; /* Adjusted for centering */
+    top: 50%;
+    transform: translateY(-50%); /* Keeps it centered vertically */
+}
 
-}
-.c-pen--1-1.desktop.w--current {
-transform: translate3d(-140%, 0, 0);
-}
 #cap {
-    width: 10%;
-    vertical-align: middle;
-    max-width: 100%;
-    display: inline-block;
-    border: 0;
-    right: 70%;
+    width: 30%; /* Increased width, adjust based on actual size of cap */
     position: absolute;
-    top: 4px;
-    transform: scale(4.89);
-    margin: 20px;
+    left: 80%; /* Adjusted to fit right at the end of the pen */
+    top: 50%;
+    transform: translateY(-50%); /* Keeps it centered vertically */
 }
-
 
 /* parallax effcet ends here */
 

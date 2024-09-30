@@ -102,39 +102,7 @@ body {
     position: relative; /* Ensures that margin-top has an effect */
     transform: translateX(-45%); /* Moves #pen to the left from its center position */
 }
-/* Media Queries for Larger PC Screens */
-@media (min-width: 1024px) {
-    .wholeouter-container {
-        height: 400px; /* Larger fixed height for bigger screens */
-    }
 
-    #pen, #cap {
-        width: 40%; /* Slightly less width to maintain aspect ratio on larger screens */
-        height: 60%; /* Larger height to fill the container appropriately */
-    }
-}
-
-@media (min-width: 1440px) {
-    .wholeouter-container {
-        height: 500px; /* Even larger height for very wide screens */
-    }
-
-    #pen, #cap {
-        width: 35%; /* Adjust width for better proportionality on large screens */
-        height: 70%; /* Increase height to utilize increased container size */
-    }
-}
-
-@media (min-width: 1920px) {
-    .wholeouter-container {
-        height: 600px; /* Max height for ultra-wide screens */
-    }
-
-    #pen, #cap {
-        width: 30%; /* Reduce width to maintain visual balance */
-        height: 80%; /* Maximize use of vertical space */
-    }
-}
 @media (max-width: 767px) {
     .wholepen-container {
         top: 20vh; /* Adjust top positioning to better fit mobile screens */

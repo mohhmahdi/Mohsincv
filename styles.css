@@ -70,8 +70,7 @@ body {
     top: 0;
     width: 300px; /* Explicit width */
     height: 100%;
-    background-color: blue;
-    color: white;
+  
     z-index: 1;
 }
 
@@ -82,8 +81,7 @@ body {
     top: 0;
     width: 300px; /* Explicit width, same as the back container */
     height: 100%;
-    background-color: red;
-    color: white;
+  
     z-index: 2;
 }
 @media (max-width: 767px) {

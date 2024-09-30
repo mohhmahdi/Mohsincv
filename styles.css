@@ -97,9 +97,7 @@ transform: translate3d(111%, 0, 0);
 border: 0;
 
 }
-.c-pen--1-1.desktop.w--current {
-transform: translate3d(-140%, 0, 0);
-}
+
 #cap {
 width: 50%;
 vertical-align: middle;
@@ -107,6 +105,7 @@ max-width: 100%;
 display: inline-block;
 border: 0;
 padding:10px;
+transform: translate3d(-140%, 0, 0);
 }
 
 /* parallax effcet ends here */

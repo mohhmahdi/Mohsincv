@@ -190,7 +190,9 @@ height:102px
       z-index: 1;
     margin: 9px;
 }
-
+#pen, #cap {
+    transition: transform 0.3s ease;
+}
 .front-container {
     z-index: 2;
    margin-left: -370px
@@ -217,6 +219,9 @@ height:102px
     z-index: 2;
         margin: 7px;
         right: 4%;
+}
+#pen, #cap {
+    transition: transform 0.3s ease;
 }
 }
 

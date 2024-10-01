@@ -53,38 +53,33 @@ document.getElementById('download-cv').onclick = function() {
 
 
 
- // parallax effect script here 
-window.addEventListener('scroll', function() {
-    // Logo fade effect
-    var logoContainer = document.querySelector('.logo-container');
-    var windowHeight = window.innerHeight;
-    var scrollY = window.scrollY;
-
-    if (scrollY < windowHeight) {
-        var opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.4 opacity
-        logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.4
-    } else {
-        logoContainer.style.opacity = 0.4;
-    }
-    // Sections
-
 document.addEventListener("DOMContentLoaded", function() {
+    const logoContainer = document.querySelector('.logo-container');
     const pen = document.getElementById('pen');
     const cap = document.getElementById('cap');
-    const homeSection = document.querySelector('.home-section'); // Adjust selector as needed
-    const contactSection = document.querySelector('.contact-section'); // Adjust selector as needed
+    const homeSection = document.querySelector('.home-section');
+    const contactSection = document.querySelector('.contact-section');
+    const windowHeight = window.innerHeight;
 
     window.addEventListener('scroll', function() {
-        let scrollPosition = window.scrollY;
+        const scrollY = window.scrollY;
+
+        // Logo fade effect
+        if (scrollY < windowHeight) {
+            var opacity = 1 - (scrollY / windowHeight * 0.6);
+            logoContainer.style.opacity = Math.max(opacity, 0.4);
+        } else {
+            logoContainer.style.opacity = 0.4;
+        }
+
+        // Image transformation effects
         let homeTop = homeSection.offsetTop;
         let contactTop = contactSection.offsetTop;
 
-        if (scrollPosition >= homeTop && scrollPosition < contactTop) {
-            // Scrolling down in the home section
+        if (scrollY >= homeTop && scrollY < contactTop) {
             pen.style.transform = 'translate3d(80%, 0px, 0px) scale3d(1, 1, 1)';
             cap.style.transform = 'translate3d(-80%, 0px, 0px) scale3d(1, 1, 1)';
         } else {
-            // Outside the home section
             pen.style.transform = 'translate3d(0%, 0px, 0px) scale3d(1, 1, 1)';
             cap.style.transform = 'translate3d(0%, 0px, 0px) scale3d(1, 1, 1)';
         }

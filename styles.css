@@ -103,7 +103,7 @@ body {
     will-change: transform;
     object-fit: contain;
     height: auto;
-    width: 50%;
+    width: 70%;
 }
 .w-container {
     position: sticky;
@@ -168,7 +168,7 @@ body {
     will-change: transform;
     object-fit: contain;
     height: auto;
-    width: 50%;
+    width: 70%;
 }
 .w-container {
     position: sticky;

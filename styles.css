@@ -206,7 +206,7 @@ width:290px;
 height:49px;
 }
 #cap{
-   width:180px;
+   width:150px;
 height:60px
 }
 .back-container {
@@ -216,7 +216,7 @@ height:60px
 
 .front-container {
     z-index: 2;
-          margin-left: -50px;
+          margin-left: -25px;
 left:0;
 }
 }

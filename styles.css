@@ -146,7 +146,15 @@ body {
 }
 
 }
-
+@media (max-width: 786px) {
+#pen, #cap {
+    transition: transform 0.5s ease;
+    will-change: transform;
+    object-fit: contain;
+    height: auto;
+    width: 70%;
+}
+}
 @media (min-width: 1200px) {
     .back-container, .front-container {
         width: 50%; /* Maintain the 50% width on larger screens */

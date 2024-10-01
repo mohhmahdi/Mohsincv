@@ -54,6 +54,20 @@ document.getElementById('download-cv').onclick = function() {
 
 
 
+window.addEventListener('load', function() {
+    // Initialize the transform properties for pen and cap
+    var pen = document.getElementById('pen');
+    var cap = document.getElementById('cap');
+
+    // Set initial transform styles
+    if (pen && cap) {
+        let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
+        pen.style.transform = initialTransform;
+        pen.style.transformStyle = 'preserve-3d';
+        cap.style.transform = initialTransform;
+        cap.style.transformStyle = 'preserve-3d';
+    }
+});
 
 window.addEventListener('scroll', function() {
     // Variables for window properties and elements
@@ -71,7 +85,7 @@ window.addEventListener('scroll', function() {
         opacity = 0.4;
     }
 
-    // Variables for curtain effect elements
+    // Elements for curtain effect
     let home = document.getElementById('home');
     let footer = document.getElementById('footer');
     let pen = document.getElementById('pen');
@@ -89,21 +103,21 @@ window.addEventListener('scroll', function() {
 
     // Curtain effect logic
     if (opacity <= 0.4) {
-        if (scrollY + windowHeight > homeRect.top && scrollY < footerRect.top) {
-            // Open the curtain when within home section and before reaching footer
+        if ((homeRect.bottom < 0 || homeRect.top > windowHeight) && 
+            (footerRect.bottom < 0 || footerRect.top > windowHeight)) {
+            let distanceFromHome = Math.max(0, windowHeight - homeRect.bottom);
+            let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
+            let maxDistance = Math.max(distanceFromHome, distanceFromFooter);
+            let percentOpen = Math.min(maxDistance / 1000, 1);
+
+            let translateX = 50 * percentOpen;
+            pen.style.transform = `translateX(${translateX}%)`;
+            cap.style.transform = `translateX(-${translateX}%)`;
+        } else {
             pen.style.transform = `translateX(0%)`;
             cap.style.transform = `translateX(0%)`;
-        } else if (scrollY >= footerRect.top) {
-            // Close the curtain when entering the footer section
-            pen.style.transform = `translateX(50%)`;
-            cap.style.transform = `translateX(-50%)`;
-        } else {
-            // Keep the curtain closed before reaching the home section
-            pen.style.transform = `translateX(50%)`;
-            cap.style.transform = `translateX(-50%)`;
         }
     } else {
-        // Keep the curtain closed while the logo is not fully faded
         pen.style.transform = `translateX(50%)`;
         cap.style.transform = `translateX(-50%)`;
     }

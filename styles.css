@@ -79,7 +79,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    margin: 10px;
+    margin: 30px;
 }
 
 .front-container {
@@ -124,11 +124,11 @@ height:102px
 }
 .back-container {
       z-index: 1;
-    margin: 5px;
+    margin: 10px;
 }
 
 .front-container {
-    z-index: 1;
+    z-index: 2;
 }
 }
 

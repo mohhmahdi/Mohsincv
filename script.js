@@ -53,35 +53,52 @@ document.getElementById('download-cv').onclick = function() {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const logoContainer = document.querySelector('.logo-container');
-    const pen = document.getElementById('pen');
-    const cap = document.getElementById('cap');
-    const homeSection = document.querySelector('.home-section');
-    const contactSection = document.querySelector('.contact-section');
-    const windowHeight = window.innerHeight;
+window.addEventListener('scroll', function() {
+    // Logo fade effect
+    var logoContainer = document.querySelector('.logo-container');
+    var windowHeight = window.innerHeight;
+    var scrollY = window.scrollY;
 
-    window.addEventListener('scroll', function() {
-        const scrollY = window.scrollY;
+    if (scrollY < windowHeight) {
+        var opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.4 opacity
+        logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.4
+    } else {
+        logoContainer.style.opacity = 0.4;
+    }
 
-        // Logo fade effect
-        if (scrollY < windowHeight) {
-            var opacity = 1 - (scrollY / windowHeight * 0.6);
-            logoContainer.style.opacity = Math.max(opacity, 0.4);
-        } else {
-            logoContainer.style.opacity = 0.4;
-        }
+    // Curtain effect for cap and pen
+    let home = document.getElementById('home');
+    let footer = document.getElementById('footer');
 
-        // Image transformation effects
-        let homeTop = homeSection.offsetTop;
-        let contactTop = contactSection.offsetTop;
+    if (!home || !footer) {
+        console.log("Home or footer sections not found, exiting curtain effect script.");
+        return; // Exit if home or footer sections are not found
+    }
 
-        if (scrollY >= homeTop && scrollY < contactTop) {
-            pen.style.transform = 'translate3d(80%, 0px, 0px) scale3d(1, 1, 1)';
-            cap.style.transform = 'translate3d(-80%, 0px, 0px) scale3d(1, 1, 1)';
-        } else {
-            pen.style.transform = 'translate3d(0%, 0px, 0px) scale3d(1, 1, 1)';
-            cap.style.transform = 'translate3d(0%, 0px, 0px) scale3d(1, 1, 1)';
-        }
-    });
+    let homeRect = home.getBoundingClientRect();
+    let footerRect = footer.getBoundingClientRect();
+
+    let homeVisibleHeight = windowHeight - homeRect.top;
+    let footerVisibleHeight = windowHeight - footerRect.top;
+
+    let pen = document.getElementById('pen');
+    let cap = document.getElementById('cap');
+
+    if (!pen || !cap) {
+        console.log("Pen or cap elements not found, exiting curtain effect script.");
+        return; // Exit if pen or cap elements are not found
+    }
+
+    // Adjust this calculation based on your specific layout and what "fully open" means in pixel or percentage terms
+    if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
+        let percentClosed = 1 - Math.min(homeVisibleHeight / home.offsetHeight, 1);
+        let translateX = 50 * percentClosed;  // Adjust the multiplier to control the extent of movement
+        pen.style.transform = `translateX(-${translateX}%)`;
+        cap.style.transform = `translateX(${translateX}%)`;
+    } else if (footerRect.top < windowHeight) {
+        let percentOpen = Math.min(footerVisibleHeight / footer.offsetHeight, 1);
+        let translateX = 50 * (1 - percentOpen);  // Adjust the multiplier to control the extent of movement
+        pen.style.transform = `translateX(-${translateX}%)`;
+        cap.style.transform = `translateX(${translateX}%)`;
+    }
 });

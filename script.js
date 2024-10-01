@@ -67,7 +67,7 @@ window.addEventListener('scroll', function() {
         logoContainer.style.opacity = 0.4;
     }
     // Sections
-<script>
+
 document.addEventListener("DOMContentLoaded", function() {
     const pen = document.getElementById('pen');
     const cap = document.getElementById('cap');
@@ -90,4 +90,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-</script>

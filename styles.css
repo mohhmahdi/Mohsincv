@@ -54,19 +54,15 @@ body {
 /* logo fade out-in ends here */
 
 /* parallax effcet start here */
-
-/* Container styling */
-/* Container styling */
 .w-container {
-    position: relative;
-    width: 600px; /* Adjusted to fit the full width of the front container */
-    height: 200px; /* Adjusted to fit the height of the back container */
-     display: flex;
-    justify-content: center;
     position: sticky;
-    top: 43vh;
-    width: 100%; /* Ensures full width */
-   z-index:1000;
+    top: 43vh; /* Adjust this value to control how far down the container sticks */
+    width: 100%; /* Ensures it spans the full width of the viewport */
+    height: 200px; /* Fixed height, adjust if necessary */
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+    z-index: 1000; /* Keeps it on top of other content */
 }
 
 /* Back container styling */
@@ -74,24 +70,34 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 300px; /* Explicit width */
+    width: 50%; /* Half of the parent width */
     height: 100%;
-  
     z-index: 1;
 }
 
 /* Front container styling */
 .front-container {
     position: absolute;
-    left: 300px; /* Starts from the middle of the back container */
+    left: 50%; /* Starts from the middle of the parent container */
     top: 0;
-    width: 300px; /* Explicit width, same as the back container */
+    width: 50%; /* Half of the parent width */
     height: 100%;
-   display: inline-block;
-   margin: 0 auto; /* Centers the container horizontally */
+    display: block;
+    margin-left: 0; /* No longer need negative margin */
     z-index: 2;
 }
 
+@media (max-width: 600px) {
+    .back-container, .front-container {
+        width: 50%; /* Maintain the 50% width on smaller screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .back-container, .front-container {
+        width: 50%; /* Maintain the 50% width on larger screens */
+    }
+}
 #pen, #cap {
   transition: transform 0.5s ease; /* Smooth transitions for transformations */
     will-change: transform; /* Optimize for transformations */

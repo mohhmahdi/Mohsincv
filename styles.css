@@ -82,7 +82,7 @@ body {
 /* Front container styling */
 .front-container {
       position: absolute;
-
+    left: 100px;
     top: 0;
     height: 100%;
     display: flex;
@@ -173,6 +173,7 @@ body {
 /* Front container styling */
 .front-container {
       position: absolute;
+    left: 100px;
     top: 0;
     height: 100%;
     display: flex;
@@ -222,6 +223,7 @@ body {
 /* Front container styling */
 .front-container {
       position: absolute;
+    left: 100px;
     top: 0;
     height: 100%;
     display: flex;

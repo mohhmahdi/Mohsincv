@@ -71,8 +71,8 @@ window.addEventListener('scroll', function() {
 document.addEventListener("DOMContentLoaded", function() {
     const pen = document.getElementById('pen');
     const cap = document.getElementById('cap');
-    const homeSection = document.querySelector('.home'); // Adjust selector as needed
-    const contactSection = document.querySelector('.contact'); // Adjust selector as needed
+    const homeSection = document.querySelector('.home-section'); // Adjust selector as needed
+    const contactSection = document.querySelector('.contact-section'); // Adjust selector as needed
 
     window.addEventListener('scroll', function() {
         let scrollPosition = window.scrollY;

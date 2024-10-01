@@ -210,13 +210,13 @@ height:102px
 .back-container {
       z-index: 1;
        right: 0;
-      margin-right: -90px;
+         margin-right: -250px;
 }
 
 .front-container {
     z-index: 2;
         margin: 7px;
-        right: 28%;
+        right: 3%;
 }
 }
 

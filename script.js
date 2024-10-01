@@ -114,7 +114,7 @@ window.addEventListener('scroll', function() {
         let percentOpen = Math.min(distanceFromFooter / 1000, 1);
 
         let translateXPen = 90 * percentOpen; // Increase the outward translation of the pen by an additional 10%
-        let translateXCap = 70 * percentOpen + 10%; // Keep the cap's translation as is
+        let translateXCap = 70 * percentOpen + 10; // Keep the cap's translation as is
         pen.style.transform = `translateX(${translateXPen}%)`;
         cap.style.transform = `translateX(-${translateXCap}%)`;
     } else {

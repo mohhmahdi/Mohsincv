@@ -193,8 +193,7 @@ height:102px
 
 .front-container {
     z-index: 2;
-    margin-left: 187px;
-        left: 0;
+   margin-left: -370px
     
 }
 }
@@ -202,22 +201,22 @@ height:102px
 
 @media (max-width: 786px) {
 #pen {
-width:230px;
-height:49px;
+        width: 440px;
 }
 #cap{
-   width:120px;
-height:60px
+   width:250px;
+
 }
 .back-container {
       z-index: 1;
-    margin: 4px;
+       right: 0;
+      margin-right: -90px;
 }
 
 .front-container {
     z-index: 2;
- margin-left: 25px;
-left:0;
+        margin: 7px;
+        right: 28%;
 }
 }
 

@@ -51,7 +51,6 @@ document.getElementById('download-cv').onclick = function() {
     window.location.href = '/images/Mohsin_Mahdi_CV-H.pdf'; // Replace with the actual path to your CV
 };
 
-
 window.addEventListener('scroll', function() {
     // Variables for window properties and elements
     var logoContainer = document.querySelector('.logo-container');
@@ -65,6 +64,7 @@ window.addEventListener('scroll', function() {
         logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.4
     } else {
         logoContainer.style.opacity = 0.4;
+        opacity = 0.4;
     }
 
     // Elements for curtain effect
@@ -82,18 +82,26 @@ window.addEventListener('scroll', function() {
     // Get bounding rectangles
     let homeRect = home.getBoundingClientRect();
 
-    if (homeRect.top <= 0 && homeRect.bottom >= 0) {
-        // When home section is reached
+    // Determine initial or adjusted transformation for pen and cap
+    if (scrollY < homeRect.top) {
+        // Before reaching the home section
+        let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
+        pen.style.transform = initialTransform;
+        pen.style.transformStyle = 'preserve-3d';
+        cap.style.transform = initialTransform;
+        cap.style.transformStyle = 'preserve-3d';
+    } else if (opacity <= 0.4 && homeRect.bottom < 0) {
+        // Curtain effect logic after home section is passed
         let footerRect = footer.getBoundingClientRect();
         let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
         let percentOpen = Math.min(distanceFromFooter / 1000, 1);
 
-        let translateXPen = 100 * percentOpen; // Adjusted outward translation of the pen
-        let translateXCap = 75 * percentOpen; // Adjusted translation of the cap
+        let translateXPen = 100 * percentOpen; // Increase the outward translation of the pen by an additional 10%
+        let translateXCap = 75 * percentOpen; // Keep the cap's translation as is
         pen.style.transform = `translateX(${translateXPen}%)`;
         cap.style.transform = `translateX(-${translateXCap}%)`;
     } else {
-        // Reset positions when not in the range of the home section
+        // Reset positions when in home or footer sections
         pen.style.transform = `translateX(0%)`;
         cap.style.transform = `translateX(0%)`;
     }

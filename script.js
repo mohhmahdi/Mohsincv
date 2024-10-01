@@ -70,31 +70,35 @@ window.addEventListener('scroll', function() {
     }
 
     // Curtain effect for pen and cap
+    let home = document.getElementById('home');
     let footer = document.getElementById('footer');
     let pen = document.getElementById('pen');
     let cap = document.getElementById('cap');
 
     // Exit if required elements are not found
-    if (!footer || !pen || !cap) {
+    if (!home || !footer || !pen || !cap) {
         console.log("Required elements not found, exiting curtain effect script.");
         return;
     }
 
-    // Get bounding rectangle for the footer
+    // Get bounding rectangles
+    let homeRect = home.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
 
-    // Check if the current scroll is outside the footer section
-    if (footerRect.bottom < 0 || footerRect.top > windowHeight) {
-        // Calculate percentage to control transform based on distance from footer
-        let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
-        let percentOpen = Math.min(distanceFromFooter / 1000, 1); // Normalize and limit to 1
-
-        // Calculate translateX based on percentage
-        let translateX = 50 * percentOpen; // Adjust the multiplier to control the extent of movement
+    // Determine if the current scroll position is before, within or after home, and before footer
+    if (homeRect.top > windowHeight) {
+        // Before reaching the home section, the curtain is closed
+        pen.style.transform = `translateX(50%)`;
+        cap.style.transform = `translateX(-50%)`;
+    } else if (footerRect.top < windowHeight) {
+        // Starting to reach the footer section, start closing the curtain
+        let distanceToFooter = footerRect.top - windowHeight;
+        let percentClose = Math.min((100 - Math.max(distanceToFooter, -100)) / 100, 1);
+        let translateX = 50 * (1 - percentClose);
         pen.style.transform = `translateX(${translateX}%)`;
         cap.style.transform = `translateX(-${translateX}%)`;
     } else {
-        // Reset positions when in the footer section
+        // Within home section and not yet to footer, the curtain is open
         pen.style.transform = `translateX(0%)`;
         cap.style.transform = `translateX(0%)`;
     }

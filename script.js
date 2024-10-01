@@ -87,28 +87,23 @@ window.addEventListener('scroll', function() {
     let homeRect = home.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
 
-    // Curtain effect starts after logo is fully faded
+    // Curtain effect logic
     if (opacity <= 0.4) {
-        // Determine if the current scroll position is outside home and footer
-        if ((homeRect.bottom < 0 || homeRect.top > windowHeight) && 
-            (footerRect.bottom < 0 || footerRect.top > windowHeight)) {
-            // Calculate percentage to control transform based on distance from home and footer
-            let distanceFromHome = Math.max(0, windowHeight - homeRect.bottom);
-            let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
-            let maxDistance = Math.max(distanceFromHome, distanceFromFooter);
-            let percentOpen = Math.min(maxDistance / 1000, 1); // Normalize and limit to 1
-
-            // Calculate translateX based on percentage
-            let translateX = 50 * percentOpen; // Adjust the multiplier to control the extent of movement
-            pen.style.transform = `translateX(${translateX}%)`;
-            cap.style.transform = `translateX(-${translateX}%)`;
-        } else {
-            // Reset positions when in home or footer sections
+        if (scrollY + windowHeight > homeRect.top && scrollY < footerRect.top) {
+            // Open the curtain when within home section and before reaching footer
             pen.style.transform = `translateX(0%)`;
             cap.style.transform = `translateX(0%)`;
+        } else if (scrollY >= footerRect.top) {
+            // Close the curtain when entering the footer section
+            pen.style.transform = `translateX(50%)`;
+            cap.style.transform = `translateX(-50%)`;
+        } else {
+            // Keep the curtain closed before reaching the home section
+            pen.style.transform = `translateX(50%)`;
+            cap.style.transform = `translateX(-50%)`;
         }
     } else {
-        // Reset positions while logo is not fully faded
+        // Keep the curtain closed while the logo is not fully faded
         pen.style.transform = `translateX(50%)`;
         cap.style.transform = `translateX(-50%)`;
     }

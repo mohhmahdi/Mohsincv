@@ -54,11 +54,12 @@ document.getElementById('download-cv').onclick = function() {
 
 
 window.addEventListener('scroll', function() {
-    // Logo fade effect
+    // Variables for window properties and elements
     var logoContainer = document.querySelector('.logo-container');
     var windowHeight = window.innerHeight;
     var scrollY = window.scrollY;
 
+    // Logo fade effect
     if (scrollY < windowHeight) {
         var opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.4 opacity
         logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.4
@@ -69,27 +70,22 @@ window.addEventListener('scroll', function() {
     // Curtain effect for cap and pen
     let home = document.getElementById('home');
     let footer = document.getElementById('footer');
-
-    if (!home || !footer) {
-        console.log("Home or footer sections not found, exiting curtain effect script.");
-        return; // Exit if home or footer sections are not found
-    }
-
-    let homeRect = home.getBoundingClientRect();
-    let footerRect = footer.getBoundingClientRect();
-
-    let homeVisibleHeight = windowHeight - homeRect.top;
-    let footerVisibleHeight = windowHeight - footerRect.top;
-
     let pen = document.getElementById('pen');
     let cap = document.getElementById('cap');
 
-    if (!pen || !cap) {
-        console.log("Pen or cap elements not found, exiting curtain effect script.");
-        return; // Exit if pen or cap elements are not found
+    // Exit if required elements are not found
+    if (!home || !footer || !pen || !cap) {
+        console.log("Required sections or elements not found, exiting curtain effect script.");
+        return;
     }
 
-    // Adjust this calculation based on your specific layout and what "fully open" means in pixel or percentage terms
+    // Get bounding rectangles and calculate visible heights
+    let homeRect = home.getBoundingClientRect();
+    let footerRect = footer.getBoundingClientRect();
+    let homeVisibleHeight = windowHeight - homeRect.top;
+    let footerVisibleHeight = windowHeight - footerRect.top;
+
+    // Adjust pen and cap positions based on the visibility of the home and footer sections
     if (homeRect.bottom > 0 && homeRect.top < windowHeight) {
         let percentClosed = 1 - Math.min(homeVisibleHeight / home.offsetHeight, 1);
         let translateX = 50 * percentClosed;  // Adjust the multiplier to control the extent of movement

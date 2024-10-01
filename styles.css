@@ -79,7 +79,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    margin: 30px;
+    margin: 15px;
 }
 
 .front-container {
@@ -88,6 +88,7 @@ body {
     align-items: flex-start;
     justify-content: center;
     left: 0;
+margin-left: 70px;
 }
 #pen, #cap {
     transition: transform 0.5s ease;
@@ -124,11 +125,12 @@ height:102px
 }
 .back-container {
       z-index: 1;
-    margin: 10px;
+    margin: 9px;
 }
 
 .front-container {
     z-index: 2;
+    margin-left: 0;
 }
 }
 

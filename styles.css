@@ -104,12 +104,16 @@ height:120px;
    width:453px;
 height:145px;
 }
-
+@media (min-width: 768px) and (max-width: 1024px) {
+    .w-container {
+z-index:1000;
+   }
+}
 /* Responsive Styles */
 @media (max-width: 600px) {
-    .back-container, .front-container {
-        width: 50%;
-    }
+   .w-container {
+z-index:1000;
+   }
 }
 @media (max-width: 786px) {
 #pen {

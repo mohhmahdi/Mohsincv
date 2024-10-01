@@ -79,17 +79,18 @@ body {
     left: -25px;
     width: 50%;
     z-index: 2;
-    justify-content: space-evenly;
+   flex-direction: column;
     align-content: flex-end;
+    justify-content: flex-end;
 }
 
 .front-container {
     left: 100px;
     width: auto; /* Initial width not specified, adjust as needed */
     z-index: 1;
-    flex-direction: column-reverse;
-    align-content: stretch;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-end;
 }
 
 #pen, #cap {

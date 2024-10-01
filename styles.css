@@ -68,7 +68,7 @@ body {
 /* Back container styling */
 .back-container {
       position: absolute;
-    left: 0;
+    left: -25px;
     top: 0;
     width: 50%;
     height: 100%;
@@ -119,7 +119,7 @@ body {
 /* Back container styling */
 .back-container {
       position: absolute;
-    left: 0;
+    left: -25px;
     top: 0;
     width: 50%;
     height: 100%;
@@ -159,7 +159,7 @@ body {
 }
 .back-container {
       position: absolute;
-    left: 0;
+    left: -25px;
     top: 0;
     width: 50%;
     height: 100%;
@@ -209,7 +209,7 @@ body {
 /* Back container styling */
 .back-container {
       position: absolute;
-    left: 0;
+    left: -25px;
     top: 0;
     width: 50%;
     height: 100%;

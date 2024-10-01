@@ -120,6 +120,10 @@ height:60px
 #pen, #cap {
     transition: transform 0.3s ease;
 }
+.back-container {
+      z-index: 1;
+    margin: 9px;
+}
 }
 @media only screen 
   and (min-device-width : 1812px) 
@@ -202,12 +206,12 @@ height:60px
 }
 .back-container {
       z-index: 1;
-    margin: 9px;
+    margin: 6px;
 }
 
 .front-container {
     z-index: 2;
-    margin-left: 0;
+    margin-left: 130px;
 left:0;
 }
 }

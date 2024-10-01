@@ -111,15 +111,10 @@ body {
 
 @media (max-width: 786px) {
     .front-container {
-        left: 21.5%;
+        left: 5%;
     }
 }
 
-@media (min-width: 1200px) {
-    .back-container, .front-container {
-        width: 50%;
-    }
-}
 
 /* parallax effcet ends here */
 

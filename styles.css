@@ -67,24 +67,31 @@ body {
 
 /* Back container styling */
 .back-container {
-    position: absolute;
+      position: absolute;
     left: 0;
     top: 0;
-    width: 50%; /* Half of the parent width */
+    width: 50%;
     height: 100%;
     z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-end;
 }
 
 /* Front container styling */
 .front-container {
-    position: absolute;
-    left: 50%; /* Starts from the middle of the parent container */
+      position: absolute;
+    left: 21.5%;
     top: 0;
-    width: 50%; /* Half of the parent width */
     height: 100%;
-    display: block;
-    margin-left: 0; /* No longer need negative margin */
+    display: flex;
+    margin-left: 0;
     z-index: 1;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: stretch;
+    justify-content: flex-start;
 }
 
 @media (max-width: 600px) {

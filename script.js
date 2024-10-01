@@ -68,7 +68,6 @@ window.addEventListener('load', function() {
         cap.style.transformStyle = 'preserve-3d';
     }
 });
-
 window.addEventListener('scroll', function() {
     // Variables for window properties and elements
     var logoContainer = document.querySelector('.logo-container');
@@ -99,26 +98,27 @@ window.addEventListener('scroll', function() {
 
     // Get bounding rectangles
     let homeRect = home.getBoundingClientRect();
-    let footerRect = footer.getBoundingClientRect();
 
-    // Curtain effect logic
-    if (opacity <= 0.4) {
-        if ((homeRect.bottom < 0 || homeRect.top > windowHeight) && 
-            (footerRect.bottom < 0 || footerRect.top > windowHeight)) {
-            let distanceFromHome = Math.max(0, windowHeight - homeRect.bottom);
-            let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
-            let maxDistance = Math.max(distanceFromHome, distanceFromFooter);
-            let percentOpen = Math.min(maxDistance / 1000, 1);
+    // Determine initial or adjusted transformation for pen and cap
+    if (scrollY < homeRect.top) {
+        // Before reaching the home section
+        let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
+        pen.style.transform = initialTransform;
+        pen.style.transformStyle = 'preserve-3d';
+        cap.style.transform = initialTransform;
+        cap.style.transformStyle = 'preserve-3d';
+    } else if (opacity <= 0.4 && homeRect.bottom < 0) {
+        // Curtain effect logic after home section is passed
+        let footerRect = footer.getBoundingClientRect();
+        let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
+        let percentOpen = Math.min(distanceFromFooter / 1000, 1);
 
-            let translateX = 50 * percentOpen;
-            pen.style.transform = `translateX(${translateX}%)`;
-            cap.style.transform = `translateX(-${translateX}%)`;
-        } else {
-            pen.style.transform = `translateX(0%)`;
-            cap.style.transform = `translateX(0%)`;
-        }
+        let translateX = 50 * percentOpen;
+        pen.style.transform = `translateX(${translateX}%)`;
+        cap.style.transform = `translateX(-${translateX}%)`;
     } else {
-        pen.style.transform = `translateX(50%)`;
-        cap.style.transform = `translateX(-50%)`;
+        // Reset positions when in home or footer sections
+        pen.style.transform = `translateX(0%)`;
+        cap.style.transform = `translateX(0%)`;
     }
 });

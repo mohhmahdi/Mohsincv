@@ -52,22 +52,6 @@ document.getElementById('download-cv').onclick = function() {
 };
 
 
-
-
-window.addEventListener('load', function() {
-    // Initialize the transform properties for pen and cap
-    var pen = document.getElementById('pen');
-    var cap = document.getElementById('cap');
-
-    // Set initial transform styles
-    if (pen && cap) {
-        let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
-        pen.style.transform = initialTransform;
-        pen.style.transformStyle = 'preserve-3d';
-        cap.style.transform = initialTransform;
-        cap.style.transformStyle = 'preserve-3d';
-    }
-});
 window.addEventListener('scroll', function() {
     // Variables for window properties and elements
     var logoContainer = document.querySelector('.logo-container');
@@ -81,7 +65,6 @@ window.addEventListener('scroll', function() {
         logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.4
     } else {
         logoContainer.style.opacity = 0.4;
-        opacity = 0.4;
     }
 
     // Elements for curtain effect
@@ -99,26 +82,18 @@ window.addEventListener('scroll', function() {
     // Get bounding rectangles
     let homeRect = home.getBoundingClientRect();
 
-    // Determine initial or adjusted transformation for pen and cap
-    if (scrollY < homeRect.top) {
-        // Before reaching the home section
-        let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
-        pen.style.transform = initialTransform;
-        pen.style.transformStyle = 'preserve-3d';
-        cap.style.transform = initialTransform;
-        cap.style.transformStyle = 'preserve-3d';
-    } else if (opacity <= 0.4 && homeRect.bottom < 0) {
-        // Curtain effect logic after home section is passed
+    if (homeRect.top <= 0 && homeRect.bottom >= 0) {
+        // When home section is reached
         let footerRect = footer.getBoundingClientRect();
         let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
         let percentOpen = Math.min(distanceFromFooter / 1000, 1);
 
-        let translateXPen = 100 * percentOpen; // Increase the outward translation of the pen by an additional 10%
-        let translateXCap = 75 * percentOpen; // Keep the cap's translation as is
+        let translateXPen = 100 * percentOpen; // Adjusted outward translation of the pen
+        let translateXCap = 75 * percentOpen; // Adjusted translation of the cap
         pen.style.transform = `translateX(${translateXPen}%)`;
         cap.style.transform = `translateX(-${translateXCap}%)`;
     } else {
-        // Reset positions when in home or footer sections
+        // Reset positions when not in the range of the home section
         pen.style.transform = `translateX(0%)`;
         cap.style.transform = `translateX(0%)`;
     }

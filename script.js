@@ -90,19 +90,36 @@ window.addEventListener('scroll', function() {
         pen.style.transformStyle = 'preserve-3d';
         cap.style.transform = initialTransform;
         cap.style.transformStyle = 'preserve-3d';
-    } else if (opacity <= 0.4 && homeRect.bottom < 0) {
+    } else if (scrollY >= homeRect.bottom) {
         // Curtain effect logic after home section is passed
         let footerRect = footer.getBoundingClientRect();
         let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
         let percentOpen = Math.min(distanceFromFooter / 1000, 1);
 
-        let translateXPen = 100 * percentOpen; // Increase the outward translation of the pen by an additional 10%
-        let translateXCap = 75 * percentOpen; // Keep the cap's translation as is
-        pen.style.transform = `translateX(${translateXPen}%)`;
-        cap.style.transform = `translateX(-${translateXCap}%)`;
+        updateTransforms(percentOpen, pen, cap); // Call updateTransforms with responsive logic
     } else {
         // Reset positions when in home or footer sections
         pen.style.transform = `translateX(0%)`;
         cap.style.transform = `translateX(0%)`;
     }
 });
+
+function updateTransforms(percentOpen, pen, cap) {
+    const viewportWidth = window.innerWidth;
+    let translateXPen, translateXCap;
+
+    if (viewportWidth > 1200) { // large screens
+        translateXPen = 100 * percentOpen;
+        translateXCap = 75 * percentOpen;
+    } else if (viewportWidth > 768) { // medium screens
+        translateXPen = 65 * percentOpen;
+        translateXCap = 100 * percentOpen;
+    } else { // small screens
+        translateXPen = 50 * percentOpen;
+        translateXCap = 90 * percentOpen;
+    }
+
+    // Apply the transformations
+    pen.style.transform = `translateX(${translateXPen}%)`;
+    cap.style.transform = `translateX(-${translateXCap}%)`;
+}

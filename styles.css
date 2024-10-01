@@ -87,8 +87,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    left: 0;
-margin-left: 70px;
+     margin-left: -640px;
 }
 #pen, #cap {
     transition: transform 0.5s ease;
@@ -131,6 +130,7 @@ height:102px
 .front-container {
     z-index: 2;
     margin-left: 0;
+left:0;
 }
 }
 

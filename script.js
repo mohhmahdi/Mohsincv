@@ -67,4 +67,27 @@ window.addEventListener('scroll', function() {
         logoContainer.style.opacity = 0.4;
     }
     // Sections
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const pen = document.getElementById('pen');
+    const cap = document.getElementById('cap');
+    const homeSection = document.querySelector('.home'); // Adjust selector as needed
+    const contactSection = document.querySelector('.contact'); // Adjust selector as needed
 
+    window.addEventListener('scroll', function() {
+        let scrollPosition = window.scrollY;
+        let homeTop = homeSection.offsetTop;
+        let contactTop = contactSection.offsetTop;
+
+        if (scrollPosition >= homeTop && scrollPosition < contactTop) {
+            // Scrolling down in the home section
+            pen.style.transform = 'translate3d(80%, 0px, 0px) scale3d(1, 1, 1)';
+            cap.style.transform = 'translate3d(-80%, 0px, 0px) scale3d(1, 1, 1)';
+        } else {
+            // Outside the home section
+            pen.style.transform = 'translate3d(0%, 0px, 0px) scale3d(1, 1, 1)';
+            cap.style.transform = 'translate3d(0%, 0px, 0px) scale3d(1, 1, 1)';
+        }
+    });
+});
+</script>

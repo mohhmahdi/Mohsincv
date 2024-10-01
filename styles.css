@@ -59,7 +59,7 @@ body {
     position: sticky;
     top: 43vh;
     width: 100%;
-    height: 200px;
+    height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,32 +67,27 @@ body {
 }
 
 .back-container, .front-container {
-    position: absolute;
+     position: absolute;
     top: 0;
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
     transition: transform 0.5s ease;
 }
 
 .back-container {
-    left: -25px;
     width: 50%;
     z-index: 2;
-   flex-direction: column;
-    align-content: flex-end;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .front-container {
-    left: 100px;
-    width: auto; /* Initial width not specified, adjust as needed */
+width: auto;
     z-index: 1;
     flex-direction: column;
-    align-content: flex-end;
-    justify-content: flex-end;
+    justify-content: center;
 }
-
 #pen, #cap {
     transition: transform 0.5s ease;
     will-change: transform;
@@ -110,11 +105,7 @@ body {
     }
 }
 
-@media (max-width: 786px) {
-    .front-container {
-        left: 5%;
-    }
-}
+
 
 
 /* parallax effcet ends here */

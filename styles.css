@@ -91,6 +91,13 @@ body {
     .back-container, .front-container {
         width: 50%; /* Maintain the 50% width on smaller screens */
     }
+#pen, #cap {
+    transition: transform 0.5s ease;
+    will-change: transform;
+    object-fit: contain;
+    height: auto;
+    width: 50%;
+}
 }
 
 @media (min-width: 1200px) {
@@ -103,7 +110,7 @@ body {
     will-change: transform; /* Optimize for transformations */
     object-fit: contain;
    height: auto;
-    width: 50%;
+  
 }
 
 /* parallax effcet ends here */

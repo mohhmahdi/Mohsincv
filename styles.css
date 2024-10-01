@@ -206,17 +206,17 @@ width:290px;
 height:49px;
 }
 #cap{
-   width:150px;
+   width:1200px;
 height:60px
 }
 .back-container {
       z-index: 1;
-    margin: 6px;
+    margin: 5px;
 }
 
 .front-container {
     z-index: 2;
-          margin-left: -0px;
+          margin-left: -10px;
 left:0;
 }
 }

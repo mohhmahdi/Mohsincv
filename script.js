@@ -113,10 +113,10 @@ function updateTransforms(percentOpen, pen, cap) {
         translateXCap = 75 * percentOpen;
     } else if (viewportWidth > 768) { // medium screens
         translateXPen = 65 * percentOpen;
-        translateXCap = 100 * percentOpen;
+        translateXCap = 130 * percentOpen;
     } else { // small screens
         translateXPen = 50 * percentOpen;
-        translateXCap = 90 * percentOpen;
+        translateXCap = 100 * percentOpen;
     }
 
     // Apply the transformations

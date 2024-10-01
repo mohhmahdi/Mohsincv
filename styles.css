@@ -72,7 +72,7 @@ body {
     top: 0;
     width: 50%; /* Half of the parent width */
     height: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Front container styling */
@@ -84,7 +84,7 @@ body {
     height: 100%;
     display: block;
     margin-left: 0; /* No longer need negative margin */
-    z-index: 2;
+    z-index: 1;
 }
 
 @media (max-width: 600px) {
@@ -102,6 +102,8 @@ body {
   transition: transform 0.5s ease; /* Smooth transitions for transformations */
     will-change: transform; /* Optimize for transformations */
     object-fit: contain;
+   height: auto;
+    width: 50%;
 }
 
 /* parallax effcet ends here */

@@ -53,11 +53,7 @@ document.getElementById('download-cv').onclick = function() {
 
 
 
-window.addEventListener('scroll', function() {
-    // Variables for window properties and elements
-    var logoContainer = document.querySelector('.logo-container');
-    var windowHeight = window.innerHeight;
-    var scrollY = window.scrollY;
+
 
 window.addEventListener('scroll', function() {
     // Variables for window properties and elements

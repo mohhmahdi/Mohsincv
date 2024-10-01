@@ -112,14 +112,14 @@ function updateTransforms(percentOpen, pen, cap) {
         translateXPen = 100 * percentOpen;
         translateXCap = 75 * percentOpen;
     } else if (viewportWidth > 768 && viewportWidth <= 1200) { // tablet screens
-        translateXPen = 50 * percentOpen;
-        translateXCap = 120 * percentOpen;
+        translateXPen = 100 * percentOpen;
+        translateXCap = 75 * percentOpen;
     } else if (viewportWidth > 480 && viewportWidth <= 768) { // smaller tablets and large phones
-        translateXPen = 40 * percentOpen;
-        translateXCap = 100 * percentOpen;
+        translateXPen = 10 * percentOpen;
+        translateXCap = 75 * percentOpen;
     } else { // small screens
-        translateXPen = 30 * percentOpen;
-        translateXCap = 90 * percentOpen;
+        translateXPen = 5 * percentOpen;
+        translateXCap = 50 * percentOpen;
     }
 
     // Apply the transformations

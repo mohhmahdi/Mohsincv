@@ -120,8 +120,9 @@ height:102px
 
 .front-container {
     z-index: 2;
-    margin-left: 0;
-left:0;
+        margin-left: 20px;
+        left: 0;
+    
 }
 }
 /* Responsive Styles */

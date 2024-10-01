@@ -59,6 +59,12 @@ window.addEventListener('scroll', function() {
     var windowHeight = window.innerHeight;
     var scrollY = window.scrollY;
 
+window.addEventListener('scroll', function() {
+    // Variables for window properties and elements
+    var logoContainer = document.querySelector('.logo-container');
+    var windowHeight = window.innerHeight;
+    var scrollY = window.scrollY;
+
     // Logo fade effect
     if (scrollY < windowHeight) {
         var opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.4 opacity
@@ -68,36 +74,31 @@ window.addEventListener('scroll', function() {
     }
 
     // Curtain effect for pen and cap
-    let home = document.getElementById('home');
     let footer = document.getElementById('footer');
     let pen = document.getElementById('pen');
     let cap = document.getElementById('cap');
 
     // Exit if required elements are not found
-    if (!home || !footer || !pen || !cap) {
-        console.log("Required sections or elements not found, exiting curtain effect script.");
+    if (!footer || !pen || !cap) {
+        console.log("Required elements not found, exiting curtain effect script.");
         return;
     }
 
-    // Get bounding rectangles and calculate visible heights
-    let homeRect = home.getBoundingClientRect();
+    // Get bounding rectangle for the footer
     let footerRect = footer.getBoundingClientRect();
 
-    // Determine if the current scroll position is outside home and footer
-    if ((homeRect.bottom < 0 || homeRect.top > windowHeight) && 
-        (footerRect.bottom < 0 || footerRect.top > windowHeight)) {
-        // Calculate percentage to control transform based on distance from home and footer
-        let distanceFromHome = Math.max(0, windowHeight - homeRect.bottom);
+    // Check if the current scroll is outside the footer section
+    if (footerRect.bottom < 0 || footerRect.top > windowHeight) {
+        // Calculate percentage to control transform based on distance from footer
         let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
-        let maxDistance = Math.max(distanceFromHome, distanceFromFooter);
-        let percentOpen = Math.min(maxDistance / 1000, 1); // Normalize and limit to 1
+        let percentOpen = Math.min(distanceFromFooter / 1000, 1); // Normalize and limit to 1
 
         // Calculate translateX based on percentage
         let translateX = 50 * percentOpen; // Adjust the multiplier to control the extent of movement
         pen.style.transform = `translateX(${translateX}%)`;
         cap.style.transform = `translateX(-${translateX}%)`;
     } else {
-        // Reset positions when in home or footer sections
+        // Reset positions when in the footer section
         pen.style.transform = `translateX(0%)`;
         cap.style.transform = `translateX(0%)`;
     }

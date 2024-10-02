@@ -688,6 +688,9 @@ nav {
     .work-p8 {
         font-size: 1rem; /* Smaller size for tablets */
     }
+.work-item .work-link {
+width:50%;
+}
 
 }
 

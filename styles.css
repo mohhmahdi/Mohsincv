@@ -43,7 +43,7 @@ body {
     display: flex;
     position: relative;
     overflow: hidden;
-   
+   bottom: 20vh;
 }
 
 /* Additional div to control the logo width */
@@ -58,7 +58,7 @@ body {
 /* Base Styles for Containers */
 .w-container {
     position: sticky;
-    top: 43vh;
+    bottom: 30vh;
     width: 100%;
     height: 100%;
     display: flex;

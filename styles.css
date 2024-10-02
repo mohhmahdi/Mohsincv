@@ -1,12 +1,14 @@
 
+
 @import url('https://fonts.cdnfonts.com/css/chiller');
 @import url('https://fonts.cdnfonts.com/css/nu-century-gothic');
 @import url('https://fonts.cdnfonts.com/css/roboto');
     * {
     box-sizing: border-box;
 }            
-
+                
 body {
+    margin: 0;
     padding: 0;
     background-image: url('/images/background 1.png');
     background-size: cover;
@@ -14,7 +16,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-  
+   
 }
 /* logo fade out-in start here */
 /* Styles for the image within the container */
@@ -41,8 +43,7 @@ body {
     display: flex;
     position: relative;
     overflow: hidden;
-   min-height: 100%;
-    margin: 0;
+   
 }
 
 /* Additional div to control the logo width */
@@ -104,79 +105,8 @@ height:120px;
    width:453px;
 height:145px;
 }
-@media only screen 
-  and (min-device-width: 904px) 
-  and (max-device-width: 2316px) 
-  and (orientation: portrait) {
 
-    #pen {
-width:331px;
-height:49px;
-}
-#cap{
-   width:189px;
-height:60px
-}
-#pen, #cap {
-    transition: transform 0.3s ease;
-}
-.back-container {
-      z-index: 1;
-    margin: 9px;
-}
-    .front-container {
-        z-index: 2;
-                margin-left: -70px;
-        left: 0;
-    }
-}
-@media only screen 
-  and (min-device-width : 1812px) 
-  and (max-device-width : 2176px) {
-     #pen {
-width:497px;
-height:84px;
-}
-#cap{
-   width:250px;
-height:102px
-}
-.back-container {
-      z-index: 1;
-    margin: 9px;
-}
 
-.front-container {
-    z-index: 2;
-        margin-left: 20px;
-        left: 0;
-    
-}
-}
-@media only screen 
-  and (min-device-width : 2316px) 
-  and (max-device-width : 904px) 
-  and (orientation : landscape) {
-    #pen {
-width:497px;
-height:84px;
-}
-#cap{
-   width:250px;
-height:102px
-}
-.back-container {
-      z-index: 1;
-    margin: 9px;
-}
-
-.front-container {
-    z-index: 2;
-        margin-left: 20px;
-        left: 0;
-    
-}
-}
 @media (min-width: 768px) and (max-width: 1024px) {
  #pen {
 width:497px;
@@ -189,51 +119,41 @@ height:102px
 .back-container {
       z-index: 1;
     margin: 9px;
-
-}
 }
 #pen, #cap {
     transition: transform 0.3s ease;
-
 }
 .front-container {
     z-index: 2;
    margin-left: -370px
-   
+    
 }
 }
-
 /* Responsive Styles */
 
 @media (max-width: 786px) {
 #pen {
-width: 440px;
-height:84px;
+        width: 440px;
 }
 #cap{
    width:250px;
-height:102px
+
 }
 .back-container {
       z-index: 1;
        right: 0;
          margin-right: -250px;
-  
 }
 
 .front-container {
     z-index: 2;
         margin: 7px;
         right: 4%;
-
 }
 #pen, #cap {
     transition: transform 0.3s ease;
-
 }
 }
-
-
 
 
 

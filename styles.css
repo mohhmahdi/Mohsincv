@@ -616,7 +616,7 @@ nav {
 .work-image:hover {
     box-shadow: 0 0 8px 3px #DAA520; /* Dark yellow glow effect */
 }
-.work-item .work-link {
+
      padding: 10px;
     margin: 30px;
     align-self: center; /* center */
@@ -689,7 +689,8 @@ nav {
         font-size: 1rem; /* Smaller size for tablets */
     }
 .work-item .work-link {
-width:50%;
+width: 80%;
+ margin-left: 5px;
 }
 
 }

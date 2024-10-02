@@ -435,6 +435,8 @@ nav {
     width: 30px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Maintain aspect ratio */
+    position: sticky;
+   z-index:1001;
 }
 }
 

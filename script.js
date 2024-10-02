@@ -112,14 +112,14 @@ function updateTransforms(percentOpen, pen, cap) {
     if (viewportWidth > 1200) { // large screens
         translateXPen = 120 * percentOpen;
         translateXCap = 110 * percentOpen;
-    } else if (viewportWidth > 768 && viewportWidth <= 1200) { // tablet screens
-        translateXPen = 100 * percentOpen;
+    } else if (viewportWidth > 768) { // tablet screens
+        translateXPen = 0 * percentOpen;
         translateXCap = 100 * percentOpen;
-    } else if (viewportWidth > 480 && viewportWidth <= 768) { // smaller tablets and large phones
-        
+    } else if (viewportWidth > 480 ) { // smaller tablets and large phones
+         translateXPen = 0 * percentOpen;
         translateXCap = 80* percentOpen;
     } else { // small screens
- 
+          translateXPen = 0 * percentOpen;
         translateXCap = 90 * percentOpen;
     }
 

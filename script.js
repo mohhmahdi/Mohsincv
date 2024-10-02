@@ -96,29 +96,36 @@ window.addEventListener('scroll', function() {
         let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
         let percentOpen = Math.min(distanceFromFooter / 1000, 1);
 
-      function updateTransforms(percentOpen, pen, cap) {
+        updateTransforms(percentOpen, pen, cap); // Call updateTransforms with responsive logic
+    } else {
+        // Reset positions when in home or footer sections
+        pen.style.transform = `translateX(0%)`;
+        cap.style.transform = `translateX(0%)`;
+    }
+});
+
+function updateTransforms(percentOpen, pen, cap) {
     const viewportWidth = window.innerWidth;
     const maxPenMove = viewportWidth / 2 - pen.offsetWidth / 2; // Max movement allowed for pen
     const maxCapMove = viewportWidth / 2 - cap.offsetWidth / 2; // Max movement allowed for cap
 
     let translateXPen, translateXCap;
 
-    // Define movement scale based on screen size
-    if (viewportWidth > 1200) {
+    if (viewportWidth > 1200) { // large screens
         translateXPen = Math.min(120 * percentOpen, maxPenMove);
         translateXCap = Math.min(90 * percentOpen, maxCapMove);
-    } else if (viewportWidth > 768 && viewportWidth <= 1200) {
+    } else if (viewportWidth > 768 && viewportWidth <= 1200) { // tablet screens
         translateXPen = Math.min(100 * percentOpen, maxPenMove);
         translateXCap = Math.min(75 * percentOpen, maxCapMove);
-    } else if (viewportWidth > 480 && viewportWidth <= 768) {
+    } else if (viewportWidth > 480 && viewportWidth <= 768) { // smaller tablets and large phones
         translateXPen = Math.min(90 * percentOpen, maxPenMove);
         translateXCap = Math.min(70 * percentOpen, maxCapMove);
-    } else {
+    } else { // small screens
         translateXPen = Math.min(80 * percentOpen, maxPenMove);
         translateXCap = Math.min(60 * percentOpen, maxCapMove);
     }
 
-    // Apply transformations ensuring they stay within the viewport
+    // Apply the transformations
     pen.style.transform = `translateX(${translateXPen}%)`;
     cap.style.transform = `translateX(-${translateXCap}%)`;
 }

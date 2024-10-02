@@ -390,7 +390,14 @@ nav {
     cursor: pointer;
     display: none; /* Hidden by default on desktop */
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+.nav-links a {
+    font-size: 20px;
+}
+}
 /* Slide-in styles for mobile */
+
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;

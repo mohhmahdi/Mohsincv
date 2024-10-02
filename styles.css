@@ -5,13 +5,8 @@
     * {
     box-sizing: border-box;
 }            
+
 body {
-    width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    position: relative; /* Ensures positioning context */
-}
-body {
-    margin: 0;
     padding: 0;
     background-image: url('/images/background 1.png');
     background-size: cover;
@@ -19,8 +14,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-   overflow-x: hidden; /* Prevent horizontal scrolling */
-    position: relative; /* Ensures positioning context */
+  
 }
 /* logo fade out-in start here */
 /* Styles for the image within the container */
@@ -195,16 +189,20 @@ height:102px
 .back-container {
       z-index: 1;
     margin: 9px;
+overflow-x: hidden; /* This prevents horizontal overflow within the container */
+}
 }
 #pen, #cap {
     transition: transform 0.3s ease;
+display: block; /* Remove any extra space below images */
 }
 .front-container {
     z-index: 2;
    margin-left: -370px
-    
+    overflow-x: hidden; /* This prevents horizontal overflow within the container */
 }
 }
+
 /* Responsive Styles */
 
 @media (max-width: 786px) {
@@ -219,15 +217,19 @@ height:102px
       z-index: 1;
        right: 0;
          margin-right: -250px;
+  overflow-x: hidden; /* This prevents horizontal overflow within the container */
 }
 
 .front-container {
     z-index: 2;
         margin: 7px;
         right: 4%;
+overflow-x: hidden; /* This prevents horizontal overflow within the container */
+}
 }
 #pen, #cap {
     transition: transform 0.3s ease;
+display: block; /* Remove any extra space below images */
 }
 }
 

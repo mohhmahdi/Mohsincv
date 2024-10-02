@@ -133,22 +133,22 @@ height:102px
 
 @media (max-width: 786px) {
 #pen {
-        width: 440px;
+   width: 268.36px;
+   height: 40.98px;
 }
 #cap{
-   width:250px;
-
+   width:150px;
+height:49.5px;
+margin-right: 180px;
 }
 .back-container {
       z-index: 1;
-       right: 0;
-         margin-right: -250px;
+    
 }
 
 .front-container {
     z-index: 2;
-        margin: 7px;
-        right: 4%;
+        margin: 10.5px;
 }
 #pen, #cap {
     transition: transform 0.3s ease;

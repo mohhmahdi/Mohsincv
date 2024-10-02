@@ -189,17 +189,17 @@ height:102px
 .back-container {
       z-index: 1;
     margin: 9px;
-overflow-x: hidden; /* This prevents horizontal overflow within the container */
+
 }
 }
 #pen, #cap {
     transition: transform 0.3s ease;
-display: block; /* Remove any extra space below images */
+
 }
 .front-container {
     z-index: 2;
    margin-left: -370px
-    overflow-x: hidden; /* This prevents horizontal overflow within the container */
+   
 }
 }
 
@@ -207,31 +207,33 @@ display: block; /* Remove any extra space below images */
 
 @media (max-width: 786px) {
 #pen {
-        width: 440px;
+width: 440px;
+height:84px;
 }
 #cap{
    width:250px;
-
+height:102px
 }
 .back-container {
       z-index: 1;
        right: 0;
          margin-right: -250px;
-  overflow-x: hidden; /* This prevents horizontal overflow within the container */
+  
 }
 
 .front-container {
     z-index: 2;
         margin: 7px;
         right: 4%;
-overflow-x: hidden; /* This prevents horizontal overflow within the container */
-}
+
 }
 #pen, #cap {
     transition: transform 0.3s ease;
-display: block; /* Remove any extra space below images */
+
 }
 }
+
+
 
 
 

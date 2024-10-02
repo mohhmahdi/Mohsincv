@@ -113,11 +113,11 @@ if (viewportWidth > 1200) { // large screens
     translateXPen = 120 * percentOpen;
     translateXCap = 110 * percentOpen;
 } else if (viewportWidth > 768) { // tablet screens
-    translateXPen = 90 * percentOpen;
+    translateXPen = 100 * percentOpen;
     translateXCap = 90 * percentOpen;
 } else { // smaller screens
-    translateXPen = 80 * percentOpen;
-    translateXCap = 70 * percentOpen;
+    translateXPen = 90 * percentOpen;
+    translateXCap = 80 * percentOpen;
 }
 
     // Apply the transformations

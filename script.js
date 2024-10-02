@@ -96,33 +96,29 @@ window.addEventListener('scroll', function() {
         let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
         let percentOpen = Math.min(distanceFromFooter / 1000, 1);
 
-        updateTransforms(percentOpen, pen, cap); // Call updateTransforms with responsive logic
-    } else {
-        // Reset positions when in home or footer sections
-        pen.style.transform = `translateX(0%)`;
-        cap.style.transform = `translateX(0%)`;
-    }
-});
-
-function updateTransforms(percentOpen, pen, cap) {
+      function updateTransforms(percentOpen, pen, cap) {
     const viewportWidth = window.innerWidth;
+    const maxPenMove = viewportWidth / 2 - pen.offsetWidth / 2; // Max movement allowed for pen
+    const maxCapMove = viewportWidth / 2 - cap.offsetWidth / 2; // Max movement allowed for cap
+
     let translateXPen, translateXCap;
 
-    if (viewportWidth > 1200) { // large screens
-        translateXPen = 150 * percentOpen;
-        translateXCap = 77 * percentOpen;
-    } else if (viewportWidth > 768 && viewportWidth <= 1200) { // tablet screens
-        translateXPen = 100 * percentOpen;
-        translateXCap = 100 * percentOpen;
-    } else if (viewportWidth > 480 && viewportWidth <= 768) { // smaller tablets and large phones
-        translateXPen = 1 * percentOpen;
-        translateXCap = 200 * percentOpen;
-    } else { // small screens
-        translateXPen = 10 * percentOpen;
-        translateXCap = 90 * percentOpen;
+    // Define movement scale based on screen size
+    if (viewportWidth > 1200) {
+        translateXPen = Math.min(120 * percentOpen, maxPenMove);
+        translateXCap = Math.min(90 * percentOpen, maxCapMove);
+    } else if (viewportWidth > 768 && viewportWidth <= 1200) {
+        translateXPen = Math.min(100 * percentOpen, maxPenMove);
+        translateXCap = Math.min(75 * percentOpen, maxCapMove);
+    } else if (viewportWidth > 480 && viewportWidth <= 768) {
+        translateXPen = Math.min(90 * percentOpen, maxPenMove);
+        translateXCap = Math.min(70 * percentOpen, maxCapMove);
+    } else {
+        translateXPen = Math.min(80 * percentOpen, maxPenMove);
+        translateXCap = Math.min(60 * percentOpen, maxCapMove);
     }
 
-    // Apply the transformations
+    // Apply transformations ensuring they stay within the viewport
     pen.style.transform = `translateX(${translateXPen}%)`;
     cap.style.transform = `translateX(-${translateXCap}%)`;
 }

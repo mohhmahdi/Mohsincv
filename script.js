@@ -110,8 +110,8 @@ function updateTransforms(percentOpen, pen, cap) {
     let translateXPen, translateXCap;
 
     if (viewportWidth > 1200) { // large screens
-        translateXPen = 150 * percentOpen;
-        translateXCap = 77 * percentOpen;
+        translateXPen = 110 * percentOpen;
+        translateXCap = 80 * percentOpen;
     } else if (viewportWidth > 768 && viewportWidth <= 1200) { // tablet screens
         translateXPen = 100 * percentOpen;
         translateXCap = 100 * percentOpen;

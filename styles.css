@@ -5,7 +5,11 @@
     * {
     box-sizing: border-box;
 }            
-                
+       html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative; /* Ensures positioning context */
+}         
 body {
     margin: 0;
     padding: 0;

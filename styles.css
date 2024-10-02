@@ -5,7 +5,7 @@
     * {
     box-sizing: border-box;
 }            
-html, body {
+body {
     width: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     position: relative; /* Ensures positioning context */
@@ -19,7 +19,8 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-   
+   overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative; /* Ensures positioning context */
 }
 /* logo fade out-in start here */
 /* Styles for the image within the container */
@@ -46,7 +47,8 @@ body {
     display: flex;
     position: relative;
     overflow: hidden;
-   
+   min-height: 100%;
+    margin: 0;
 }
 
 /* Additional div to control the logo width */

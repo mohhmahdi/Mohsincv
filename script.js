@@ -51,6 +51,7 @@ document.getElementById('download-cv').onclick = function() {
     window.location.href = '/images/Mohsin_Mahdi_CV-H.pdf'; // Replace with the actual path to your CV
 };
 
+// good js 
 window.addEventListener('scroll', function() {
     // Variables for window properties and elements
     var logoContainer = document.querySelector('.logo-container');
@@ -106,23 +107,20 @@ window.addEventListener('scroll', function() {
 
 function updateTransforms(percentOpen, pen, cap) {
     const viewportWidth = window.innerWidth;
-    const maxPenMove = viewportWidth / 2 - pen.offsetWidth / 2; // Max movement allowed for pen
-    const maxCapMove = viewportWidth / 2 - cap.offsetWidth / 2; // Max movement allowed for cap
-
     let translateXPen, translateXCap;
 
     if (viewportWidth > 1200) { // large screens
-        translateXPen = Math.min(120 * percentOpen, maxPenMove);
-        translateXCap = Math.min(90 * percentOpen, maxCapMove);
+        translateXPen = 150 * percentOpen;
+        translateXCap = 77 * percentOpen;
     } else if (viewportWidth > 768 && viewportWidth <= 1200) { // tablet screens
-        translateXPen = Math.min(100 * percentOpen, maxPenMove);
-        translateXCap = Math.min(75 * percentOpen, maxCapMove);
+        translateXPen = 100 * percentOpen;
+        translateXCap = 100 * percentOpen;
     } else if (viewportWidth > 480 && viewportWidth <= 768) { // smaller tablets and large phones
-        translateXPen = Math.min(90 * percentOpen, maxPenMove);
-        translateXCap = Math.min(70 * percentOpen, maxCapMove);
+        translateXPen = 1 * percentOpen;
+        translateXCap = 200 * percentOpen;
     } else { // small screens
-        translateXPen = Math.min(80 * percentOpen, maxPenMove);
-        translateXCap = Math.min(60 * percentOpen, maxCapMove);
+        translateXPen = 10 * percentOpen;
+        translateXCap = 90 * percentOpen;
     }
 
     // Apply the transformations

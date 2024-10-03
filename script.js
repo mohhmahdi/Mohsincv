@@ -117,14 +117,14 @@ if (viewportWidth > 1800) { // targeting very wide screens, e.g., 1920px and abo
     translateXPen = 110 * percentOpen;
     translateXCap = 125 * percentOpen;
 } else if (viewportWidth > 1024) { // larger than tablets but less than large screens
-    translateXPen = 90 * percentOpen;
-    translateXCap = 110 * percentOpen;
+    translateXPen = 0 * percentOpen;
+    translateXCap = 0 * percentOpen;
 } else if (viewportWidth >= 768 && viewportWidth <= 1024) { // tablet range inclusive
-    translateXPen = 90 * percentOpen;
-    translateXCap = 100 * percentOpen;
+    translateXPen = 0 * percentOpen;
+    translateXCap = 0 * percentOpen;
 } else { // smaller screens
-    translateXPen = 80 * percentOpen;
-    translateXCap = 90 * percentOpen;
+    translateXPen = 130 * percentOpen;
+    translateXCap = 180 * percentOpen;
 }
 
     // Apply the transformations

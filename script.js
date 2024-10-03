@@ -50,12 +50,15 @@ navLinks.addEventListener('click', (event) => {
 });
 document.getElementById('download-cv').onclick = function() {
     window.location.href = '/images/Mohsin_Mahdi_CV-H.pdf'; // Replace with the actual path to your CV
+}; // Added closing bracket here
+
 document.getElementById('download-cert2').onclick = function() {
     window.location.href = '/images/bare3.pdf'; // Replace with the actual path to your CV
+}; // Added closing bracket here
+
 document.getElementById('download-cert1').onclick = function() {
     window.location.href = '/images/edoxi.pdf'; // Replace with the actual path to your CV
-};
-
+}; // Added closing bracket here
 // good js 
 window.addEventListener('scroll', function() {
     // Variables for window properties and elements

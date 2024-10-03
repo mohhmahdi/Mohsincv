@@ -833,6 +833,24 @@ header {
 .image-button img:hover {
     background-color: #fff8ee; /* Background color on hover */
 }
+.image-buttonc {
+   position: relative;
+  top: 50%; /* Center vertically */
+  right: 10%; /* Use percentage to keep it close but responsive */
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 50px; /* Adjust spacing as needed */
+}
+
+.image-buttonc img {
+  width: 64px;
+  height: auto;
+}
+.image-buttonc img:hover {
+    background-color: #fff8ee; /* Background color on hover */
+}
 .text-container {
   flex: 0 0 70%;
   padding-left: 20px;
@@ -876,6 +894,33 @@ header {
 .image-button img {
   width: 64px;
 }
+ .image-containerc {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-start;
+
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .text-container {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-left: 0;
+  }
+  .image-buttonc {
+   position: relative;
+  top: 50%; /* Center vertically */
+  right: 5%; /* Use percentage to keep it close but responsive */
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 10px; /* Adjust spacing as needed */
+  }
+.image-buttonc img {
+  width: 64px;
+}
 }
 
 @media (max-width: 480px) {
@@ -887,6 +932,9 @@ header {
     max-width: 80%;
   }
 
+  .image-containerc img {
+    max-width: 80%;
+  }
   .image-container h4 {
 display: flex;
     justify-content: flex-start;
@@ -902,6 +950,14 @@ display: flex;
   }
 
   .image-button img {
+    width: 48px; /* Adjust icon size for smaller screens */
+  }
+  .image-buttonc {
+    right: 5%; /* Closer to the edge on smaller screens */
+    width: 48px; /* Smaller button on smaller screens */
+  }
+
+  .image-buttonc img {
     width: 48px; /* Adjust icon size for smaller screens */
   }
 }

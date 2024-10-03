@@ -918,9 +918,9 @@ text-align: center;   /* Center-align text */
     clip: auto; /* Remove clipping */
 }
 .skill-item .skill-icon span {
-     font-family: 'Roboto light', sans-serif;
+     font-family: 'Roboto medium', sans-serif;
     font-size: 16px; /* Increased for visibility, adjust as necessary */
-    color: burlywood; /* Ensures color is dark, adjust if background is dark */
+    color: #333; /* Ensures color is dark, adjust if background is dark */
     display: block; /* Ensures the span is treated as a block element */
     margin-top: 2px; /* Adds a little space between the icon and the text */
     position: relative; /* Setting position to relative */

@@ -670,7 +670,6 @@ nav {
 }
 .buttoncert-container {
     display: flex;
-    justify-content: center; /* Center button horizontally */
     align-items: center; /* Center button vertically */
     margin-top: 20px; /* Space above the container */
 }
@@ -682,7 +681,12 @@ nav {
     color: brown; /* Initial text color is brown */
     text-decoration: none;
 }
-
+.download-cert:hover {
+   color: darkred; /* Change text color to white on hover */
+    border-color: #6F4E37; /* Coffee color for the border on hover */
+    box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
+    background-color: #fff8ee; /* Optional: fill background on hover */
+}
 /* Responsive styles */
 @media (max-width: 768px) {
     .work-item {
@@ -717,6 +721,7 @@ width: 80%;
 .buttoncert-container {
         width: 100%; /* Full width on smaller screens */
         height: auto; /* Auto height to accommodate content */
+justify-content: center;
     }
 
     .download-cert {

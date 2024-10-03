@@ -118,8 +118,8 @@ function updateTransforms(percentOpen, pen, cap) {
     let translateXPen, translateXCap;
 
 if (viewportWidth > 1800) { // targeting very wide screens, e.g., 1920px and above
-    translateXPen = 120 * percentOpen;
-    translateXCap = 140 * percentOpen;
+    translateXPen = 130 * percentOpen;
+    translateXCap = 135 * percentOpen;
 } else if (viewportWidth > 1200) { // large screens
     translateXPen = 110 * percentOpen;
     translateXCap = 125 * percentOpen;

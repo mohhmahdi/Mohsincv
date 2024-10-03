@@ -783,12 +783,12 @@ header {
 .image-button {
    position: relative;
   top: 50%; /* Center vertically */
-  right: 5%; /* Use percentage to keep it close but responsive */
+  right: 10%; /* Use percentage to keep it close but responsive */
   transform: translateY(-50%);
   border: none;
   background: none;
   cursor: pointer;
-  margin-right: 10px; /* Adjust spacing as needed */
+  margin-right: 50px; /* Adjust spacing as needed */
 }
 
 .image-button img {
@@ -829,7 +829,14 @@ header {
     padding-left: 0;
   }
   .image-button {
-    right: 5%; /* Closer to the edge on smaller screens */
+   position: relative;
+  top: 50%; /* Center vertically */
+  right: 5%; /* Use percentage to keep it close but responsive */
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 10px; /* Adjust spacing as needed */
   }
 .image-button img {
   width: 64px;
@@ -872,7 +879,7 @@ h4 {
     margin-bottom: 20px; /* Space below each header before the skill items */
     text-align: left; /* Left-aligning the header text */
     font-size: 18px; /* Desktop font size */
-    color: burlywood; /* Text color */
+    color: #333; /* Text color */
 }
 
 /* Styling for the skills container */

@@ -88,7 +88,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-     margin-left: -640px;
+     margin-left: -600px;
 }
 #pen, #cap {
     transition: transform 0.5s ease;

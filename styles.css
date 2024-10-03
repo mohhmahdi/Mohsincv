@@ -278,7 +278,7 @@ h5::after {
   bottom: 0;
   width: 0; /* Start with no visible underline */
   height: 3px;
-  background-color: Burlwood; /* Burlwood underline color */
+  background-color: Burlywood; /* Burlywood underline color */
   transition: width 0.3s ease; /* Smooth transition for the underline */
 }
 

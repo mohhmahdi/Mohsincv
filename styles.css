@@ -736,8 +736,8 @@ margin: auto;
         font-size: 1rem; /* Smaller size for tablets */
     }
 .work-item .work-link {
-width: 80%;
-margin: auto;
+        width: 50%;
+        margin: 10px;
 }
 .buttoncert-container {
         width: 100%; /* Full width on smaller screens */

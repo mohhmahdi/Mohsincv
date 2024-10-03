@@ -109,7 +109,8 @@ height:145px;
 
 @media (min-width: 768px) and (max-width: 1024px) {
 .w-container {
-    margin-left: 50px;
+    margin-left: 20px;
+overflow:hidden;
 }
  #pen {
 width:497px;
@@ -137,6 +138,7 @@ height:102px
 @media (max-width: 786px) {
 .w-container {
     margin-left: 50px;
+overflow:hidden;
 }
 #pen {
    width: 268.36px;

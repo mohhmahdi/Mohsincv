@@ -50,6 +50,10 @@ navLinks.addEventListener('click', (event) => {
 });
 document.getElementById('download-cv').onclick = function() {
     window.location.href = '/images/Mohsin_Mahdi_CV-H.pdf'; // Replace with the actual path to your CV
+document.getElementById('download-cert2').onclick = function() {
+    window.location.href = '/images/bare3.pdf'; // Replace with the actual path to your CV
+document.getElementById('download-cert1').onclick = function() {
+    window.location.href = '/images/edoxi.pdf'; // Replace with the actual path to your CV
 };
 
 // good js 

@@ -696,10 +696,12 @@ nav {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
 .work-item .work-link {
-width:50%;
+width:60%;
+margin: auto;
 }
 .work-item {
 width:60%;
+height: 70%;
 }
 }
 /* Responsive styles */
@@ -731,7 +733,7 @@ width:60%;
     }
 .work-item .work-link {
 width: 80%;
- margin-left: 5px;
+margin: auto;
 }
 .buttoncert-container {
         width: 100%; /* Full width on smaller screens */

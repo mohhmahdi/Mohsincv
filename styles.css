@@ -872,7 +872,7 @@ h4 {
     margin-bottom: 20px; /* Space below each header before the skill items */
     text-align: left; /* Left-aligning the header text */
     font-size: 18px; /* Desktop font size */
-    color: #333; /* Text color */
+    color: burlywood; /* Text color */
 }
 
 /* Styling for the skills container */
@@ -913,7 +913,7 @@ text-align: center;   /* Center-align text */
 .skill-item .skill-icon span {
      font-family: 'Roboto light', sans-serif;
     font-size: 16px; /* Increased for visibility, adjust as necessary */
-    color: #333; /* Ensures color is dark, adjust if background is dark */
+    color: burlywood; /* Ensures color is dark, adjust if background is dark */
     display: block; /* Ensures the span is treated as a block element */
     margin-top: 2px; /* Adds a little space between the icon and the text */
     position: relative; /* Setting position to relative */
@@ -922,15 +922,7 @@ text-align: center;   /* Center-align text */
     height: auto; /* Ensure height adjusts to content */
     overflow: visible; /* Ensures no content is clipped */
 }
-.skill-item:hover .skill-icon span {
-    color: #000; /* Make text black on hover for better visibility */
-    background-color: rgba(255, 255, 255, 0.8); /* Light background on hover for readability */
-}
-.skill-icon::after {
-    content: "";
-    display: block;
-    clear: both;
-}
+
 /* Responsive adjustments for larger screens */
 @media (min-width: 768px) {
     .skills {

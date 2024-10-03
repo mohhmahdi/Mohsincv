@@ -244,19 +244,7 @@ h2 {
 font-family: 'Roboto Thin', sans-serif;
   margin-left: 20px; /* Default for larger screens */
 }
-h2::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0; /* Start with no visible underline */
-  height: 3px;
-  background-color: #fff8ee; /* Burlwood underline color */
-  transition: width 0.3s ease; /* Smooth transition for the underline */
-}
-h2:hover::after {
-  width: 50%; /* Expand the underline across the full width on hover */
-}
+
 @media (max-width: 768px) {
   h2 {
         margin-left: 10px; /* Reduce left margin for tablets */
@@ -290,7 +278,7 @@ h5::after {
   bottom: 0;
   width: 0; /* Start with no visible underline */
   height: 3px;
-  background-color: #fff8ee; /* Burlwood underline color */
+  background-color: Burlwood; /* Burlwood underline color */
   transition: width 0.3s ease; /* Smooth transition for the underline */
 }
 
@@ -344,19 +332,7 @@ h7 {
   margin-left: 20px; /* Default for larger screens */
 font-size: 1.5rem;
 }
-h7::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0; /* Start with no visible underline */
-  height: 3px;
-  background-color: #fff8ee; /* Burlwood underline color */
-  transition: width 0.3s ease; /* Smooth transition for the underline */
-}
-h2:hover::after {
-  width: 50%; /* Expand the underline across the full width on hover */
-}
+
 @media (max-width: 768px) {
   h7 {
         margin-left: 20px; /* Reduce left margin for tablets */

@@ -62,11 +62,11 @@ window.addEventListener('scroll', function() {
     // Logo fade effect
     var opacity;
     if (scrollY < windowHeight) {
-        opacity = 1 - (scrollY / windowHeight * 0.6); // Fades out to 0.4 opacity
-        logoContainer.style.opacity = Math.max(opacity, 0.4); // Ensures opacity doesn't go below 0.4
+        opacity = 1 - (scrollY / windowHeight * 0.7); // Fades out to 0.4 opacity
+        logoContainer.style.opacity = Math.max(opacity, 0.3); // Ensures opacity doesn't go below 0.4
     } else {
-        logoContainer.style.opacity = 0.4;
-        opacity = 0.4;
+        logoContainer.style.opacity = 0.3;
+        opacity = 0.3;
     }
 
     // Elements for curtain effect

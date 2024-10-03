@@ -453,6 +453,8 @@ nav {
     object-fit: contain; /* Maintain aspect ratio */
     position: sticky;
    z-index:1001;
+        overflow: hidden;
+        margin-right: 20px;
 }
 }
 

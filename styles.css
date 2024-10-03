@@ -793,7 +793,21 @@ header {
   border-radius: 5px;
   display: block;
 }
+.image-containerc {
+ 
+  text-align: left;
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: flex-end; /* Align children to the right */
+  position: relative;
+}
 
+.image-containerc img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+}
 .image-container h4 {
     display: flex;
     justify-content: flex-start;

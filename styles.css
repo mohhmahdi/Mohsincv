@@ -803,7 +803,7 @@ header {
 }
 
 .image-containerc img {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
   border-radius: 5px;
   display: block;

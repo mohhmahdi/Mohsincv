@@ -244,7 +244,19 @@ h2 {
 font-family: 'Roboto Thin', sans-serif;
   margin-left: 20px; /* Default for larger screens */
 }
-
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Start with no visible underline */
+  height: 3px;
+  background-color: #fff8ee; /* Burlwood underline color */
+  transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+h2:hover::after {
+  width: 50%; /* Expand the underline across the full width on hover */
+}
 @media (max-width: 768px) {
   h2 {
         margin-left: 10px; /* Reduce left margin for tablets */
@@ -264,11 +276,11 @@ font-family: 'Roboto Thin', sans-serif;
 }
 h5 {
   font-family: 'Roboto Medium', sans-serif;
-  font-size: 1rem; /* Set a base font size for all screen sizes */
+  font-size: 1.5rem; /* Set a base font size for all screen sizes */
   position: relative; /* Required for positioning the pseudo-element */
   display: inline-block; /* Ensures that the underline fits the content width */
   overflow: hidden; /* Clips the underline if it overflows the content width */
-  margin: 25px
+  margin: 35px
 }
 
 h5::after {
@@ -277,13 +289,13 @@ h5::after {
   left: 0;
   bottom: 0;
   width: 0; /* Start with no visible underline */
-  height: 2px;
-  background-color: #007BFF; /* Blue underline color */
+  height: 3px;
+  background-color: #fff8ee; /* Burlwood underline color */
   transition: width 0.3s ease; /* Smooth transition for the underline */
 }
 
 h5:hover::after {
-  width: 100%; /* Expand the underline across the full width on hover */
+  width: 50%; /* Expand the underline across the full width on hover */
 }
 
 /* Adjust margins and font size based on screen width */
@@ -309,6 +321,7 @@ font-family: 'Roboto Black', sans-serif;
   margin-left: 20px; /* Default for larger screens */
 }
 
+
 @media (max-width: 768px) {
     .h6 {
         margin-left: 10px; /* Reduce left margin for tablets */
@@ -329,8 +342,21 @@ font-family: 'Roboto Black', sans-serif;
 h7 {
   font-family: 'Roboto Black', sans-serif;
   margin-left: 20px; /* Default for larger screens */
+font-size: 1.5rem;
 }
-
+h7::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Start with no visible underline */
+  height: 3px;
+  background-color: #fff8ee; /* Burlwood underline color */
+  transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+h2:hover::after {
+  width: 50%; /* Expand the underline across the full width on hover */
+}
 @media (max-width: 768px) {
   h7 {
         margin-left: 20px; /* Reduce left margin for tablets */
@@ -824,8 +850,9 @@ header {
   .image-button {
     right: 5%; /* Closer to the edge on smaller screens */
   }
-
-
+.image-button img {
+  width: 64px;
+}
 }
 
 @media (max-width: 480px) {
@@ -872,7 +899,7 @@ h4 {
     display: grid;
     margin-top: 15px;
     grid-template-columns: repeat(3, 1fr); /* Three columns on all devices by default */
-    gap: 30px; /* Space between skill items */
+    gap: 10px; /* Space between skill items */
     margin-bottom: 50px; /* Space below the entire skills set before next content */
     
  
@@ -927,8 +954,7 @@ text-align: center;   /* Center-align text */
 @media (min-width: 768px) {
     .skills {
  margin-top: 15px;
-gap: 35px; /* Space between skill items */
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
+ grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
     }
 }
 @media (min-width: 1024px) {

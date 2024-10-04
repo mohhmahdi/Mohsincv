@@ -51,7 +51,21 @@ body {
     width: 65%;
     position: relative;
 }
-
+@media (min-width: 768px) and (max-width: 1024px) {
+   .logo-container {
+height: 90vh;
+}
+}
+@media (min-width: 767px){
+.logo-container {
+height: 80vh;
+}
+}
+@media (max-width: 480px) {
+.logo-container {
+height: 70vh;
+}
+}
 /* logo fade out-in ends here */
 
 /* parallax effcet start here */

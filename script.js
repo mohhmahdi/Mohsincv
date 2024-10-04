@@ -158,3 +158,5 @@ else { // smaller than 480px
     cap.style.transform = `translateX(-${translateXCap}%)`;
  // pen2.style.transform = `translateX(${translateXPen}%)`;
 }
+console.log("Width: " + window.innerWidth + "px");
+console.log("Height: " + window.innerHeight + "px");

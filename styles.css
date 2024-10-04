@@ -18,6 +18,59 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
    
 }
+/* responsive starts  */
+
+/* Base styles for desktop, assuming the largest size you were handling was over 1441px */
+@media (max-width: 1440px) { /* Decrease from here for smaller devices */
+    .logo-container {
+        height: 100vh;
+    }
+/* logo fade ends */
+}
+/* responsive view 1440 range */
+
+@media (max-width: 1200px) {
+    .logo-container {
+        height: 90vh;
+    }
+/* logo fade ends  */
+}
+/* responsive view 1200 range */
+
+@media (max-width: 1024px) {
+    .logo-container {
+        height: 80vh;
+    }
+/* logo fade ends */
+}
+
+/* responsive view 1024 range */
+
+@media (max-width: 768px) {
+    .logo-container {
+        height: 70vh;
+    }
+/* logo fade ends */
+}
+/*  responsive view 768 range */
+
+@media (max-width: 600px) {
+    .logo-container {
+        height: 60vh;
+    }
+/* logo fade ends */
+}
+
+/* responsive view 600 range ends */
+/* Below 321px if needed, you can continue to scale down or keep it consistent */
+@media (max-width: 320px) {
+    .logo-container {
+        height: 50vh; /* Adjust if necessary for very small devices */
+    }
+/* logo fade ends */
+}
+/* responsive view 320 range and below ends */
+
 /* logo fade out-in start here */
 /* Styles for the image within the container */
 #afterheaderImage {
@@ -1191,41 +1244,3 @@ textarea {
     }
 }
 /* Additional CSS styles can go here */
-/* responsive starts  */
-
-@media (min-width: 1441px) {
-    .logo-container {
-        height: 110vh;
-    }
-/* logo fade out-in ends here */
-}
-@media (min-width: 1201px) {
-    .logo-container {
-        height: 100vh;
-    }
-/* logo fade out-in ends here */
-}
-@media (min-width: 1025px) {
-    .logo-container {
-        height: 90vh;
-    }
-/* logo fade out-in ends here */
-}
-@media (min-width: 768px) {
-    .logo-container {
-        height: 80vh;
-    }
-/* logo fade out-in ends here */
-}
-@media (min-width: 601px) {
-    .logo-container {
-        height: 70vh;
-    }
-/* logo fade out-in ends here */
-}
-@media (min-width: 321px) {
-    .logo-container {
-        height: 60vh;
-    }
-/* logo fade out-in ends here */
-}

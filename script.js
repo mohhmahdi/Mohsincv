@@ -121,13 +121,17 @@ function updateTransforms(percentOpen, pen, cap) {
     const viewportWidth = window.innerWidth;
     let translateXPen, translateXCap; //  let translateXPen2
 
-if (viewportWidth > 1440) { // targeting  wide screens, e.g., 
+if (viewportWidth > 1920) { // targeting  wide screens, e.g., 
     translateXPen = 130 * percentOpen;
     translateXCap = 135 * percentOpen;
-} else if (viewportWidth > 1200) { // large screens
+} else if (viewportWidth > 1440) { // large screens
     translateXPen = 90 * percentOpen;
     translateXCap = 75 * percentOpen;
-} else if (viewportWidth > 1024) { // larger than tablets but less than large screens
+} 
+else if (viewportWidth > 1200) { // large screens
+    translateXPen = 80 * percentOpen;
+    translateXCap = 75 * percentOpen;
+}else if (viewportWidth > 1024) { // larger than tablets but less than large screens
     translateXPen = 85 * percentOpen;
     translateXCap = 70 * percentOpen;
 } else if (viewportWidth >= 768 && viewportWidth <= 1024) { // tablet range inclusive

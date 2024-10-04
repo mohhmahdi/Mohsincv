@@ -121,43 +121,33 @@ function updateTransforms(percentOpen, pen, cap) {
     const viewportWidth = window.innerWidth;
     let translateXPen, translateXCap; //  let translateXPen2
 
-if (viewportWidth > 1920) { // targeting  wide screens, e.g., 
-    translateXPen = 130 * percentOpen;
-    translateXCap = 135 * percentOpen;
-} else if (viewportWidth > 1440) { // large screens
-    translateXPen = 90 * percentOpen;
-    translateXCap = 75 * percentOpen;
-} 
-else if (viewportWidth > 1200) { // large screens
-    translateXPen = 80 * percentOpen;
-    translateXCap = 75 * percentOpen;
-}else if (viewportWidth > 1024) { // larger than tablets but less than large screens
-    translateXPen = 85 * percentOpen;
-    translateXCap = 70 * percentOpen;
-} else if (viewportWidth >= 768 && viewportWidth <= 1024) { // tablet range inclusive
-    translateXPen = 45 * percentOpen;
-    translateXCap = 50 * percentOpen;
-} 
-else if (viewportWidth == 767 ) { // before tablet open
-    translateXPen = 90 * percentOpen;
- // translateXPen2 = 0 * percentOpen;
-    translateXCap = 30 * percentOpen;
-}
-else if (viewportWidth >= 600) { // smaller phone
-    translateXPen = 60 * percentOpen;
- // translateXPen2 = 0 * percentOpen;
-    translateXCap = 25 * percentOpen;
-} else if (viewportWidth >= 480) { // smaller phone
-    translateXPen = 50 * percentOpen;
+if (viewportWidth > 1440) { // Above 1441px
+        translateXPen = 130 * percentOpen;
+        translateXCap = 135 * percentOpen;
+    } else if (viewportWidth >= 1201) { // 1201px to 1440px
+        translateXPen = 110 * percentOpen;
+        translateXCap = 115 * percentOpen;
+    } else if (viewportWidth >= 1025) { // 1025px to 1200px
+        translateXPen = 95 * percentOpen;
+        translateXCap = 100 * percentOpen;
+    } else if (viewportWidth >= 768) { // 768px to 1024px
+        translateXPen = 85 * percentOpen;
+        translateXCap = 90 * percentOpen;
+    } else if (viewportWidth >= 601) { // 601px to 767px
+        translateXPen = 75 * percentOpen;
 // translateXPen2 = 0 * percentOpen;
-    translateXCap = 20 * percentOpen;
-}
-else { // smaller than 480px
-    translateXPen = 40 * percentOpen;
+        translateXCap = 80 * percentOpen;
+    } else if (viewportWidth >= 321) { // 321px to 600px
+        translateXPen = 65 * percentOpen;
 // translateXPen2 = 0 * percentOpen;
-    translateXCap = 15 * percentOpen;
-}
-    // Apply the transformations
+        translateXCap = 70 * percentOpen;
+    } else { // Up to 320px
+        translateXPen = 55 * percentOpen;
+// translateXPen2 = 0 * percentOpen;
+        translateXCap = 60 * percentOpen;
+    }
+
+  // Apply the transformations
     pen.style.transform = `translateX(${translateXPen}%)`;
     cap.style.transform = `translateX(-${translateXCap}%)`;
  // pen2.style.transform = `translateX(${translateXPen}%)`;

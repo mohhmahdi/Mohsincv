@@ -92,7 +92,7 @@ body {
     flex: 1;
     place-content: center;
     align-items: center;
-    height: 50vh; /* Default: biggest devices for this project later on start small smaller is bigger (: (warframe ref) */
+    height: 110vh; /* Default: biggest devices for this project later on start small smaller is bigger (: (warframe ref) */
     display: flex;
     position: relative;
     overflow: hidden;

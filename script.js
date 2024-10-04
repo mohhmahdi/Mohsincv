@@ -124,16 +124,18 @@ if (viewportWidth > 1800) { // targeting very wide screens, e.g., 1920px and abo
     translateXPen = 110 * percentOpen;
     translateXCap = 125 * percentOpen;
 } else if (viewportWidth > 1024) { // larger than tablets but less than large screens
-    translateXPen = 0 * percentOpen;
-    translateXCap = 0 * percentOpen;
+    translateXPen = 100 * percentOpen;
+    translateXCap = 115 * percentOpen;
 } else if (viewportWidth >= 768 && viewportWidth <= 1024) { // tablet range inclusive
-    translateXPen = 0 * percentOpen;
-    translateXCap = 0 * percentOpen;
-} else { // smaller screens
-    translateXPen = 130 * percentOpen;
-    translateXCap = 180 * percentOpen;
+    translateXPen = 180 * percentOpen;
+    translateXCap = 100 * percentOpen;
+} else if (viewportWidth >= 600) { // smaller phone
+    translateXPen = 60 * percentOpen;
+    translateXCap = 50 * percentOpen;
+} else { // smaller than 600px
+    translateXPen = 50 * percentOpen;
+    translateXCap = 40 * percentOpen;
 }
-
     // Apply the transformations
     pen.style.transform = `translateX(${translateXPen}%)`;
     cap.style.transform = `translateX(-${translateXCap}%)`;

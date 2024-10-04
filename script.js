@@ -125,11 +125,11 @@ if (viewportWidth > 1440) { // targeting  wide screens, e.g.,
     translateXPen = 130 * percentOpen;
     translateXCap = 135 * percentOpen;
 } else if (viewportWidth > 1200) { // large screens
-    translateXPen = 100 * percentOpen;
-    translateXCap = 105 * percentOpen;
+    translateXPen = 90 * percentOpen;
+    translateXCap = 75 * percentOpen;
 } else if (viewportWidth > 1024) { // larger than tablets but less than large screens
-    translateXPen = 75 * percentOpen;
-    translateXCap = 80 * percentOpen;
+    translateXPen = 85 * percentOpen;
+    translateXCap = 70 * percentOpen;
 } else if (viewportWidth >= 768 && viewportWidth <= 1024) { // tablet range inclusive
     translateXPen = 45 * percentOpen;
     translateXCap = 50 * percentOpen;

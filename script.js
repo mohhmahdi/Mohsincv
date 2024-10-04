@@ -117,7 +117,7 @@ function updateTransforms(percentOpen, pen, cap) {
     const viewportWidth = window.innerWidth;
     let translateXPen, translateXCap;
 
-if (viewportWidth > 1800) { // targeting very wide screens, e.g., 1920px and above
+if (viewportWidth > 1440) { // targeting  wide screens, e.g., 
     translateXPen = 130 * percentOpen;
     translateXCap = 135 * percentOpen;
 } else if (viewportWidth > 1200) { // large screens
@@ -129,12 +129,21 @@ if (viewportWidth > 1800) { // targeting very wide screens, e.g., 1920px and abo
 } else if (viewportWidth >= 768 && viewportWidth <= 1024) { // tablet range inclusive
     translateXPen = 180 * percentOpen;
     translateXCap = 100 * percentOpen;
-} else if (viewportWidth >= 600) { // smaller phone
+} 
+else if (viewportWidth == 767 ) { // before tablet open
+    translateXPen = 90 * percentOpen;
+    translateXCap = 100 * percentOpen;
+}
+else if (viewportWidth >= 600) { // smaller phone
     translateXPen = 60 * percentOpen;
     translateXCap = 50 * percentOpen;
-} else { // smaller than 600px
+} else if (viewportWidth >= 480) { // smaller phone
     translateXPen = 50 * percentOpen;
     translateXCap = 40 * percentOpen;
+}
+else { // smaller than 480px
+    translateXPen = 40 * percentOpen;
+    translateXCap = 30 * percentOpen;
 }
     // Apply the transformations
     pen.style.transform = `translateX(${translateXPen}%)`;

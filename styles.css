@@ -39,11 +39,10 @@ body {
     flex: 1;
     place-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120vh; /* Default: biggest devices for this project later on start small smaller is bigger (: (warframe ref) */
     display: flex;
     position: relative;
     overflow: hidden;
-  
 }
 
 /* Additional div to control the logo width */
@@ -51,49 +50,6 @@ body {
     width: 65%;
     position: relative;
 }
-@media (max-width: 1440px) {
-.logo-container {
-height: 110vh;
-}
-/* logo fade out-in ends here */
-}
-@media (max-width: 1200px) {
-.logo-container {
-height: 100vh;
-}
-/* logo fade out-in ends here */
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-   .logo-container {
-height: 90vh;
-}
-/* logo fade out-in ends here */
-}
-@media (min-width: 767px)and (max-width: 767px) {
-.logo-container {
-height: 80vh;
-}
-/* logo fade out-in ends here */
-}
-@media (max-width: 600px) {
-.logo-container {
-height: 70vh;
-}
-/* logo fade out-in ends here */
-}
-@media (max-width: 480px) {
-.logo-container {
-height: 60vh;
-}
-/* logo fade out-in ends here */
-}
-@media (max-width: 320px) {
-.logo-container {
-height: 50vh;
-}
-/* logo fade out-in ends here */
-}
-
 /* logo fade out-in ends here */
 
 /* parallax effcet start here */
@@ -1235,3 +1191,41 @@ textarea {
     }
 }
 /* Additional CSS styles can go here */
+/* responsive starts  */
+
+@media (min-width: 1441px) {
+    .logo-container {
+        height: 110vh;
+    }
+/* logo fade out-in ends here */
+}
+@media (min-width: 1201px) {
+    .logo-container {
+        height: 100vh;
+    }
+/* logo fade out-in ends here */
+}
+@media (min-width: 1025px) {
+    .logo-container {
+        height: 90vh;
+    }
+/* logo fade out-in ends here */
+}
+@media (min-width: 768px) {
+    .logo-container {
+        height: 80vh;
+    }
+/* logo fade out-in ends here */
+}
+@media (min-width: 601px) {
+    .logo-container {
+        height: 70vh;
+    }
+/* logo fade out-in ends here */
+}
+@media (min-width: 321px) {
+    .logo-container {
+        height: 60vh;
+    }
+/* logo fade out-in ends here */
+}

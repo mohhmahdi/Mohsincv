@@ -230,7 +230,7 @@ margin-right: 205px;
     display: flex;       /* Establishes a flex container */
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
-    height: 11vh;      /* Takes at least the  height of the viewport */
+    height: 100vh;      /* Takes at least the  height of the viewport */
     width: 100vw;       /* Takes at least the full width of the viewport */
 }
 h3 {

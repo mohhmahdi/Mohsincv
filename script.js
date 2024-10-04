@@ -125,33 +125,33 @@ if (viewportWidth > 1440) { // targeting  wide screens, e.g.,
     translateXPen = 130 * percentOpen;
     translateXCap = 135 * percentOpen;
 } else if (viewportWidth > 1200) { // large screens
-    translateXPen = 110 * percentOpen;
-    translateXCap = 125 * percentOpen;
-} else if (viewportWidth > 1024) { // larger than tablets but less than large screens
     translateXPen = 100 * percentOpen;
-    translateXCap = 115 * percentOpen;
+    translateXCap = 105 * percentOpen;
+} else if (viewportWidth > 1024) { // larger than tablets but less than large screens
+    translateXPen = 75 * percentOpen;
+    translateXCap = 80 * percentOpen;
 } else if (viewportWidth >= 768 && viewportWidth <= 1024) { // tablet range inclusive
-    translateXPen = 90 * percentOpen;
-    translateXCap = 100 * percentOpen;
+    translateXPen = 45 * percentOpen;
+    translateXCap = 50 * percentOpen;
 } 
 else if (viewportWidth == 767 ) { // before tablet open
     translateXPen = 90 * percentOpen;
  // translateXPen2 = 0 * percentOpen;
-    translateXCap = 100 * percentOpen;
+    translateXCap = 30 * percentOpen;
 }
 else if (viewportWidth >= 600) { // smaller phone
     translateXPen = 60 * percentOpen;
  // translateXPen2 = 0 * percentOpen;
-    translateXCap = 50 * percentOpen;
+    translateXCap = 25 * percentOpen;
 } else if (viewportWidth >= 480) { // smaller phone
     translateXPen = 50 * percentOpen;
 // translateXPen2 = 0 * percentOpen;
-    translateXCap = 40 * percentOpen;
+    translateXCap = 20 * percentOpen;
 }
 else { // smaller than 480px
     translateXPen = 40 * percentOpen;
 // translateXPen2 = 0 * percentOpen;
-    translateXCap = 30 * percentOpen;
+    translateXCap = 15 * percentOpen;
 }
     // Apply the transformations
     pen.style.transform = `translateX(${translateXPen}%)`;

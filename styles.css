@@ -334,7 +334,11 @@ justify-content: center;
   width: 64px;
 }
 /* exp ends here */
-
+   .skills {
+ margin-top: 15px;
+ grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
+    }
+/* skill ends here */
 }
 /*  responsive view 768 range */
 
@@ -376,6 +380,56 @@ margin: auto;
  height: auto;
 }
 /* work ends here */
+ .experience-item {
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    max-width: 80%;
+  }
+
+  .image-containerc img {
+    max-width: 80%;
+  }
+  .image-container h4 {
+display: flex;
+    justify-content: flex-start;
+    font-size: 16px;
+  }
+
+  .text-container p {
+    font-size: 14px;
+  }
+  .image-button {
+    right: 5%; /* Closer to the edge on smaller screens */
+    width: 64px; /* Smaller button on smaller screens */
+  }
+
+  .image-button img {
+    width: 64px; /* Adjust icon size for smaller screens */
+  }
+  .image-buttonc {
+    right: 5%; /* Closer to the edge on smaller screens */
+    width: 64px; /* Smaller button on smaller screens */
+  }
+
+  .image-buttonc img {
+    width: 64px; /* Adjust icon size for smaller screens */
+  }
+/* exp ends here */
+   .skills {
+ margin-top: 15px;
+ grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
+    }
+/* skill ends here */
+    #contact {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    input, textarea, button {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+/* contact ends here */
 }
 
 /* responsive view 600 range ends */
@@ -388,6 +442,11 @@ h3 {
         height: 50vh; /* Adjust if necessary for very small devices */
     }
 /* logo fade ends */
+   .skills {
+ margin-top: 15px;
+ grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
+    }
+/* skill ends here */
 }
 /* responsive view 320 range and below ends */
 
@@ -938,48 +997,8 @@ header {
   margin-bottom: 5px;
 }
 
-@media (max-width: 768px) {
- 
-}
 
-@media (max-width: 480px) {
-  .experience-item {
-    margin-bottom: 20px;
-  }
 
-  .image-container img {
-    max-width: 80%;
-  }
-
-  .image-containerc img {
-    max-width: 80%;
-  }
-  .image-container h4 {
-display: flex;
-    justify-content: flex-start;
-    font-size: 16px;
-  }
-
-  .text-container p {
-    font-size: 14px;
-  }
-  .image-button {
-    right: 5%; /* Closer to the edge on smaller screens */
-    width: 64px; /* Smaller button on smaller screens */
-  }
-
-  .image-button img {
-    width: 64px; /* Adjust icon size for smaller screens */
-  }
-  .image-buttonc {
-    right: 5%; /* Closer to the edge on smaller screens */
-    width: 64px; /* Smaller button on smaller screens */
-  }
-
-  .image-buttonc img {
-    width: 64px; /* Adjust icon size for smaller screens */
-  }
-}
 
 
 /* Skills Section */
@@ -1041,13 +1060,8 @@ text-align: center;   /* Center-align text */
     overflow: visible; /* Ensures no content is clipped */
 }
 
-/* Responsive adjustments for larger screens */
-@media (min-width: 768px) {
-    .skills {
- margin-top: 15px;
- grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
-    }
-}
+
+
 @media (min-width: 1024px) {
     h4 {
         font-size: 20px;
@@ -1153,9 +1167,7 @@ text-align: center;   /* Center-align text */
 }
 
 /* You might not need the following media query unless you have specific styles for smaller screens */
-@media (max-width: 768px) {
-    /* Styles for smaller devices can be placed here if necessary */
-}
+
 /* Contact section styles */
 #contact {
     padding: 20px;
@@ -1202,14 +1214,5 @@ textarea {
     background-color: #fff8ee; /* Optional: fill background on hover */
 }
 
-/* Responsive styles */
-@media (max-width: 600px) {
-    #contact {
-        padding: 15px; /* Reduced padding for smaller screens */
-    }
 
-    input, textarea, button {
-        font-size: 14px; /* Smaller font size for mobile */
-    }
-}
 /* Additional CSS styles can go here */

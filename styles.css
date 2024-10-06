@@ -1,5 +1,5 @@
 
-@import url('https://fonts.cdnfonts.com/css/kurato');           
+@import url('https://fonts.cdnfonts.com/css/oswald-6');           
 @import url('https://fonts.cdnfonts.com/css/nu-century-gothic');
 @import url('https://fonts.cdnfonts.com/css/roboto');
 
@@ -235,7 +235,7 @@ margin-right: 205px;
 }
 h3 {
     font-weight: bold;
-    font-family: 'Kurato', cursive; /* Ensure Kurato is properly loaded */
+    font-family: 'Oswald', cursive; /* Ensure Oswald is properly loaded */
     font-size: 150px; /* Default font size for larger screens */
     text-align: center;
     margin: auto;
@@ -435,7 +435,7 @@ nav {
 
 /* Navigation link styles */
 .nav-links a {
-    font-family: 'Kurato', cursive; /* Use Kurato font */
+    font-family: 'Oswald', cursive; /* Use Oswald font */
     font-size: 30px; /* Adjust as needed */
     color: #333; /* Change to your desired text color */
     text-decoration: none; /* Remove underline */
@@ -476,7 +476,7 @@ nav {
         opacity: 0; /* Start hidden */
     }
 .nav-links a {
-    font-family: 'Kurato', cursive; /* Use Kurato font */
+    font-family: 'Oswald', cursive; /* Use Oswald font */
     font-size: 30px; /* Adjust as needed */
     color: #333; /* Change to your desired text color */
     text-decoration: none; /* Remove underline */

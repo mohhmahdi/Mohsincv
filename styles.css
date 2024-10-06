@@ -1020,6 +1020,7 @@ h4 {
     margin-top: 10px; /* Space above each header */
     margin-bottom: 20px; /* Space below each header before the skill items */
     text-align: left; /* Left-aligning the header text */
+    font-family: 'Oswald', sans-serif;                                         
     font-size: 18px; /* Desktop font size */
     color: #333; /* Text color */
 }

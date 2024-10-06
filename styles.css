@@ -30,6 +30,9 @@ body {
 /* responsive view 1440 range */
 
 @media (max-width: 1200px) {
+h3 {
+        font-size: 120px; /* Smaller font size for medium screens */
+    }
     .logo-container {
         height: 90vh;
     }
@@ -42,19 +45,263 @@ body {
         height: 80vh;
     }
 /* logo fade ends */
+.w-container {
+    margin-left: 20px;
+overflow:hidden;
+}
+ #pen {
+width:497px;
+height:84px;
+}
+#cap{
+   width:250px;
+height:102px
+}
+.back-container {
+      z-index: 1;
+    margin: 9px;
+}
+#pen, #cap {
+    transition: transform 0.3s ease;
+}
+.front-container {
+    z-index: 2;
+   margin-left: -370px
+    
+}
+/* parallax effcet ends here */
+.nav-links a {
+    font-size: 20px;
+}
+/* nav ends here */
+.work-item .work-link {
+width:60%;
+margin: auto;
+}
+.work-item {
+ width: 90%;
+ height: auto;
+}
+/* Work ends here */
 }
 
 /* responsive view 1024 range */
 
 @media (max-width: 768px) {
+  h1 {
+        margin-left: 10px; /* Reduce left margin for tablets */
+    }
+  h2 {
+        margin-left: 10px; /* Reduce left margin for tablets */
+    }
+ h3 {
+        font-size: 90px; /* Smaller font size for small screens */
+    }
+h5 {
+    margin-left: 20px; /* Reduce left margin for tablets */
+  }
+ h6 {
+        margin-left: 10px; /* Reduce left margin for tablets */
+    }
+h7 {
+font-size: 1rem; /* Reduces the font size to the default 16px */
+        margin-left: 20px; /* Reduce left margin for tablets */
+    }
     .logo-container {
         height: 70vh;
     }
 /* logo fade ends */
+.w-container {
+    margin-left: 50px;
+overflow:hidden;
+}
+#pen {
+   width: 268.36px;
+   height: 40.98px;
+}
+#cap{
+   width:150px;
+height:49.5px;
+margin-right: 205px;
+}
+.back-container {
+      z-index: 1;
+    
+}
+
+.front-container {
+    z-index: 2;
+        margin: 10.5px;
+}
+#pen, #cap {
+    transition: transform 0.3s ease;
+}
+/* parallax effcet ends here */
+   .nav-links {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Start off-screen */
+        height: 100%;
+        width: 250px; /* Width of the slide menu */
+    /* background-image: url('/images/background 1.png');*/
+        background-color: #F1F1F1; /* Background color */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+        flex-direction: column;
+        padding-top: 0.5rem; /* Adjust for toggle button height */
+        opacity: 0; /* Start hidden */
+    }
+.nav-links a {
+    font-family: 'Oswald', cursive; /* Use Oswald font */
+    font-size: 30px; /* Adjust as needed */
+    color: #333; /* Change to your desired text color */
+    text-decoration: none; /* Remove underline */
+    padding: 0.5rem 1rem; /* Add padding for better spacing */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+    .nav-links.show {
+        right: 0; /* Slide in */
+        opacity: 1; /* Show when toggled */
+    }
+
+    /* Hide the nav links by default */
+    .nav-links:not(.show) {
+        display: none; /* Hide links when not shown */
+    }
+
+  .menu-toggle {
+        display: flex; /* Show the toggle button on mobile */
+        position: fixed; /* Position it fixed */
+        right: 1rem; /* Adjust to your desired spacing from the right */
+        top: 1rem; /* Align with the top of the nav */
+        z-index: 10; /* Ensure it appears above other elements */
+    }
+    .menu-toggle img {
+    width: 30px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Maintain aspect ratio */
+    position: sticky;
+   z-index:1001;
+        overflow: hidden;
+        margin-right: 20px;
+}
+/* nav ends here */
+    .home-container {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center; /* Center the content */
+    }
+
+    .home-text {
+        margin-right: 0; /* Remove margin in stacked view */
+        text-align: center; /* Center text on smaller screens */
+        font-size: 1rem; /* Decrease font size for better mobile layout */
+    }
+
+    .home-image {
+        text-align: center; /* Center the image on smaller screens */
+        margin-top: 20px; /* Add some spacing between text and image */
+    }
+/* Home ends here */
+   .info-container {
+        flex-direction: column; /* Stack the elements vertically */
+    }
+
+    .info-container img {
+        width: 221.5px; /* Half of 443px */
+        height: 355px; /* Half of 710px */
+        margin-right: 0; /* Remove margin between image and text */
+    }
+
+    .special-paragraph {
+
+        margin: 10px 0; /* Reduced margin in a mobile environment */
+        font-size: 14px; /* Slightly smaller font on mobile */
+        width: auto; 
+        height: auto; 
+    }
+.buttoncv-container {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height to accommodate content */
+    }
+
+    .download-button {
+        width: auto; /* Adjust width as needed */
+        padding: 8px 16px; /* Smaller padding on smaller screens */
+        font-size: 14px; /* Smaller font size on smaller screens */
+    }
+.my-info-section {
+  padding: 40px 0;
+}
+/* info ends here */
+    .work-item {
+        flex-direction: column;
+        width: 80%;
+        max-width: none; /* Overrides previous max-width */
+        align-items: center;
+        height: 600px;
+        margin: 30px;
+    }
+
+    .work-content {
+        width: 100%; /* Full width for smaller screens */
+        padding-right: 0; /* Remove padding on smaller screens */
+    }
+
+    .work-image {
+        width: 80%; /* Smaller and centered image on top */
+        margin-bottom: 20px; /* Space between image and text */
+    }
+
+    .work-h8 {
+        font-size: 1.2rem; /* Smaller size for tablets */
+    }
+    .work-p8 {
+        font-size: 1rem; /* Smaller size for tablets */
+    }
+.work-item .work-link {
+        width: 50%;
+        margin: 10px;
+}
+.buttoncert-container {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height to accommodate content */
+justify-content: center;
+    }
+
+    .download-cert {
+        width: auto; /* Adjust width as needed */
+        padding: 8px 16px; /* Smaller padding on smaller screens */
+        font-size: 14px; /* Smaller font size on smaller screens */
+    }
+/* work ends here */
 }
 /*  responsive view 768 range */
 
 @media (max-width: 600px) {
+  h1 {
+        margin-left: 5px; /* Further reduce margin for mobile */
+    }
+ h2 {
+        margin-left: 5px; /* Further reduce margin for mobile */
+        font-size: 1rem; /* Reduces the font size to the default 16px */
+    }
+
+ h3 {
+        font-size: 60px; /* Smaller font size for very small screens */
+    }
+ h5 {
+    font-size: 1rem; /* Ensures consistent font size at this breakpoint */
+    margin-left: 5px; /* Further reduce margin for mobile phones */
+  }
+ h6 {
+      font-size: 1rem; /* Reduces the font size to the default 16px */
+      margin-left: 5px; /* Further reduce margin for mobile */
+    }
+ h7 {
+        margin-left: 5px; /* Further reduce margin for mobile */
+    }
+
+
     .logo-container {
         height: 60vh;
     }
@@ -64,6 +311,9 @@ body {
 /* responsive view 600 range ends */
 /* Below 321px if needed, you can continue to scale down or keep it consistent */
 @media (max-width: 320px) {
+h3 {
+        font-size: 35px; /* Smaller font size for very small screens */
+    }
     .logo-container {
         height: 50vh; /* Adjust if necessary for very small devices */
     }
@@ -157,66 +407,6 @@ height:120px;
 height:145px;
 }
 
-
-@media (min-width: 768px) and (max-width: 1024px) {
-.w-container {
-    margin-left: 20px;
-overflow:hidden;
-}
- #pen {
-width:497px;
-height:84px;
-}
-#cap{
-   width:250px;
-height:102px
-}
-.back-container {
-      z-index: 1;
-    margin: 9px;
-}
-#pen, #cap {
-    transition: transform 0.3s ease;
-}
-.front-container {
-    z-index: 2;
-   margin-left: -370px
-    
-}
-}
-/* Responsive Styles */
-
-@media (max-width: 786px) {
-.w-container {
-    margin-left: 50px;
-overflow:hidden;
-}
-#pen {
-   width: 268.36px;
-   height: 40.98px;
-}
-#cap{
-   width:150px;
-height:49.5px;
-margin-right: 205px;
-}
-.back-container {
-      z-index: 1;
-    
-}
-
-.front-container {
-    z-index: 2;
-        margin: 10.5px;
-}
-#pen, #cap {
-    transition: transform 0.3s ease;
-}
-
-}
-
-
-
 /* parallax effcet ends here */
 
 .linkedin-container {
@@ -246,26 +436,7 @@ text-shadow:
         -1px  1px 0 #FAFAFA,
          1px  1px 0 #FAFAFA;
 }
-/* Smaller screens (e.g., tablets) */
-@media (max-width: 1024px) {
-    h3 {
-        font-size: 120px; /* Smaller font size for medium screens */
-    }
-}
 
-/* Even smaller screens (e.g., large phones) */
-@media (max-width: 768px) {
-    h3 {
-        font-size: 90px; /* Smaller font size for small screens */
-    }
-}
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-    h3 {
-        font-size: 60px; /* Smaller font size for very small screens */
-    }
-}
 p {
   font-size: 1.2rem;
  font-family: 'Roboto Light', sans-serif;
@@ -289,39 +460,17 @@ h1 {
   margin-left: 20px; /* Default for larger screens */
 }
 
-@media (max-width: 768px) {
-  h1 {
-        margin-left: 10px; /* Reduce left margin for tablets */
-    }
-}
 
-@media (max-width: 480px) {
-  h1 {
-        margin-left: 5px; /* Further reduce margin for mobile */
-    }
-}
 h2 {
 font-family: 'Roboto Thin', sans-serif;
   margin-left: 20px; /* Default for larger screens */
 }
 
-@media (max-width: 768px) {
-  h2 {
-        margin-left: 10px; /* Reduce left margin for tablets */
-    }
-}
 
-@media (max-width: 480px) {
-  h2 {
-        margin-left: 5px; /* Further reduce margin for mobile */
-    }
-}
+
+
 /* Adjust font size for screens smaller than 600px */
-@media (max-width: 600px) {
-  h2 {
-    font-size: 1rem; /* Reduces the font size to the default 16px */
-  }
-}
+
 h5 {
   font-family: 'Roboto Medium', sans-serif;
   font-size: 1.5rem; /* Set a base font size for all screen sizes */
@@ -347,69 +496,31 @@ h5:hover::after {
 }
 
 /* Adjust margins and font size based on screen width */
-@media (max-width: 768px) {
-  h5 {
-    margin-left: 20px; /* Reduce left margin for tablets */
-  }
-}
 
-@media (max-width: 600px) {
-  h5 {
-    font-size: 1rem; /* Ensures consistent font size at this breakpoint */
-  }
-}
 
-@media (max-width: 480px) {
-  h5 {
-    margin-left: 5px; /* Further reduce margin for mobile phones */
-  }
-}
+
+
+
 h6 {
 font-family: 'Roboto Black', sans-serif;
   margin-left: 20px; /* Default for larger screens */
 }
 
 
-@media (max-width: 768px) {
-    .h6 {
-        margin-left: 10px; /* Reduce left margin for tablets */
-    }
-}
 
-@media (max-width: 480px) {
-  h6 {
-        margin-left: 5px; /* Further reduce margin for mobile */
-    }
-}
-/* Adjust font size for screens smaller than 600px */
-@media (max-width: 600px) {
-  h6 {
-    font-size: 1rem; /* Reduces the font size to the default 16px */
-  }
-}
+
+
+
 h7 {
   font-family: 'Roboto Black', sans-serif;
   margin-left: 20px; /* Default for larger screens */
 font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  h7 {
-        margin-left: 20px; /* Reduce left margin for tablets */
-    }
-}
 
-@media (max-width: 480px) {
-  h7 {
-        margin-left: 5px; /* Further reduce margin for mobile */
-    }
-}
-/* Adjust font size for screens smaller than 600px */
-@media (max-width: 600px) {
-  h7 {
-    font-size: 1rem; /* Reduces the font size to the default 16px */
-  }
-}
+
+
+
 /* Reset styles *
 
 /* Nav links pc version */
@@ -453,63 +564,9 @@ nav {
     display: none; /* Hidden by default on desktop */
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-.nav-links a {
-    font-size: 20px;
-}
-}
-/* Slide-in styles for mobile */
 
-@media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -250px; /* Start off-screen */
-        height: 100%;
-        width: 250px; /* Width of the slide menu */
-    /* background-image: url('/images/background 1.png');*/
-        background-color: #F1F1F1; /* Background color */
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */
-        flex-direction: column;
-        padding-top: 0.5rem; /* Adjust for toggle button height */
-        opacity: 0; /* Start hidden */
-    }
-.nav-links a {
-    font-family: 'Oswald', cursive; /* Use Oswald font */
-    font-size: 30px; /* Adjust as needed */
-    color: #333; /* Change to your desired text color */
-    text-decoration: none; /* Remove underline */
-    padding: 0.5rem 1rem; /* Add padding for better spacing */
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-    .nav-links.show {
-        right: 0; /* Slide in */
-        opacity: 1; /* Show when toggled */
-    }
 
-    /* Hide the nav links by default */
-    .nav-links:not(.show) {
-        display: none; /* Hide links when not shown */
-    }
 
-  .menu-toggle {
-        display: flex; /* Show the toggle button on mobile */
-        position: fixed; /* Position it fixed */
-        right: 1rem; /* Adjust to your desired spacing from the right */
-        top: 1rem; /* Align with the top of the nav */
-        z-index: 10; /* Ensure it appears above other elements */
-    }
-    .menu-toggle img {
-    width: 30px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Maintain aspect ratio */
-    position: sticky;
-   z-index:1001;
-        overflow: hidden;
-        margin-right: 20px;
-}
-}
 
 .home-container {
     display: flex;
@@ -537,23 +594,7 @@ nav {
     height: auto; /* Maintain aspect ratio */
 }
 
-@media (max-width: 768px) {
-    .home-container {
-        flex-direction: column; /* Stack on smaller screens */
-        align-items: center; /* Center the content */
-    }
 
-    .home-text {
-        margin-right: 0; /* Remove margin in stacked view */
-        text-align: center; /* Center text on smaller screens */
-        font-size: 1rem; /* Decrease font size for better mobile layout */
-    }
-
-    .home-image {
-        text-align: center; /* Center the image on smaller screens */
-        margin-top: 20px; /* Add some spacing between text and image */
-    }
-}
 
 /* ... info section ... */
 .info-container {
@@ -601,39 +642,7 @@ nav {
     box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
     background-color: #fff8ee; /* Optional: fill background on hover */
 }
-/* Responsive CSS */
-@media (max-width: 768px) {
-    .info-container {
-        flex-direction: column; /* Stack the elements vertically */
-    }
 
-    .info-container img {
-        width: 221.5px; /* Half of 443px */
-        height: 355px; /* Half of 710px */
-        margin-right: 0; /* Remove margin between image and text */
-    }
-
-    .special-paragraph {
-
-        margin: 10px 0; /* Reduced margin in a mobile environment */
-        font-size: 14px; /* Slightly smaller font on mobile */
-        width: auto; 
-        height: auto; 
-    }
-.buttoncv-container {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Auto height to accommodate content */
-    }
-
-    .download-button {
-        width: auto; /* Adjust width as needed */
-        padding: 8px 16px; /* Smaller padding on smaller screens */
-        font-size: 14px; /* Smaller font size on smaller screens */
-    }
-.my-info-section {
-  padding: 40px 0;
-}
-}
 /* ... info ends ... */
 /* Basic styling for the work section */
 /* General styles */
@@ -749,60 +758,7 @@ nav {
     box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
     background-color: #fff8ee; /* Optional: fill background on hover */
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-.work-item .work-link {
-width:60%;
-margin: auto;
-}
-.work-item {
- width: 90%;
- height: auto;
-}
-}
-/* Responsive styles */
-@media (max-width: 768px) {
-    .work-item {
-        flex-direction: column;
-        width: 80%;
-        max-width: none; /* Overrides previous max-width */
-        align-items: center;
-        height: 600px;
-        margin: 30px;
-    }
 
-    .work-content {
-        width: 100%; /* Full width for smaller screens */
-        padding-right: 0; /* Remove padding on smaller screens */
-    }
-
-    .work-image {
-        width: 80%; /* Smaller and centered image on top */
-        margin-bottom: 20px; /* Space between image and text */
-    }
-
-    .work-h8 {
-        font-size: 1.2rem; /* Smaller size for tablets */
-    }
-    .work-p8 {
-        font-size: 1rem; /* Smaller size for tablets */
-    }
-.work-item .work-link {
-        width: 50%;
-        margin: 10px;
-}
-.buttoncert-container {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Auto height to accommodate content */
-justify-content: center;
-    }
-
-    .download-cert {
-        width: auto; /* Adjust width as needed */
-        padding: 8px 16px; /* Smaller padding on smaller screens */
-        font-size: 14px; /* Smaller font size on smaller screens */
-    }
-
-}
 
 
 /* Header styles */

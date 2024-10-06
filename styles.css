@@ -21,26 +21,9 @@ body {
 /* responsive starts  */
 
 /* Base styles for desktop, assuming the largest size you were handling was over 1441px */
-@media (max-width: 1440px) { /* Decrease from here for smaller devices */
-    .logo-container {
-        height: 100vh;
-    }
-/* logo fade ends */
-}
-/* responsive view 1440 range */
 
-@media (max-width: 1200px) {
-h3 {
-        font-size: 120px; /* Smaller font size for medium screens */
-    }
-    .logo-container {
-        height: 90vh;
-    }
-/* logo fade ends  */
-}
-/* responsive view 1200 range */
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
 h3 {
         font-size: 90px; /* Smaller font size for medium screens */
     }

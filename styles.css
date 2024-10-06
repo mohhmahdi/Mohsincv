@@ -234,9 +234,9 @@ margin-right: 205px;
     width: 100vw;       /* Takes at least the full width of the viewport */
 }
 h3 {
-    font-weight: bold;
+    font-weight: 400;
     font-family: 'Oswald', cursive; /* Ensure Oswald is properly loaded */
-    font-size: 150px; /* Default font size for larger screens */
+    font-size: 120px; /* Default font size for larger screens */
     text-align: center;
     margin: auto;
     margin-top: 20px;

@@ -558,7 +558,7 @@ height:145px;
 h3 {
     font-weight: 400;
     font-family: 'Oswald', cursive; /* Ensure Oswald is properly loaded */
-    font-size: 120px; /* Default font size for larger screens */
+    font-size: 125px; /* Default font size for larger screens */
     text-align: center;
     margin: auto;
     margin-top: 20px;

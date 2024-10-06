@@ -41,6 +41,9 @@ h3 {
 /* responsive view 1200 range */
 
 @media (max-width: 1024px) {
+h3 {
+        font-size: 90px; /* Smaller font size for medium screens */
+    }
     .logo-container {
         height: 80vh;
     }
@@ -95,7 +98,7 @@ margin: auto;
         margin-left: 10px; /* Reduce left margin for tablets */
     }
  h3 {
-        font-size: 90px; /* Smaller font size for small screens */
+        font-size: 50px; /* Smaller font size for small screens */
     }
 h5 {
     margin-left: 20px; /* Reduce left margin for tablets */
@@ -215,7 +218,7 @@ margin-right: 205px;
     .special-paragraph {
 
         margin: 10px 0; /* Reduced margin in a mobile environment */
-        font-size: 14px; /* Slightly smaller font on mobile */
+        font-size: 12px; /* Slightly smaller font on mobile */
         width: auto; 
         height: auto; 
     }
@@ -352,7 +355,7 @@ justify-content: center;
     }
 
  h3 {
-        font-size: 60px; /* Smaller font size for very small screens */
+        font-size: 40px; /* Smaller font size for very small screens */
     }
  h5 {
     font-size: 1rem; /* Ensures consistent font size at this breakpoint */
@@ -743,7 +746,7 @@ nav {
     flex: 1; /* Allows the paragraph to fill up the remaining space */
     margin: 0 20px; /* Spacing for text readability */
    font-family: 'Roboto Light', sans-serif;
-    font-size: 25px; /* Example font size */
+    font-size: 18px; /* Example font size */
       width: auto; 
         height: auto; 
     margin-bottom: 20px; /* Ensures there is space below the paragraph */
@@ -919,7 +922,6 @@ header {
   text-align: left;
   display: flex;
   align-items: center; /* Vertically center the content */
-  justify-content: flex-end; /* Align children to the right */
   position: relative;
 }
 

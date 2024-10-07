@@ -249,21 +249,21 @@ text-shadow:
 /* Smaller screens (e.g., tablets) */
 @media (max-width: 1024px) {
     h3 {
-        font-size: 120px; /* Smaller font size for medium screens */
+        font-size: 90px; /* Smaller font size for medium screens */
     }
 }
 
 /* Even smaller screens (e.g., large phones) */
 @media (max-width: 768px) {
     h3 {
-        font-size: 90px; /* Smaller font size for small screens */
+        font-size: 35px; /* Smaller font size for small screens */
     }
 }
 
 /* Small mobile devices */
 @media (max-width: 480px) {
     h3 {
-        font-size: 60px; /* Smaller font size for very small screens */
+        font-size: 25px; /* Smaller font size for very small screens */
     }
 }
 p {
@@ -477,15 +477,16 @@ nav {
     }
 .nav-links a {
     font-family: 'Oswald', cursive; /* Use Oswald font */
-    font-size: 30px; /* Adjust as needed */
+    font-size: 20px; /* Adjust as needed */
     color: #333; /* Change to your desired text color */
     text-decoration: none; /* Remove underline */
-    padding: 0.5rem 1rem; /* Add padding for better spacing */
+    padding: 0.1rem 0rem; /* Add padding for better spacing */
     transition: color 0.3s ease; /* Smooth color transition */
 }
     .nav-links.show {
         right: 0; /* Slide in */
         opacity: 1; /* Show when toggled */
+padding:14px
     }
 
     /* Hide the nav links by default */
@@ -787,7 +788,7 @@ margin: auto;
         font-size: 1rem; /* Smaller size for tablets */
     }
 .work-item .work-link {
-        width: 50%;
+        width: 70%;
         margin: 10px;
 }
 .buttoncert-container {

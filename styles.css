@@ -27,416 +27,7 @@ body {
 h3 {
         font-size: 90px; /* Smaller font size for medium screens */
     }
-    .logo-container {
-        height: 80vh;
-    }
-/* logo fade ends */
-.w-container {
-    margin-left: 20px;
-overflow:hidden;
-}
- #pen {
-width:497px;
-height:84px;
-}
-#cap{
-   width:250px;
-height:102px
-}
-.back-container {
-      z-index: 1;
-    margin: 9px;
-}
-#pen, #cap {
-    transition: transform 0.3s ease;
-}
-.front-container {
-    z-index: 2;
-   margin-left: -370px
-    
-}
-/* parallax effcet ends here */
-.nav-links a {
-    font-size: 20px;
-}
-/* nav ends here */
-.work-item .work-link {
-width:60%;
-margin: auto;
-}
-.work-item {
- width: 90%;
- height: auto;
-}
-/* Work ends here */
-} 
-
-/* responsive view 1024 range */
-
-@media (min-width: 768px) {
-  h1 {
-        margin-left: 10px; /* Reduce left margin for tablets */
-    }
-  h2 {
-        margin-left: 10px; /* Reduce left margin for tablets */
-    }
- h3 {
-        font-size: 50px; /* Smaller font size for small screens */
-    }
-h5 {
-    margin-left: 20px; /* Reduce left margin for tablets */
-  }
- h6 {
-        margin-left: 10px; /* Reduce left margin for tablets */
-    }
-h7 {
-font-size: 1rem; /* Reduces the font size to the default 16px */
-        margin-left: 20px; /* Reduce left margin for tablets */
-    }
-    .logo-container {
-        height: 70vh;
-    }
-/* logo fade ends */
-.w-container {
-    margin-left: 50px;
-overflow:hidden;
-}
-#pen {
-   width: 268.36px;
-   height: 40.98px;
-}
-#cap{
-   width:150px;
-height:49.5px;
-margin-right: 205px;
-}
-.back-container {
-      z-index: 1;
-    
-}
-
-.front-container {
-    z-index: 2;
-        margin: 10.5px;
-}
-#pen, #cap {
-    transition: transform 0.3s ease;
-}
-/* parallax effcet ends here */
-   .nav-links {
-        position: fixed;
-        top: 0;
-        right: -250px; /* Start off-screen */
-        height: 100%;
-        width: 250px; /* Width of the slide menu */
-    /* background-image: url('/images/background 1.png');*/
-        background-color: #F1F1F1; /* Background color */
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */
-        flex-direction: column;
-        padding-top: 0.5rem; /* Adjust for toggle button height */
-        opacity: 0; /* Start hidden */
-    }
-.nav-links a {
-    font-family: 'Oswald', cursive; /* Use Oswald font */
-    font-size: 30px; /* Adjust as needed */
-    color: #333; /* Change to your desired text color */
-    text-decoration: none; /* Remove underline */
-    padding: 0.5rem 1rem; /* Add padding for better spacing */
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-    .nav-links.show {
-        right: 0; /* Slide in */
-        opacity: 1; /* Show when toggled */
-    }
-
-    /* Hide the nav links by default */
-    .nav-links:not(.show) {
-        display: none; /* Hide links when not shown */
-    }
-
-  .menu-toggle {
-        display: flex; /* Show the toggle button on mobile */
-        position: fixed; /* Position it fixed */
-        right: 1rem; /* Adjust to your desired spacing from the right */
-        top: 1rem; /* Align with the top of the nav */
-        z-index: 10; /* Ensure it appears above other elements */
-    }
-    .menu-toggle img {
-    width: 30px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Maintain aspect ratio */
-    position: sticky;
-   z-index:1001;
-        overflow: hidden;
-        margin-right: 20px;
-}
-/* nav ends here */
-    .home-container {
-        flex-direction: column; /* Stack on smaller screens */
-        align-items: center; /* Center the content */
-    }
-
-    .home-text {
-        margin-right: 0; /* Remove margin in stacked view */
-        text-align: center; /* Center text on smaller screens */
-        font-size: 1rem; /* Decrease font size for better mobile layout */
-    }
-
-    .home-image {
-        text-align: center; /* Center the image on smaller screens */
-        margin-top: 20px; /* Add some spacing between text and image */
-    }
-/* Home ends here */
-   .info-container {
-        flex-direction: column; /* Stack the elements vertically */
-    }
-
-    .info-container img {
-        width: 221.5px; /* Half of 443px */
-        height: 355px; /* Half of 710px */
-        margin-right: 0; /* Remove margin between image and text */
-    }
-
-    .special-paragraph {
-
-        margin: 10px 0; /* Reduced margin in a mobile environment */
-        font-size: 12px; /* Slightly smaller font on mobile */
-        width: auto; 
-        height: auto; 
-    }
-.buttoncv-container {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Auto height to accommodate content */
-    }
-
-    .download-button {
-        width: auto; /* Adjust width as needed */
-        padding: 8px 16px; /* Smaller padding on smaller screens */
-        font-size: 14px; /* Smaller font size on smaller screens */
-    }
-.my-info-section {
-  padding: 40px 0;
-}
-/* info ends here */
-    .work-item {
-        flex-direction: column;
-        width: 80%;
-        max-width: none; /* Overrides previous max-width */
-        align-items: center;
-        height: 600px;
-        margin: 30px;
-    }
-
-    .work-content {
-        width: 100%; /* Full width for smaller screens */
-        padding-right: 0; /* Remove padding on smaller screens */
-    }
-
-    .work-image {
-        width: 80%; /* Smaller and centered image on top */
-        margin-bottom: 20px; /* Space between image and text */
-    }
-
-    .work-h8 {
-        font-size: 1.2rem; /* Smaller size for tablets */
-    }
-    .work-p8 {
-        font-size: 1rem; /* Smaller size for tablets */
-    }
-.work-item .work-link {
-        width: 50%;
-        margin: 10px;
-}
-.buttoncert-container {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Auto height to accommodate content */
-justify-content: center;
-    }
-
-    .download-cert {
-        width: auto; /* Adjust width as needed */
-        padding: 8px 16px; /* Smaller padding on smaller screens */
-        font-size: 14px; /* Smaller font size on smaller screens */
-    }
-/* work ends here */
- .experience-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .image-container {
-    flex: 0 0 auto;
-    display: flex;
-    justify-content: flex-start;
-
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .text-container {
-    flex: 0 0 auto;
-    width: 100%;
-    padding-left: 0;
-  }
-  .image-button {
-   position: relative;
-  top: 50%; /* Center vertically */
-  right: 5%; /* Use percentage to keep it close but responsive */
-  transform: translateY(-50%);
-  border: none;
-  background: none;
-  cursor: pointer;
-  margin-right: 10px; /* Adjust spacing as needed */
-  }
-.image-button img {
-  width: 64px;
-}
- .image-containerc {
-    flex: 0 0 auto;
-    display: flex;
-    justify-content: flex-start;
-
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .text-container {
-    flex: 0 0 auto;
-    width: 100%;
-    padding-left: 0;
-  }
-  .image-buttonc {
-   position: relative;
-  top: 50%; /* Center vertically */
-  right: 5%; /* Use percentage to keep it close but responsive */
-  transform: translateY(-50%);
-  border: none;
-  background: none;
-  cursor: pointer;
-  margin-right: 10px; /* Adjust spacing as needed */
-  }
-.image-buttonc img {
-  width: 64px;
-}
-/* exp ends here */
-   .skills {
- margin-top: 15px;
- grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
-    }
-/* skill ends here */
-}
-/*  responsive view 768 range */
-
-@media (min-width: 600px) {
-  h1 {
-        margin-left: 5px; /* Further reduce margin for mobile */
-    }
- h2 {
-        margin-left: 5px; /* Further reduce margin for mobile */
-        font-size: 1rem; /* Reduces the font size to the default 16px */
-    }
-
- h3 {
-        font-size: 40px; /* Smaller font size for very small screens */
-    }
- h5 {
-    font-size: 1rem; /* Ensures consistent font size at this breakpoint */
-    margin-left: 5px; /* Further reduce margin for mobile phones */
-  }
- h6 {
-      font-size: 1rem; /* Reduces the font size to the default 16px */
-      margin-left: 5px; /* Further reduce margin for mobile */
-    }
- h7 {
-        margin-left: 5px; /* Further reduce margin for mobile */
-    }
-
-
-    .logo-container {
-        height: 60vh;
-    }
-/* logo fade ends */
- .work-item .work-link {
-width:60%;
-margin: auto;
-}
-.work-item {
- width: 90%;
- height: auto;
-}
-/* work ends here */
- .experience-item {
-    margin-bottom: 20px;
-  }
-
-  .image-container img {
-    max-width: 80%;
-  }
-
-  .image-containerc img {
-    max-width: 80%;
-  }
-  .image-container h4 {
-display: flex;
-    justify-content: flex-start;
-    font-size: 16px;
-  }
-
-  .text-container p {
-    font-size: 14px;
-  }
-  .image-button {
-    right: 5%; /* Closer to the edge on smaller screens */
-    width: 64px; /* Smaller button on smaller screens */
-  }
-
-  .image-button img {
-    width: 64px; /* Adjust icon size for smaller screens */
-  }
-  .image-buttonc {
-    right: 5%; /* Closer to the edge on smaller screens */
-    width: 64px; /* Smaller button on smaller screens */
-  }
-
-  .image-buttonc img {
-    width: 64px; /* Adjust icon size for smaller screens */
-  }
-/* exp ends here */
-   .skills {
- margin-top: 15px;
- grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
-    }
-/* skill ends here */
-    #contact {
-        padding: 15px; /* Reduced padding for smaller screens */
-    }
-
-    input, textarea, button {
-        font-size: 14px; /* Smaller font size for mobile */
-    }
-/* contact ends here */
-}
-
-/* responsive view 600 range ends */
-/* Below 321px if needed, you can continue to scale down or keep it consistent */
-@media (max-width: 320px) {
-h3 {
-        font-size: 35px; /* Smaller font size for very small screens */
-    }
-    .logo-container {
-        height: 50vh; /* Adjust if necessary for very small devices */
-    }
-/* logo fade ends */
-   .skills {
- margin-top: 15px;
- grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
-    }
-/* skill ends here */
-}
-/* responsive view 320 range and below ends */
-
-/* logo fade out-in start here */
+  /* logo fade out-in start here */
 /* Styles for the image within the container */
 #afterheaderImage {
     width: 50%;
@@ -1042,7 +633,427 @@ text-align: center;   /* Center-align text */
     width: auto; /* Ensure the width is sufficient to hold the content */
     height: auto; /* Ensure height adjusts to content */
     overflow: visible; /* Ensures no content is clipped */
+
+/* You might not need the following media query unless you have specific styles for smaller screens */
+
+/* Contact section styles */
+#contact {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto; /* Center the form */
 }
+
+
+/* Contact form styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Space between inputs */
+}
+
+input, textarea {
+    width: 100%; /* Make inputs full width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Font size for better readability */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Minimum height for the textarea */
+}
+
+.contact-form button {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Consistent font size */
+    justify-content: center;
+    width: 100%;
+    border: 7px solid burlywood; /* Light cream border */
+    color: brown; /* Initial text color is brown */
+}
+
+.contact-form button:hover {
+     color: darkred; /* Change text color to white on hover */
+    border-color: #6F4E37; /* Coffee color for the border on hover */
+    box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
+    background-color: #fff8ee; /* Optional: fill background on hover */
+}
+
+
+/* Additional CSS styles can go here */
+
+}
+
+
+} 
+
+/* responsive view 1024 range */
+
+@media (max-width: 768px) {
+  h1 {
+        margin-left: 10px; /* Reduce left margin for tablets */
+    }
+  h2 {
+        margin-left: 10px; /* Reduce left margin for tablets */
+    }
+ h3 {
+        font-size: 50px; /* Smaller font size for small screens */
+    }
+h5 {
+    margin-left: 20px; /* Reduce left margin for tablets */
+  }
+ h6 {
+        margin-left: 10px; /* Reduce left margin for tablets */
+    }
+h7 {
+font-size: 1rem; /* Reduces the font size to the default 16px */
+        margin-left: 20px; /* Reduce left margin for tablets */
+    }
+    .logo-container {
+        height: 70vh;
+    }
+/* logo fade ends */
+.w-container {
+    margin-left: 50px;
+overflow:hidden;
+}
+#pen {
+   width: 268.36px;
+   height: 40.98px;
+}
+#cap{
+   width:150px;
+height:49.5px;
+margin-right: 205px;
+}
+.back-container {
+      z-index: 1;
+    
+}
+
+.front-container {
+    z-index: 2;
+        margin: 10.5px;
+}
+#pen, #cap {
+    transition: transform 0.3s ease;
+}
+/* parallax effcet ends here */
+   .nav-links {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Start off-screen */
+        height: 100%;
+        width: 250px; /* Width of the slide menu */
+    /* background-image: url('/images/background 1.png');*/
+        background-color: #F1F1F1; /* Background color */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+        flex-direction: column;
+        padding-top: 0.5rem; /* Adjust for toggle button height */
+        opacity: 0; /* Start hidden */
+    }
+.nav-links a {
+    font-family: 'Oswald', cursive; /* Use Oswald font */
+    font-size: 30px; /* Adjust as needed */
+    color: #333; /* Change to your desired text color */
+    text-decoration: none; /* Remove underline */
+    padding: 0.5rem 1rem; /* Add padding for better spacing */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+    .nav-links.show {
+        right: 0; /* Slide in */
+        opacity: 1; /* Show when toggled */
+    }
+
+    /* Hide the nav links by default */
+    .nav-links:not(.show) {
+        display: none; /* Hide links when not shown */
+    }
+
+  .menu-toggle {
+        display: flex; /* Show the toggle button on mobile */
+        position: fixed; /* Position it fixed */
+        right: 1rem; /* Adjust to your desired spacing from the right */
+        top: 1rem; /* Align with the top of the nav */
+        z-index: 10; /* Ensure it appears above other elements */
+    }
+    .menu-toggle img {
+    width: 30px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Maintain aspect ratio */
+    position: sticky;
+   z-index:1001;
+        overflow: hidden;
+        margin-right: 20px;
+}
+/* nav ends here */
+    .home-container {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center; /* Center the content */
+    }
+
+    .home-text {
+        margin-right: 0; /* Remove margin in stacked view */
+        text-align: center; /* Center text on smaller screens */
+        font-size: 1rem; /* Decrease font size for better mobile layout */
+    }
+
+    .home-image {
+        text-align: center; /* Center the image on smaller screens */
+        margin-top: 20px; /* Add some spacing between text and image */
+    }
+/* Home ends here */
+   .info-container {
+        flex-direction: column; /* Stack the elements vertically */
+    }
+
+    .info-container img {
+        width: 221.5px; /* Half of 443px */
+        height: 355px; /* Half of 710px */
+        margin-right: 0; /* Remove margin between image and text */
+    }
+
+    .special-paragraph {
+
+        margin: 10px 0; /* Reduced margin in a mobile environment */
+        font-size: 12px; /* Slightly smaller font on mobile */
+        width: auto; 
+        height: auto; 
+    }
+.buttoncv-container {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height to accommodate content */
+    }
+
+    .download-button {
+        width: auto; /* Adjust width as needed */
+        padding: 8px 16px; /* Smaller padding on smaller screens */
+        font-size: 14px; /* Smaller font size on smaller screens */
+    }
+.my-info-section {
+  padding: 40px 0;
+}
+/* info ends here */
+    .work-item {
+        flex-direction: column;
+        width: 80%;
+        max-width: none; /* Overrides previous max-width */
+        align-items: center;
+        height: 600px;
+        margin: 30px;
+    }
+
+    .work-content {
+        width: 100%; /* Full width for smaller screens */
+        padding-right: 0; /* Remove padding on smaller screens */
+    }
+
+    .work-image {
+        width: 80%; /* Smaller and centered image on top */
+        margin-bottom: 20px; /* Space between image and text */
+    }
+
+    .work-h8 {
+        font-size: 1.2rem; /* Smaller size for tablets */
+    }
+    .work-p8 {
+        font-size: 1rem; /* Smaller size for tablets */
+    }
+.work-item .work-link {
+        width: 50%;
+        margin: 10px;
+}
+.buttoncert-container {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height to accommodate content */
+justify-content: center;
+    }
+
+    .download-cert {
+        width: auto; /* Adjust width as needed */
+        padding: 8px 16px; /* Smaller padding on smaller screens */
+        font-size: 14px; /* Smaller font size on smaller screens */
+    }
+/* work ends here */
+ .experience-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-container {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-start;
+
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .text-container {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-left: 0;
+  }
+  .image-button {
+   position: relative;
+  top: 50%; /* Center vertically */
+  right: 5%; /* Use percentage to keep it close but responsive */
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 10px; /* Adjust spacing as needed */
+  }
+.image-button img {
+  width: 64px;
+}
+ .image-containerc {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-start;
+
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .text-container {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-left: 0;
+  }
+  .image-buttonc {
+   position: relative;
+  top: 50%; /* Center vertically */
+  right: 5%; /* Use percentage to keep it close but responsive */
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 10px; /* Adjust spacing as needed */
+  }
+.image-buttonc img {
+  width: 64px;
+}
+/* exp ends here */
+   .skills {
+ margin-top: 15px;
+ grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
+    }
+/* skill ends here */
+}
+/*  responsive view 768 range */
+
+@media (max-width: 600px) {
+  h1 {
+        margin-left: 5px; /* Further reduce margin for mobile */
+    }
+ h2 {
+        margin-left: 5px; /* Further reduce margin for mobile */
+        font-size: 1rem; /* Reduces the font size to the default 16px */
+    }
+
+ h3 {
+        font-size: 40px; /* Smaller font size for very small screens */
+    }
+ h5 {
+    font-size: 1rem; /* Ensures consistent font size at this breakpoint */
+    margin-left: 5px; /* Further reduce margin for mobile phones */
+  }
+ h6 {
+      font-size: 1rem; /* Reduces the font size to the default 16px */
+      margin-left: 5px; /* Further reduce margin for mobile */
+    }
+ h7 {
+        margin-left: 5px; /* Further reduce margin for mobile */
+    }
+
+
+    .logo-container {
+        height: 60vh;
+    }
+/* logo fade ends */
+ .work-item .work-link {
+width:60%;
+margin: auto;
+}
+.work-item {
+ width: 90%;
+ height: auto;
+}
+/* work ends here */
+ .experience-item {
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    max-width: 80%;
+  }
+
+  .image-containerc img {
+    max-width: 80%;
+  }
+  .image-container h4 {
+display: flex;
+    justify-content: flex-start;
+    font-size: 16px;
+  }
+
+  .text-container p {
+    font-size: 14px;
+  }
+  .image-button {
+    right: 5%; /* Closer to the edge on smaller screens */
+    width: 64px; /* Smaller button on smaller screens */
+  }
+
+  .image-button img {
+    width: 64px; /* Adjust icon size for smaller screens */
+  }
+  .image-buttonc {
+    right: 5%; /* Closer to the edge on smaller screens */
+    width: 64px; /* Smaller button on smaller screens */
+  }
+
+  .image-buttonc img {
+    width: 64px; /* Adjust icon size for smaller screens */
+  }
+/* exp ends here */
+   .skills {
+ margin-top: 15px;
+ grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
+    }
+/* skill ends here */
+    #contact {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    input, textarea, button {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+/* contact ends here */
+}
+
+/* responsive view 600 range ends */
+/* Below 321px if needed, you can continue to scale down or keep it consistent */
+@media (max-width: 320px) {
+h3 {
+        font-size: 35px; /* Smaller font size for very small screens */
+    }
+    .logo-container {
+        height: 50vh; /* Adjust if necessary for very small devices */
+    }
+/* logo fade ends */
+   .skills {
+ margin-top: 15px;
+ grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More columns as space allows */
+    }
+/* skill ends here */
+}
+/* responsive view 320 range and below ends */
 
 
 
@@ -1150,53 +1161,3 @@ text-align: center;   /* Center-align text */
     }
 }
 
-/* You might not need the following media query unless you have specific styles for smaller screens */
-
-/* Contact section styles */
-#contact {
-    padding: 20px;
-    max-width: 600px;
-    margin: auto; /* Center the form */
-}
-
-
-/* Contact form styles */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px; /* Space between inputs */
-}
-
-input, textarea {
-    width: 100%; /* Make inputs full width */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px; /* Font size for better readability */
-}
-
-textarea {
-    resize: vertical; /* Allow vertical resizing */
-    min-height: 100px; /* Minimum height for the textarea */
-}
-
-.contact-form button {
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px; /* Consistent font size */
-    justify-content: center;
-    width: 100%;
-    border: 7px solid burlywood; /* Light cream border */
-    color: brown; /* Initial text color is brown */
-}
-
-.contact-form button:hover {
-     color: darkred; /* Change text color to white on hover */
-    border-color: #6F4E37; /* Coffee color for the border on hover */
-    box-shadow: 0 0 8px 3px #6F4E37; /* Coffee color glow effect on hover */
-    background-color: #fff8ee; /* Optional: fill background on hover */
-}
-
-
-/* Additional CSS styles can go here */

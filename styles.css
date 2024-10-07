@@ -23,7 +23,7 @@ body {
 /* Base styles for desktop, assuming the largest size you were handling was over 1441px */
 
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
 h3 {
         font-size: 90px; /* Smaller font size for medium screens */
     }
@@ -69,7 +69,7 @@ margin: auto;
  height: auto;
 }
 /* Work ends here */
-}
+} */
 
 /* responsive view 1024 range */
 

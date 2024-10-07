@@ -264,6 +264,7 @@ text-shadow:
 @media (max-width: 480px) {
     h3 {
         font-size: 25px; /* Smaller font size for very small screens */
+        margin-left: 30px;
     }
 }
 p {
@@ -361,7 +362,7 @@ h5:hover::after {
 
 @media (max-width: 480px) {
   h5 {
-    margin-left: 5px; /* Further reduce margin for mobile phones */
+    margin-left:25px; /* Further reduce margin for mobile phones */
   }
 }
 h6 {
@@ -574,7 +575,7 @@ padding:14px
     flex: 1; /* Allows the paragraph to fill up the remaining space */
     margin: 0 20px; /* Spacing for text readability */
    font-family: 'Roboto Light', sans-serif;
-    font-size: 25px; /* Example font size */
+    font-size: 18px; /* Example font size */
       width: auto; 
         height: auto; 
     margin-bottom: 20px; /* Ensures there is space below the paragraph */
@@ -767,7 +768,7 @@ margin: auto;
         width: 80%;
         max-width: none; /* Overrides previous max-width */
         align-items: center;
-        height: 600px;
+        height: 500px;
         margin: 30px;
     }
 

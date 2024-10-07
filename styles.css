@@ -73,7 +73,7 @@ margin: auto;
 
 /* responsive view 1024 range */
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   h1 {
         margin-left: 10px; /* Reduce left margin for tablets */
     }
@@ -328,7 +328,7 @@ justify-content: center;
 }
 /*  responsive view 768 range */
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   h1 {
         margin-left: 5px; /* Further reduce margin for mobile */
     }

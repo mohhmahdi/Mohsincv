@@ -106,7 +106,7 @@ window.addEventListener('scroll', function() {
         // Curtain effect logic after home section is passed
         let footerRect = footer.getBoundingClientRect();
         let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
-        let percentOpen = Math.min(distanceFromFooter / 1000, 1);
+        let percentOpen = Math.min(distanceFromFooter / 700, 1);
 
         updateTransforms(percentOpen, pen, cap); // Call updateTransforms with responsive logic  ,pen2
     } else {

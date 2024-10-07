@@ -236,7 +236,7 @@ margin-right: 205px;
 h3 {
     font-weight: 400;
     font-family: 'Oswald', cursive; /* Ensure Oswald is properly loaded */
-    font-size: 150px; /* Default font size for larger screens */
+    font-size: 80px; /* Default font size for larger screens */
     text-align: center;
     margin: auto;
     margin-top: 20px;
@@ -249,7 +249,7 @@ text-shadow:
 /* Smaller screens (e.g., tablets) */
 @media (max-width: 1024px) {
     h3 {
-        font-size: 90px; /* Smaller font size for medium screens */
+        font-size: 70px; /* Smaller font size for medium screens */
     }
 }
 
@@ -437,7 +437,7 @@ nav {
 /* Navigation link styles */
 .nav-links a {
     font-family: 'Oswald', cursive; /* Use Oswald font */
-    font-size: 30px; /* Adjust as needed */
+    font-size: 22px; /* Adjust as needed */
     color: #333; /* Change to your desired text color */
     text-decoration: none; /* Remove underline */
     padding: 0.5rem 1rem; /* Add padding for better spacing */

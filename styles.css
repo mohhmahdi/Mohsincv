@@ -189,11 +189,16 @@ height:102px
 @media (max-width: 786px) {
 .w-container {
     margin-left: 50px;
-overflow:hidden;
+
 }
 #pen {
    width: 268.36px;
    height: 40.98px;
+overflow:hidden;
+}
+#pen2 {
+width:60px;
+height: 40.98px;
 }
 #cap{
    width:150px;

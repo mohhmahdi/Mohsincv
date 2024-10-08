@@ -84,7 +84,7 @@ window.addEventListener('scroll', function() {
     let cap = document.getElementById('cap');
 
     // Exit if required elements are not found
-    if (!home || !footer || !pen || !cap) { // || !pen2
+    if (!home || !footer || !pen || !cap || !pen2) { 
         console.log("Required sections or elements not found, exiting curtain effect script.");
         return;
     }
@@ -100,26 +100,26 @@ window.addEventListener('scroll', function() {
         pen.style.transformStyle = 'preserve-3d';
         cap.style.transform = initialTransform;
         cap.style.transformStyle = 'preserve-3d';
-        //pen2.style.transform = initialTransform;
-        //pen2.style.transformStyle = 'preserve-3d';
+        pen2.style.transform = initialTransform;
+        pen2.style.transformStyle = 'preserve-3d';
     } else if (scrollY >= homeRect.bottom) {
         // Curtain effect logic after home section is passed
         let footerRect = footer.getBoundingClientRect();
         let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
         let percentOpen = Math.min(distanceFromFooter / 1500, 1);
 
-        updateTransforms(percentOpen, pen, cap); // Call updateTransforms with responsive logic  ,pen2
+        updateTransforms(percentOpen, pen, cap ,pen2); // Call updateTransforms with responsive logic  
     } else {
         // Reset positions when in home or footer sections
         pen.style.transform = `translateX(0%)`;
         cap.style.transform = `translateX(0%)`;
-        //pen2.style.transform = `translateX(0%)`;
+        pen2.style.transform = `translateX(0%)`;
     }
 });
 
 function updateTransforms(percentOpen, pen, cap) {
     const viewportWidth = window.innerWidth;
-    let translateXPen, translateXCap; //  let translateXPen2
+    let translateXPen, translateXCap, translateXPen2;
 
 if (viewportWidth > 1440) { // Above 1441px
         translateXPen = 130 * percentOpen;
@@ -135,22 +135,22 @@ if (viewportWidth > 1440) { // Above 1441px
         translateXCap = 90 * percentOpen;
     } else if (viewportWidth >= 601) { // 601px to 767px
         translateXPen = 75 * percentOpen;
-// translateXPen2 = 0 * percentOpen;
+        translateXPen2 = 0 * percentOpen;
         translateXCap = 80 * percentOpen;
     } else if (viewportWidth >= 321) { // 321px to 600px
         translateXPen = 65 * percentOpen;
-// translateXPen2 = 0 * percentOpen;
+        translateXPen2 = 0 * percentOpen;
         translateXCap = 70 * percentOpen;
     } else { // Up to 320px
         translateXPen = 55 * percentOpen;
-// translateXPen2 = 0 * percentOpen;
+        translateXPen2 = 0 * percentOpen;
         translateXCap = 60 * percentOpen;
     }
 
   // Apply the transformations
     pen.style.transform = `translateX(${translateXPen}%)`;
     cap.style.transform = `translateX(-${translateXCap}%)`;
- // pen2.style.transform = `translateX(${translateXPen}%)`;
+    pen2.style.transform = `translateX(${translateXPen}%)`;
 }
 console.log("Width: " + window.innerWidth + "px");
 console.log("Height: " + window.innerHeight + "px");

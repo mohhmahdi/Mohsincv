@@ -133,19 +133,19 @@ if (viewportWidth > 1440) { // Above 1441px
     } else if (viewportWidth >= 768) { // 768px to 1024px
         translateXPen = 85 * percentOpen;
         translateXPen2 = 0 * percentOpen;
-        translateXCap = 90 * percentOpen;
+        translateXCap = 270 * percentOpen;
     } else if (viewportWidth >= 601) { // 601px to 767px
         translateXPen = 75 * percentOpen;
         translateXPen2 = 0 * percentOpen;
-        translateXCap = 80 * percentOpen;
+        translateXCap = 260 * percentOpen;
     } else if (viewportWidth >= 321) { // 321px to 600px
         translateXPen = 65 * percentOpen;
         translateXPen2 = 0 * percentOpen;
-        translateXCap = 70 * percentOpen;
+        translateXCap = 250 * percentOpen;
     } else { // Up to 320px
         translateXPen = 55 * percentOpen;
         translateXPen2 = 0 * percentOpen;
-        translateXCap = 60 * percentOpen;
+        translateXCap = 240 * percentOpen;
     }
 
   // Apply the transformations

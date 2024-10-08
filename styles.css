@@ -151,6 +151,9 @@ body {
 width:792px;
 height:120px;
 }
+#pen2 {
+overflow:hidden;
+}
 
 #cap{
    width:453px;

@@ -132,6 +132,7 @@ if (viewportWidth > 1440) { // Above 1441px
         translateXCap = 100 * percentOpen;
     } else if (viewportWidth >= 768) { // 768px to 1024px
         translateXPen = 85 * percentOpen;
+        translateXPen2 = 0 * percentOpen;
         translateXCap = 90 * percentOpen;
     } else if (viewportWidth >= 601) { // 601px to 767px
         translateXPen = 75 * percentOpen;

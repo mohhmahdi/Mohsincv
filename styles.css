@@ -69,6 +69,7 @@ body {
     display: flex;
     position: relative;
     overflow: hidden;
+border-bottom: 50px solid transparent;
 }
 
 /* Additional div to control the logo width */
@@ -89,6 +90,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 3;
+border-bottom: 150px solid transparent;
 }
 
 .back-container, .front-container {
@@ -166,6 +168,7 @@ height:102px
 .w-container {
 display: flex;
 justify-content: flex-end;
+border-bottom: 50px solid transparent;
 
 
 }

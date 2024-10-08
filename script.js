@@ -151,7 +151,7 @@ if (viewportWidth > 1440) { // Above 1441px
   // Apply the transformations
     pen.style.transform = `translateX(${translateXPen}%)`;
     cap.style.transform = `translateX(-${translateXCap}%)`;
-    pen2.style.transform = `translateX(${translateXPen}%)`;
+    pen2.style.transform = `translateX(${translateXPen2}%)`;
 }
 console.log("Width: " + window.innerWidth + "px");
 console.log("Height: " + window.innerHeight + "px");

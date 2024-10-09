@@ -93,8 +93,16 @@ window.addEventListener('scroll', function() {
     let homeRect = home.getBoundingClientRect();
 
     // Determine initial or adjusted transformation for pen and cap
-   
-     if (scrollY <= homeRect.top) {
+    if (scrollY < homeRect.top) {
+        // Before reaching the home section
+        let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
+        pen.style.transform = initialTransform;
+        pen.style.transformStyle = 'preserve-3d';
+        cap.style.transform = initialTransform;
+        cap.style.transformStyle = 'preserve-3d';
+        pen2.style.transform = initialTransform;
+        pen2.style.transformStyle = 'preserve-3d';
+    } else if (scrollY >= homeRect.bottom) {
         // Curtain effect logic after home section is passed
         let footerRect = footer.getBoundingClientRect();
         let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);

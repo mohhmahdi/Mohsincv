@@ -162,6 +162,12 @@ height:102px
     
 }
 }
+@media (min-width: 767px) and (max-width: 1024px) {
+.w-container {
+    
+overflow:hidden;
+}
+}
 /* Responsive Styles */
 
 @media (max-width: 767px) {

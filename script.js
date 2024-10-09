@@ -77,12 +77,11 @@ window.addEventListener('scroll', function() {
     }
 
 // Elements for curtain effect
-
     let home = document.getElementById('home');
     let footer = document.getElementById('footer');
     let pen = document.getElementById('pen');
+    //let pen2 = document.getElementById('pen');
     let cap = document.getElementById('cap');
-    let pen2 = document.getElementById('pen2'); // Assuming this line is uncommented or defined somewhere
 
     // Exit if required elements are not found
     if (!home || !footer || !pen || !cap || !pen2) { 
@@ -90,40 +89,36 @@ window.addEventListener('scroll', function() {
         return;
     }
 
-    var scrollY = window.scrollY;
-    var windowHeight = window.innerHeight;
+    // Get bounding rectangles
     let homeRect = home.getBoundingClientRect();
-    let footerRect = footer.getBoundingClientRect();
 
-    // Calculate effective scrollable range
-    let startEffect = window.scrollY + homeRect.top;  // Starts at the top of 'home'
-    let endEffect = window.scrollY + footerRect.bottom - windowHeight;  // Ends at the bottom of 'footer'
+    // Determine initial or adjusted transformation for pen and cap
+    if (scrollY < homeRect.top) {
+        // Before reaching the home section
+        let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
+        pen.style.transform = initialTransform;
+        pen.style.transformStyle = 'preserve-3d';
+        cap.style.transform = initialTransform;
+        cap.style.transformStyle = 'preserve-3d';
+        pen2.style.transform = initialTransform;
+        pen2.style.transformStyle = 'preserve-3d';
+    } else if (scrollY >= homeRect.bottom) {
+        // Curtain effect logic after home section is passed
+        let footerRect = footer.getBoundingClientRect();
+        let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
+        let percentOpen = Math.min(distanceFromFooter / 1000, 1);
 
-    if (scrollY >= startEffect && scrollY <= endEffect) {
-        // Calculate the percent of the effect to apply based on scroll position
-        let totalEffectRange = endEffect - startEffect;
-        let currentScrollPosition = scrollY - startEffect;
-        let percentOpen = Math.max(0, Math.min(currentScrollPosition / totalEffectRange, 1));
-
-        updateTransforms(percentOpen, pen, cap, pen2);
-    } else if (scrollY < startEffect) {
-        // Before reaching the top of the home section
-        resetTransforms(pen, cap, pen2);
+        updateTransforms(percentOpen, pen, cap ,pen2); // Call updateTransforms with responsive logic  
     } else {
-        // After passing the bottom of the footer section
-        updateTransforms(1, pen, cap, pen2); // Ensure it's fully "open"
+        // Reset positions when in home or footer sections
+        pen.style.transform = `translateX(0%)`;
+        cap.style.transform = `translateX(0%)`;
+        pen2.style.transform = `translateX(0%)`;
     }
 });
 
-
-
-function resetTransforms(pen, cap, pen2) {
-    // Reset transformations to initial state as before
-}
-
-function updateTransforms(percentOpen, pen, cap, pen2) {
-    // Define transformations here as before
- const viewportWidth = window.innerWidth;
+function updateTransforms(percentOpen, pen, cap) {
+    const viewportWidth = window.innerWidth;
     let translateXPen, translateXCap, translateXPen2;
 
 if (viewportWidth > 1440) { // Above 1441px

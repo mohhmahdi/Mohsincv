@@ -130,14 +130,14 @@ if (viewportWidth > 1440) { // Above 1441px
     } else if (viewportWidth >= 1025) { // 1025px to 1200px
         translateXPen = 95 * percentOpen;
         translateXCap = 100 * percentOpen;
-    } else if (viewportWidth >= 768) { // 768px to 1024px
+    } else if (viewportWidth >= 769) { // 768px to 1024px
         translateXPen = 85 * percentOpen;
         translateXPen2 = 0 * percentOpen;
-        translateXCap = 270 * percentOpen;
+        translateXCap = 470 * percentOpen;
     } else if (viewportWidth >= 601) { // 601px to 767px
         translateXPen = 75 * percentOpen;
         translateXPen2 = 0 * percentOpen;
-        translateXCap = 260 * percentOpen;
+        translateXCap = 190 * percentOpen;
     } else if (viewportWidth >= 321) { // 321px to 600px
         translateXPen = 65 * percentOpen;
         translateXPen2 = 0 * percentOpen;

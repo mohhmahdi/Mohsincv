@@ -94,7 +94,7 @@ document.addEventListener('scroll', function() {
     let logocRect = logoc.getBoundingClientRect();
 
     // Determine initial or adjusted transformation for pen and cap
-    if (scrollY < logocRect.top) {
+    if (scrollY <= logocRect.top) {
         // Before reaching the logoc section
         let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
         pen.style.transform = initialTransform;

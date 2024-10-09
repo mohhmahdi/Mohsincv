@@ -77,24 +77,25 @@ window.addEventListener('scroll', function() {
     }
 
 // Elements for curtain effect
-    let home = document.getElementById('home');
+    let logoc = document.getElementById('logoc');
     let footer = document.getElementById('footer');
     let pen = document.getElementById('pen');
     //let pen2 = document.getElementById('pen');
     let cap = document.getElementById('cap');
 
+document.addEventListener('scroll', function() {
     // Exit if required elements are not found
-    if (!home || !footer || !pen || !cap || !pen2) { 
+    if (!logoc || !footer || !pen || !cap || !pen2) { 
         console.log("Required sections or elements not found, exiting curtain effect script.");
         return;
     }
 
     // Get bounding rectangles
-    let homeRect = home.getBoundingClientRect();
+    let logocRect = logoc.getBoundingClientRect();
 
     // Determine initial or adjusted transformation for pen and cap
-    if (scrollY < homeRect.top) {
-        // Before reaching the home section
+    if (scrollY < logocRect.top) {
+        // Before reaching the logoc section
         let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
         pen.style.transform = initialTransform;
         pen.style.transformStyle = 'preserve-3d';
@@ -102,15 +103,15 @@ window.addEventListener('scroll', function() {
         cap.style.transformStyle = 'preserve-3d';
         pen2.style.transform = initialTransform;
         pen2.style.transformStyle = 'preserve-3d';
-    } else if (scrollY >= homeRect.bottom) {
-        // Curtain effect logic after home section is passed
+    } else if (scrollY >= logocRect.bottom) {
+        // Curtain effect logic after logoc section is passed
         let footerRect = footer.getBoundingClientRect();
-        let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
+        let distanceFromFooter = Math.max(0, footerRect.top - window.innerHeight);
         let percentOpen = Math.min(distanceFromFooter / 1000, 1);
 
-        updateTransforms(percentOpen, pen, cap ,pen2); // Call updateTransforms with responsive logic  
+        updateTransforms(percentOpen, pen, cap, pen2); // Call updateTransforms with responsive logic  
     } else {
-        // Reset positions when in home or footer sections
+        // Reset positions when in logoc or footer sections
         pen.style.transform = `translateX(0%)`;
         cap.style.transform = `translateX(0%)`;
         pen2.style.transform = `translateX(0%)`;

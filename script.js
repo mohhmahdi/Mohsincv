@@ -86,34 +86,36 @@ window.addEventListener('scroll', function() {
     // Exit if required elements are not found
  document.addEventListener('scroll', function() {
     // Exit if required elements are not found
-    if (!home || !footer || !pen || !cap || !pen2) { 
+       if (!home || !footer || !pen || !cap || !pen2) { 
         console.log("Required sections or elements not found, exiting curtain effect script.");
         return;
     }
 
+    // Get bounding rectangles
     let homeRect = home.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
-    let threshold = 5; // Threshold can be adjusted based on specific needs
+    let windowHeight = window.innerHeight;
 
-    // Determine initial or adjusted transformation for pen and cap
-    if (scrollY < homeRect.top) {
-        // Before reaching the home section
-        pen.style.transform = `translateX(0%)`;
-        cap.style.transform = `translateX(0%)`;
-        pen2.style.transform = `translateX(0%)`;
-    } else if (Math.abs(scrollY - homeRect.bottom) <= threshold) {
-        // At the bottom of the home section
-        let distanceFromFooter = Math.max(0, footerRect.top - window.innerHeight);
-        let percentOpen = Math.min(distanceFromFooter / 1000, 1);
-        // Custom function to update transforms based on percentOpen
-        updateTransforms(percentOpen, pen, cap, pen2); 
-    } else if (scrollY >= footerRect.bottom) {
-        // Reset positions when at or below the bottom of the footer section
-        pen.style.transform = `translateX(0%)`;
-        cap.style.transform = `translateX(0%)`;
-        pen2.style.transform = `translateX(0%)`;
+    // Determine scroll position
+    let scrollY = window.scrollY;
+
+    // Check if we are within the desired transformation range
+    if (scrollY >= homeRect.top && scrollY <= footerRect.bottom) {
+        // Calculate percentage of the effect to apply based on scroll position
+        let startEffect = homeRect.top;
+        let endEffect = footerRect.bottom;
+        let totalEffectRange = endEffect - startEffect;
+        let currentScrollPosition = scrollY - startEffect;
+        let percentOpen = Math.min(currentScrollPosition / totalEffectRange, 1);
+
+        // Call updateTransforms with responsive logic  
+        updateTransforms(percentOpen, pen, cap ,pen2);
     } else {
-        // Other conditions or default behavior can be defined here
+        // Reset positions outside of the transformation range
+        let resetTransform = 'translateX(0%)';
+        pen.style.transform = resetTransform;
+        cap.style.transform = resetTransform;
+        pen2.style.transform = resetTransform;
     }
 });
 

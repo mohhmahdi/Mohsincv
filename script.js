@@ -53,7 +53,7 @@ document.getElementById('download-cv').onclick = function() {
 }; // Added closing bracket here
 
 document.getElementById('download-cert2').onclick = function() {
-    window.location.href = '/images/bare3.pdf'; // Replace with the actual path to your CV
+    window.location.href = '/images/Bare3-En.pdf'; // Replace with the actual path to your CV
 }; // Added closing bracket here
 
 document.getElementById('download-cert1').onclick = function() {

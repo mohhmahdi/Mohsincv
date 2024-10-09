@@ -98,13 +98,9 @@ window.addEventListener('scroll', function() {
     // Determine initial or adjusted transformation for pen and cap
     if (scrollY < homeRect.top) {
         // Before reaching the home section
-        let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
-        pen.style.transform = initialTransform;
-        pen.style.transformStyle = 'preserve-3d';
-        cap.style.transform = initialTransform;
-        cap.style.transformStyle = 'preserve-3d';
-        pen2.style.transform = initialTransform;
-        pen2.style.transformStyle = 'preserve-3d';
+        pen.style.transform = `translateX(0%)`;
+        cap.style.transform = `translateX(0%)`;
+        pen2.style.transform = `translateX(0%)`;
     } else if (Math.abs(scrollY - homeRect.bottom) <= threshold) {
         // At the bottom of the home section
         let distanceFromFooter = Math.max(0, footerRect.top - window.innerHeight);

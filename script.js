@@ -61,7 +61,6 @@ document.getElementById('download-cert1').onclick = function() {
 }; // Added closing bracket here
 // good js 
 window.addEventListener('scroll', function() {
-    // Variables for window properties and elements
     var logoContainer = document.querySelector('.logo-container');
     var windowHeight = window.innerHeight;
     var scrollY = window.scrollY;
@@ -70,23 +69,21 @@ window.addEventListener('scroll', function() {
     var opacity;
     if (scrollY < windowHeight) {
         opacity = 1 - (scrollY / windowHeight * 0.7); // Fades out to 0.4 opacity
-        logoContainer.style.opacity = Math.max(opacity, 0.3); // Ensures opacity doesn't go below 0.4
+        logoContainer.style.opacity = Math.max(opacity, 0.3); // Ensures opacity doesn't go below 0.3
     } else {
         logoContainer.style.opacity = 0.3;
         opacity = 0.3;
     }
 
-// Elements for curtain effect
+    // Elements for curtain effect
     let home = document.getElementById('home');
     let footer = document.getElementById('footer');
     let pen = document.getElementById('pen');
-    //let pen2 = document.getElementById('pen');
     let cap = document.getElementById('cap');
+    let pen2 = document.getElementById('pen2'); // Ensure this element exists in your HTML
 
     // Exit if required elements are not found
- document.addEventListener('scroll', function() {
-    // Exit if required elements are not found
-       if (!home || !footer || !pen || !cap || !pen2) { 
+    if (!home || !footer || !pen || !cap || !pen2) { 
         console.log("Required sections or elements not found, exiting curtain effect script.");
         return;
     }
@@ -94,66 +91,50 @@ window.addEventListener('scroll', function() {
     // Get bounding rectangles
     let homeRect = home.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
-    let windowHeight = window.innerHeight;
-
-    // Determine scroll position
-    let scrollY = window.scrollY;
 
     // Check if we are within the desired transformation range
-    if (scrollY >= homeRect.top && scrollY <= footerRect.bottom) {
+    if (scrollY >= homeRect.top - windowHeight && scrollY <= footerRect.bottom) {
         // Calculate percentage of the effect to apply based on scroll position
-        let startEffect = homeRect.top;
+        let startEffect = homeRect.top - windowHeight;
         let endEffect = footerRect.bottom;
         let totalEffectRange = endEffect - startEffect;
         let currentScrollPosition = scrollY - startEffect;
         let percentOpen = Math.min(currentScrollPosition / totalEffectRange, 1);
-
-        // Call updateTransforms with responsive logic  
-        updateTransforms(percentOpen, pen, cap ,pen2);
+        updateTransforms(percentOpen, pen, cap, pen2);
     } else {
         // Reset positions outside of the transformation range
-        let resetTransform = 'translateX(0%)';
-        pen.style.transform = resetTransform;
-        cap.style.transform = resetTransform;
-        pen2.style.transform = resetTransform;
+        resetTransforms(pen, cap, pen2);
     }
 });
 
-function updateTransforms(percentOpen, pen, cap) {
+function updateTransforms(percentOpen, pen, cap, pen2) {
     const viewportWidth = window.innerWidth;
     let translateXPen, translateXCap, translateXPen2;
 
-if (viewportWidth > 1440) { // Above 1441px
+    if (viewportWidth > 1440) { // Above 1441px
         translateXPen = 130 * percentOpen;
         translateXCap = 135 * percentOpen;
+     
     } else if (viewportWidth >= 1201) { // 1201px to 1440px
         translateXPen = 110 * percentOpen;
         translateXCap = 115 * percentOpen;
-    } else if (viewportWidth >= 1025) { // 1025px to 1200px
+        
+    } else {
+        // Continue for other conditions
         translateXPen = 95 * percentOpen;
         translateXCap = 100 * percentOpen;
-    } else if (viewportWidth >= 768) { // 768px to 1024px
-        translateXPen = 85 * percentOpen;
-        translateXPen2 = 0 * percentOpen;
-        translateXCap = 270 * percentOpen;
-    } else if (viewportWidth >= 601) { // 601px to 767px
-        translateXPen = 75 * percentOpen;
-        translateXPen2 = 0 * percentOpen;
-        translateXCap = 260 * percentOpen;
-    } else if (viewportWidth >= 321) { // 321px to 600px
-        translateXPen = 65 * percentOpen;
-        translateXPen2 = 0 * percentOpen;
-        translateXCap = 250 * percentOpen;
-    } else { // Up to 320px
-        translateXPen = 55 * percentOpen;
-        translateXPen2 = 0 * percentOpen;
-        translateXCap = 240 * percentOpen;
+        translateXPen2 = 0.5 * percentOpen; // Adjust appropriately
     }
 
-  // Apply the transformations
+    // Apply the transformations
     pen.style.transform = `translateX(${translateXPen}%)`;
     cap.style.transform = `translateX(-${translateXCap}%)`;
     pen2.style.transform = `translateX(${translateXPen2}%)`;
 }
-console.log("Width: " + window.innerWidth + "px");
-console.log("Height: " + window.innerHeight + "px");
+
+function resetTransforms(pen, cap, pen2) {
+    let resetTransform = 'translateX(0%)';
+    pen.style.transform = resetTransform;
+    cap.style.transform = resetTransform;
+    pen2.style.transform = resetTransform;
+}

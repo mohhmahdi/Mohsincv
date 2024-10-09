@@ -94,7 +94,7 @@ document.addEventListener('scroll', function() {
     let logocRect = logoc.getBoundingClientRect();
 
     // Determine initial or adjusted transformation for pen and cap
-    if (scrollY <= logocRect.top) {
+    if (scrollY >= logocRect.top) {
         // Before reaching the logoc section
         let initialTransform = 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)';
         pen.style.transform = initialTransform;
@@ -103,7 +103,7 @@ document.addEventListener('scroll', function() {
         cap.style.transformStyle = 'preserve-3d';
         pen2.style.transform = initialTransform;
         pen2.style.transformStyle = 'preserve-3d';
-    } else if (scrollY >= logocRect.bottom) {
+    } else if (scrollY <= logocRect.bottom) {
         // Curtain effect logic after logoc section is passed
         let footerRect = footer.getBoundingClientRect();
         let distanceFromFooter = Math.max(0, footerRect.top - window.innerHeight);

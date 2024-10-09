@@ -115,17 +115,16 @@ window.addEventListener('scroll', function() {
     }
 });
 
-function updateTransforms(percentOpen, pen, cap, pen2) {
-    // Define transformations here as before
- const viewportWidth = window.innerWidth;
-    let translateXPen, translateXCap, translateXPen2;
-}
+
 
 function resetTransforms(pen, cap, pen2) {
     // Reset transformations to initial state as before
 }
 
-
+function updateTransforms(percentOpen, pen, cap, pen2) {
+    // Define transformations here as before
+ const viewportWidth = window.innerWidth;
+    let translateXPen, translateXCap, translateXPen2;
 
 if (viewportWidth > 1440) { // Above 1441px
         translateXPen = 130 * percentOpen;

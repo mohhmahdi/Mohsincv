@@ -84,13 +84,16 @@ window.addEventListener('scroll', function() {
     let cap = document.getElementById('cap');
 
     // Exit if required elements are not found
+ document.addEventListener('scroll', function() {
+    // Exit if required elements are not found
     if (!home || !footer || !pen || !cap || !pen2) { 
         console.log("Required sections or elements not found, exiting curtain effect script.");
         return;
     }
 
-    // Get bounding rectangles
     let homeRect = home.getBoundingClientRect();
+    let footerRect = footer.getBoundingClientRect();
+    let threshold = 5; // Threshold can be adjusted based on specific needs
 
     // Determine initial or adjusted transformation for pen and cap
     if (scrollY < homeRect.top) {
@@ -102,21 +105,21 @@ window.addEventListener('scroll', function() {
         cap.style.transformStyle = 'preserve-3d';
         pen2.style.transform = initialTransform;
         pen2.style.transformStyle = 'preserve-3d';
-    } else if (scrollY >= homeRect.bottom) {
-        // Curtain effect logic after home section is passed
-        let footerRect = footer.getBoundingClientRect();
-        let distanceFromFooter = Math.max(0, footerRect.top - windowHeight);
+    } else if (Math.abs(scrollY - homeRect.bottom) <= threshold) {
+        // At the bottom of the home section
+        let distanceFromFooter = Math.max(0, footerRect.top - window.innerHeight);
         let percentOpen = Math.min(distanceFromFooter / 1000, 1);
-
-        updateTransforms(percentOpen, pen, cap ,pen2); // Call updateTransforms with responsive logic  
-    } else {
-        // Reset positions when in home or footer sections
+        // Custom function to update transforms based on percentOpen
+        updateTransforms(percentOpen, pen, cap, pen2); 
+    } else if (scrollY >= footerRect.bottom) {
+        // Reset positions when at or below the bottom of the footer section
         pen.style.transform = `translateX(0%)`;
         cap.style.transform = `translateX(0%)`;
         pen2.style.transform = `translateX(0%)`;
+    } else {
+        // Other conditions or default behavior can be defined here
     }
 });
-
 
 function updateTransforms(percentOpen, pen, cap) {
     const viewportWidth = window.innerWidth;

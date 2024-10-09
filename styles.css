@@ -172,11 +172,8 @@ overflow:hidden;
 
 @media (max-width: 767px) {
 .w-container {
-display: flex;
-justify-content: flex-end;
-border-bottom: 50px solid transparent;
-
-
+    
+overflow:hidden;
 }
 #pen {
    width: 268.36px;

@@ -49,7 +49,7 @@ navLinks.addEventListener('click', (event) => {
     }
 });
 document.getElementById('download-cv').onclick = function() {
-    window.location.href = '/images/Mohsin_Mahdi_CV-H.pdf'; // Replace with the actual path to your CV
+    window.location.href = '/images/Mohsin_Mahdi_-_Hybrid_Role_in_Front-End_Development,_UIUX_Design.pdf'; // Replace with the actual path to your CV
 }; // Added closing bracket here
 
 document.getElementById('download-cert2').onclick = function() {

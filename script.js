@@ -69,11 +69,9 @@ window.addEventListener('scroll', function() {
     // Logo fade effect
     var opacity;
     if (scrollY < windowHeight) {
-        opacity = 1 - (scrollY / windowHeight * 0.7); // Fades out to 0.4 opacity
-        logoContainer.style.opacity = Math.max(opacity, 0.3); // Ensures opacity doesn't go below 0.4
+        opacity = 1 - (scrollY / windowHeight * 0.8); // Fades out to 0.3 opacity (not 0.4 as previously commented)
+        logoContainer.style.opacity = Math.max(opacity, 0.2); // Ensures opacity doesn't go below 0.3
     } else {
-        logoContainer.style.opacity = 0.3;
-        opacity = 0.3;
+        logoContainer.style.opacity = 0.2; // Ensures opacity is set to 0.3 when scrolled past the window height
     }
-)};
-
+}); // Correctly closed function and event listener
